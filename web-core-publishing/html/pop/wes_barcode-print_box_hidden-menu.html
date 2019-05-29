@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Pop 컨테이너박스 박스 바코드 재출력</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/wes/pop.css">
+	<style>
+        .hidden-menu section{position:relative;overflow:hidden;}
+        .hidden-menu aside{z-index:20;position:absolute;top:0;bottom:0;left:0;box-shadow:1px 1px 1px rgba(0,0,0,0.3);transform:translate(-90px);transition:all 0.4s ease}
+        .hidden-menu aside.active{transform:translate(0)}
+        .hidden-menu button.hidden-menu-btn{z-index:30;position:absolute;top:50%;left:1px;display:block;width:30px;height:50px;font-size:0;border-radius:0 5px 5px 0;box-shadow:1px 1px 1px rgba(0,0,0,0.5);transition:all 0.4s ease}
+    </style>
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../resources/js/imc/imc-utils.js"></script>
+	<script>
+		$( function() {
+			
+			$(".container-item-wrap").each(function(){
+				var col = $(this).attr('data-col');
+				var row = $(this).attr('data-row');
+
+				var _width = 100/col;
+				var _height = 100/row;
+				var _html = [];
+				for (var i = 0; i < (col*row); i++){
+					_html.push('<span class="cell" style="width:'+_width+'%;height:'+_height+'%;"></span>');
+				}
+				$(this).html(_html);
+			});
+
+			/* select container box */
+
+			var selectCol = 3;
+			var selectRow = 3;
+
+			var _guideWidth = 100/selectCol;
+			var _guideHeight = 100/selectRow;
+
+			var _guideHtml = [];
+			for (var i = 1; i <= (selectCol*selectRow); i++){
+				if(i == 4){
+					_guideHtml.push('<span class="cell select" style="width:'+_guideWidth+'%;height:'+_guideHeight+'%;"><em>'+i+'</em></span>');	
+				}else{
+					_guideHtml.push('<span class="cell" style="width:'+_guideWidth+'%;height:'+_guideHeight+'%;"><em>'+i+'</em></span>');
+				}
+			}
+			
+			$("#blocks .container-item-wrap").html(_guideHtml);
+
+
+            $('.hidden-menu-btn').click(function(e) {
+                if($('section > aside.col').hasClass('active')){
+                    $('section > aside.col').removeClass('active');    
+                }else{
+                    $('section > aside.col').addClass('active');
+                }
+                
+            });
+		});
+	</script>
+</head>
+<body>
+    
+	<main class="hidden-menu">
+		<header>
+			<h2>컨테이너 박스 바코드 재출력</h2>
+		</header>
+		<section>
+			<aside class="col">
+				<ul>
+					<li><a href="#">바코드 발행</a></li>
+					<li><a href="#">일괄등록</a></li>
+					<li><a href="#">등록</a></li>
+					<li><a href="#" class="active">재출력</a></li>
+				</ul>
+            </aside>
+            <button class="hidden-menu-btn">메뉴보기</button>
+			<div class="col">
+				<div class="item-wrap row no-flex">
+					<div class="function-area search-box">
+						<div class="align-left">
+							<span>컨테이너 ID 조회</span>
+							<input type="text" />
+							<button class="btn-pop blue">조회</button>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item-wrap col">
+						<div class="item-inner paging-in">
+							<h3>컨테이너 박스 조회 결과</h3>
+							<div class="item-cont">
+								<div id="grid">
+									<div class="sfp-grid-panel">
+										<div class="sfp-grid-header-panel" >
+											<table class="sfp-grid">
+												<colgroup>
+													<col style="width:60px">
+													<col>
+												</colgroup>
+												<thead>
+													<tr>
+														<th>선택</th>
+														<th>컨테이너 박스 ID</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+										<div class="sfp-grid-body-panel" style="height:750px">
+											<table class="sfp-grid">
+												<colgroup>
+													<col style="width:60px">
+													<col>
+												</colgroup>
+												<thead style="display: none;">
+													<tr>
+														<th>선택</th>
+														<th>컨테이너 박스 ID</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><button class="select-line">선택</button></td>
+														<td>CA_0001_1123</td>
+													</tr>
+													<tr class="selected">
+														<td><button class="select-line">선택</button></td>
+														<td>CA_0001_1123</td>
+													</tr>
+												</tbody>
+												<tfoot style="display: none;"></tfoot>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="paging">
+								<button disabled>위</button>
+								<button class="bottom" disabled>아래</button>
+							</div>
+						</div>
+					</div>
+					<div class="item-wrap col">
+						<div class="item-inner">
+							<h3>선택한 컨테이너</h3>
+							<div class="item-cont">
+								<ul class="select-item-info">
+									<li>
+										<strong class="title">컨테이너 ID</strong>
+										<input type="text" value="sdfe1523" />
+									</li>
+									<li class="check-all">
+										<label><input type="checkbox"><span class="check-mark">전체 영역 선택</span></label>
+									</li>
+								</ul>
+								<div class="barcode-guide check-cell select-container mgt20" id="blocks" data-container-type="box">
+									<div class="container-item-wrap">
+										
+									</div>
+									<span class="cell box-code select">Box barcode</span>
+								</div>
+								<button class="btn-pop blue full-size mgt20">바코드 재출력</button>
+							</div>
+						</div>
+					</div>
+				</div>
+						
+			</div>
+			
+		</section>
+	</main>
+</body>
+</html>

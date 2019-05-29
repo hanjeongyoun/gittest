@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SFP 2.0 Page 기본 레이아웃</title>
+    <link rel="stylesheet" href="../../../resources/css/common.css">
+    <link rel="stylesheet" href="../../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../../resources/css/button.css">
+    <link rel="stylesheet" href="../../../resources/css/form.css">
+    <link rel="stylesheet" href="../../../resources/css/page.css">
+    <link rel="stylesheet" href="../../../resources/css/left_gnb.css">
+    <link rel="stylesheet" href="../../../resources/css/theme/blue/common.css">
+    <link rel="stylesheet" href="../../../resources/css/theme/blue/grid.css">
+    <link rel="stylesheet" href="../../../resources/css/theme/blue/page.css">
+    <link rel="stylesheet" href="../../../resources/css/theme/blue/form.css">
+    <link rel="stylesheet" href="../../../resources/css/theme/blue/button.css">
+    <link rel="stylesheet" href="../../../resources/css/theme/blue/left_gnb.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Material</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 1</a></li>
+                    <li><a href="">자재 관리 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Machine</a>
+                <ul>
+                    <li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 유형 관리 2-1</a></li>
+                            <li><a href="">자재 유형 관리 2-2</a></li>
+                            <li><a href="">자재 유형 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="has-depth">자재 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 관리 2-1</a></li>
+                            <li><a href="" class="has-depth">자재 관리 2-2</a>
+                                <ul>
+                                    <li><a href="">자재 관리 3-1</a></li>
+                                    <li><a href="">자재 관리 3-2</a></li>
+                                    <li><a href="">자재 관리 3-3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">자재 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Men</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 3</a></li>
+                    <li><a href="">자재 관리 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Method</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 4</a></li>
+                    <li><a href="">자재 관리 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>인력관리<span class="sub-title">PO에 배치되어 아이템 생산을 담당하는 모든 인력리스트 및 인력정보를 관리합니다.</span></h2>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+                <div class="function-area">
+                    <div class="align-left">
+                        <select>
+                            <option value="6" selected="">부서</option>
+                            <option value="7">부서2</option>
+                        </select>
+                        <input type="text" placeholder="사원명, 사번" readonly="readonly"/>
+                        <button class="btn-srch ico">조회</button>
+                        <button class="btn-reset image">초기화</button>
+                        <label><input type="radio" name="search" /><span class="radio-mark">시간</span></label>
+                        <label><input type="radio" name="search"/><span class="radio-mark">주</span></label>
+                        <label><input type="radio" name="search"/><span class="radio-mark">월</span></label>
+                    </div>
+                    <div class="align-right">
+                        <button class="btn-download ico">엑셀다운로드</button>
+                        <button class="btn-del ico">삭제</button>
+                        <button class="btn-add ico">등록</button>
+                    </div>
+                </div>
+                <div class="card-area">
+                    <div class="row">
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title1</h3>
+                                <div class="card-cont">
+                                    <button class="btn sky">버튼넣어도됩니다</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title2</h3>
+                                <div class="card-cont">
+                                    <div class="register-table">
+                                        <ul>
+                                            <li>
+                                                <div class="title">워크센터 명</div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span><input type="text" placeholder="워크센터 명을 입력하세요."></span><span class="no-flex"><button class="btn">중복확인</button></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">면적(가로x세로)</div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span><input type="text" readonly="readonly" placeholder="readonly input box"></span>
+                                                        <span class="no-flex">x</span>
+                                                        <span><input type="text"></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title">도면</div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        일반 텍스트 
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title2-1</h3>
+                                <div class="card-cont">
+                                    <button class="btn sky">버튼넣어도됩니다</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title3</h3>
+                                <div class="card-cont">
+                                   height:100%, width:100%, padding:20px;box-sizing:border-box 영역
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title3</h3>
+                                <div class="card-cont">
+                                   height:100%, width:100%, padding:20px;box-sizing:border-box 영역
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3 class="card-title">Card Title4</h3>
+                                <div class="card-cont">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>

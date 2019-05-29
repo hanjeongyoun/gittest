@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>재고 정확도 | SWS </title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>재고 정확도</h2>
+		</header>
+		<div class="contents-wrap no-footer aside-monitoring-sws">
+			<section>
+				<div class="fix-card one-col square long-type">
+					<ul>
+						<li>
+							<div class="title-wrap big">
+								<h3 class="monitoring-title">재고 정확도</h3>
+								<p class="monitoring-sub-title">Inventory accuracy</p>
+							</div>
+							<div class="card-cont">
+								<ul class="stock-accuracy">
+									<li class="white-area">
+										<div class="graph-area-wrap">
+											<div class="graph-area"></div>
+											<div class="graph-value"><strong>89.2</strong>%</div>
+											<span class="add-text"><strong>97.3 %</strong>Target</span>
+										</div>
+									</li>
+									<li>
+										<dl class="stock-info-list">
+											<dt>재고 감모 손실 빈도 (횟수)</dt>
+											<dd>Inventory shrinkage frequency (count)</dd>
+											<dd class="value"><strong>7</strong></dd>
+											<dt>재고 감모 손실 비용 (천원)</dt>
+											<dd>Inventory shrinkage cost </dd>
+											<dd class="value"><strong>1,000</strong>천원</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="stock-info-list">
+											<dt>재고 조정 빈도</dt>
+											<dd>Inventory adjustment frequency</dd>
+											<dd class="value"><strong>10</strong></dd>
+											<dt>재고 조정 증감</dt>
+											<dd>Inventory change</dd>
+											<dd class="value"><strong>+13</strong> ea.</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="fix-card row-ver square">
+					<ul class="stock-rate">
+						<li>
+							<div class="title-wrap">
+								<h3 class="monitoring-title">오입고ㆍ오출고 발생 비율</h3>
+								<p class="monitoring-sub-title">Error occurrence frequency</p>
+							</div>
+							<div class="card-cont">
+								<div class="sec-left">
+									<dl class="stock-info-list">
+										<dt>오입고 발생 빈도</dt>
+										<dd>Error-Receiving occurrence frequency</dd>
+										<dd class="value"><strong>14</strong></dd>
+										<dt>오입고 발생 비율</dt>
+										<dd>Error occurrence ratio</dd>
+										<dd class="value"><strong>0.41</strong>%</dd>
+									</dl>
+									<div class="graph-area"></div>
+								 </div>
+								<div class="sec-right">
+									<dl class="stock-info-list">
+										<dt>오출고 발생 빈도</dt>
+										<dd>Error-Outgoing occurrence frequency</dd>
+										<dd class="value"><strong>14</strong></dd>
+										<dt>오출고 발생 비율</dt>
+										<dd>Error occurrence ratio</dd>
+										<dd class="value"><strong>0.41</strong>%</dd>
+									</dl>
+									<div class="graph-area"></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="inventory-list-wrap mgt20">
+					<h3 class="monitoring-title">최근 재고 조정 내역</h3>
+					<p class="monitoring-sub-title">Inventory adjustment list</p>
+					<div class="sfp-grid-panel border-style mgt20">
+						<div class="sfp-grid-header-panel" >
+							<table class="sfp-grid">
+								<colgroup>
+									<col style="width:25%">
+									<col>
+									<col style="width:25%">
+									<col>
+									<col style="width:25%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>조정 사항</th>
+										<th>날짜</th>
+										<th>원인</th>
+										<th>증감</th>
+										<th>관리</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="sfp-grid-body-panel" style="height:450px">
+							<table class="sfp-grid">
+								<colgroup>
+									<col style="width:25%">
+									<col>
+									<col style="width:25%">
+									<col>
+									<col style="width:25%">
+								</colgroup>
+								<thead style="display: none;">
+									<tr>
+										<th>조정 사항</th>
+										<th>날짜</th>
+										<th>원인</th>
+										<th>증감</th>
+										<th>관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>*TR-R36-ERFFMTSBMDNASHNA</td>
+										<td>1</td>
+										<td>2</td>
+										<td>E</td>
+										<td>
+											<button class="btn-mod ico small">수정</button>
+											<button class="btn-del ico small">삭제</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>	
+				</div>
+			</section>
+		</div>
+	</main>
+	<script>
+		var svgnsurl = 'http://www.w3.org/2000/svg';
+		$(function() {
+			$('.round-chart').each(roundchart);
+		});
+		
+		function roundchart() {
+	
+			var $box, path, 
+				width, height, radius, linewidth = 11, 
+				angle = parseInt(this.getAttribute('data-value'));
+	
+			if (isNaN(angle)) {
+				return;
+			}
+			
+			$box = $(this);
+			width = parseInt($box.css('width'));
+			height = parseInt($box.css('height'));
+			radius = height/2-linewidth/2;
+			angle = Math.min(359.999, 360*angle/100);
+			angle = 90-angle;
+	
+			path = document.createElementNS(svgnsurl, 'path');
+			path.setAttributeNS(null, 'stroke', this.getAttribute('data-color'));
+			path.setAttributeNS(null, 'd', [
+					'M', width/2, ',', linewidth/2,
+					'A', radius, ',', radius, ' 0 ', Math.abs(angle) > 90 ? 1 : 0, ',1 ', width/2+radius*Math.cos(-angle*Math.PI/180), ',', height/2+radius*Math.sin(-angle*Math.PI/180)
+				].join(''));
+	
+			$('<svg xmlns="'+ svgnsurl +'" xmlns:xlink="http://www.w3.org/1999/xlink" />')
+				.attr({width: width, height: height})
+				.appendTo($box)[0].appendChild(path);
+	
+		}
+	</script>
+</body>
+</html>

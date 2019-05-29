@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>예약 신청</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/mobile.css">
+	<script src="./../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="./../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="./../../resources/js/bower/moment/moment.min.js"></script>
+	<script src="./../../resources/js/bower/moment/moment-with-locales.min.js"></script>
+	<script src="./../../resources/js/imc/imc-utils.js"></script>
+	<script src="./../../resources/js/imc/imc-ajax.js"></script>
+	<script src="./../../resources/js/imc/imc-dialog.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-grid.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-box.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-pager.js"></script>
+	<script src="./../../resources/js/imc/imc-datepicker.js"></script>
+</head>
+<body>
+	<header>
+		<h1>예약 상세</h1>
+		<a href="#" class="btn-menu">menu<span></span></a>
+		<nav class="gnb">
+			<ul>
+				<li><a href="#">메인</a></li>
+				<li><a href="#">예약신청</a></li>
+				<li><a href="#">예약 목록</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="contents-wrap">
+			<section>
+				<!-- <a href="#" class="back">이전 페이지로</a> -->
+				<h2 class="page-title">예약 상세 내역</h2>
+				<div class="register-table">
+					<ul>
+						<li>
+							<div class="title">업체명</div>
+							<div class="cont">
+								<div class="line-wrap">
+									TAEWOO MEXICO
+								</div>
+							</div>
+						</li>
+						<!-- 승인 전 보여지는 화면 (날짜 한건으로 선택되기 전) -->
+						<li>
+							<div class="title">방문일자</div>
+							<div class="cont day-wrap">
+								<div class="line-wrap select-date-list">
+									<ul>
+										<li><span>2019년 1월 17일 15시 30분 ~ 16시 30분</span></li>
+										<li><span>2019년 1월 18일 15시 30분 ~ 16시 30분</span></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- // 승인 전 보여지는 화면 (날짜 한건으로 선택되기 전) -->
+						<!-- 날짜 승인 후 보여지는 화면(날짜 한건으로 선택 된 후) -->
+						<li>
+							<div class="title">방문일자</div>
+							<div class="cont day-wrap">
+								<div class="line-wrap select-date-list">
+									<ul>
+										<li><span>2019년 1월 17일 15시 30분 ~ 16시 30분</span></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<!-- //날짜 승인 후 보여지는 화면(날짜 한건으로 선택 된 후) -->
+						<li>
+							<div class="title">담당자명</div>
+							<div class="cont">
+								<div class="line-wrap">
+									홍길동
+								</div>
+							</div>
+							<div class="title">방문인원</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<span><em>2</em> 명</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">방문자 리스트</div>
+							<div class="cont">
+								<div class="line-wrap">
+									김씨, 이씨
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">회의실 사용 여부</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<label><input type="checkbox" checked="" disabled><span class="check-mark">사용</span></label>
+								</div>
+							</div>
+							<div class="title">회의실</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<select disabled>
+										<option value="1" selected="">6회의실</option>
+										<option value="6">1회의실</option>
+										<option value="7">2회의실</option>
+									</select>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">시연항목</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<label><input type="checkbox" disabled><span class="check-mark">CSC1.0</span></label>
+									<label><input type="checkbox" checked="" disabled><span class="check-mark">CSC2.0</span></label>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">식사(중식) 여부</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<label><input type="checkbox" checked="" disabled><span class="check-mark">함</span></label>
+								</div>
+							</div>
+							<div class="title">방문 차량 대수</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<span><em>2</em> 대</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">방문 차량 번호</div>
+							<div class="cont">
+								<div class="line-wrap">
+									가1234
+								</div>
+							</div>
+						</li>
+						<!-- <li>
+							<div class="title">사유</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<input type="text" />
+								</div>
+							</div>
+						</li> -->
+						<li>
+							<div class="title">비고</div>
+							<div class="cont">
+								<div class="line-wrap">
+									<input type="text" readonly/>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<footer>
+				<!-- 예약신청 수정일 경우 -->
+				<div class="footer-wrap">
+					<button class="btn blue">차량번호등록</button>
+					<button class="btn orange">수정</button>
+				</div>
+				<!-- // 신규 예약 신청일 경우 -->
+			</footer>
+		</div>
+		
+	</main>
+</body>
+</html>

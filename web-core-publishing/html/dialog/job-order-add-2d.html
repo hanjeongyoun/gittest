@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>작업지시 2d 등록</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>작업지시 2d 등록</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+                <div class="function-area">
+                    <div class="align-center">
+                        <button class="period-prev">이전</button>
+                        <span class="period">
+                            <input type="text" style="width:150px" />
+                            <input type="text" style="width:150px" />
+                        </span>
+                        <button class="period-next">다음</button>
+                    </div>
+                </div>
+                <div id="grid" class="border-style job-order" style="min-height:600px; ">
+                    <div class="sfp-grid-panel ">
+                        <div class="sfp-grid-header-panel">
+                            <table class="sfp-grid">	
+                                <colgroup>
+                                    <col style="width:100px">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                </colgroup>	
+                                <thead>
+                                    <tr>	
+                                        <th class="machine" rowspan="2">사출기</th>	
+                                        <th title="06" month="06" class="month" colspan="19">06</th>	
+                                        <th title="07" month="07" class="month" colspan="22">07</th>
+                                    </tr>
+                                    <tr>	
+                                        <th title="2018-06-12 " date="2018-06-12" holiday-nm="" class="day">12</th>	
+                                        <th title="2018-06-13 " date="2018-06-13" holiday-nm="" class="day">13</th>
+                                        <th title="2018-06-14 " date="2018-06-14" holiday-nm="" class="day">14</th>	
+                                        <th title="2018-06-15 " date="2018-06-15" holiday-nm="" class="day">15</th>	
+                                        <th title="2018-06-16 " date="2018-06-16" holiday-nm="" class="saturday  day">16</th>	
+                                        <th title="2018-06-17 " date="2018-06-17" holiday-nm="" class="sunday   day">17</th>	
+                                        <th title="2018-06-18 " date="2018-06-18" holiday-nm="" class="day">18</th>	
+                                        <th title="2018-06-19 " date="2018-06-19" holiday-nm="" class="day">19</th>	
+                                        <th title="2018-06-20 " date="2018-06-20" holiday-nm="" class="day">20</th>	
+                                        <th title="2018-06-21 " date="2018-06-21" holiday-nm="" class="day">21</th>	
+                                        <th title="2018-06-22 " date="2018-06-22" holiday-nm="" class="day">22</th>	
+                                        <th title="2018-06-23 " date="2018-06-23" holiday-nm="" class="saturday  day">23</th>	
+                                        <th title="2018-06-24 " date="2018-06-24" holiday-nm="" class="sunday   day">24</th>	
+                                        <th title="2018-06-25 " date="2018-06-25" holiday-nm="" class="day">25</th>	
+                                        <th title="2018-06-26 " date="2018-06-26" holiday-nm="" class="day">26</th>	
+                                        <th title="2018-06-27 " date="2018-06-27" holiday-nm="" class="day">27</th>	
+                                        <th title="2018-06-28 " date="2018-06-28" holiday-nm="" class="day">28</th>	
+                                        <th title="2018-06-29 " date="2018-06-29" holiday-nm="" class="day">29</th>	
+                                        <th title="2018-06-30 " date="2018-06-30" holiday-nm="" class="saturday  day">30</th>	
+                                        <th title="2018-07-01 " date="2018-07-01" holiday-nm="" class="sunday   day">01</th>	
+                                        <th title="2018-07-02 " date="2018-07-02" holiday-nm="" class="day">02</th>	
+                                        <th title="2018-07-03 " date="2018-07-03" holiday-nm="" class="day">03</th>	
+                                        <th title="2018-07-04 " date="2018-07-04" holiday-nm="" class="day">04</th>	
+                                        <th title="2018-07-05 " date="2018-07-05" holiday-nm="" class="day">05</th>	
+                                        <th title="2018-07-06 " date="2018-07-06" holiday-nm="" class="day">06</th>	
+                                        <th title="2018-07-07 " date="2018-07-07" holiday-nm="" class="saturday  day">07</th>	
+                                        <th title="2018-07-08 " date="2018-07-08" holiday-nm="" class="sunday   day">08</th>	
+                                        <th title="2018-07-09 " date="2018-07-09" holiday-nm="" class="day">09</th>	
+                                        <th title="2018-07-10 " date="2018-07-10" holiday-nm="" class="day">10</th>	
+                                        <th title="2018-07-11 " date="2018-07-11" holiday-nm="" class="   day">11</th>	
+                                        <th title="2018-07-12 " date="2018-07-12" holiday-nm="" class="day">12</th>	
+                                        <th title="2018-07-13 " date="2018-07-13" holiday-nm="" class="day">13</th>	
+                                        <th title="2018-07-14 " date="2018-07-14" holiday-nm="" class="   saturday  day">14</th>	
+                                        <th title="2018-07-15 " date="2018-07-15" holiday-nm="" class="sunday   day">15</th>	
+                                        <th title="2018-07-16 " date="2018-07-16" holiday-nm="" class="day">16</th>	
+                                        <th title="2018-07-17 " date="2018-07-17" holiday-nm="" class="day">17</th>	
+                                        <th title="2018-07-18 " date="2018-07-18" holiday-nm="" class="day">18</th>	
+                                        <th title="2018-07-19 " date="2018-07-19" holiday-nm="" class="   day">19</th>	
+                                        <th title="2018-07-20 " date="2018-07-20" holiday-nm="" class="   day">20</th>
+                                        <th title="2018-07-21 " date="2018-07-21" holiday-nm="" class="   saturday  day">21</th>	
+                                        <th title="2018-07-22 " date="2018-07-22" holiday-nm="" class="  sunday   day">22</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel" style="height:550px">
+                            <table class="sfp-grid">	
+                                <colgroup>
+                                    <col style="width:100px">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                    <col style="width:2.2%">
+                                </colgroup>		
+                                <tbody>
+                                    <tr mcn-id="M0001">	
+                                        <td class="machine">머신11</td>	
+                                        <td title="2018-06-12" date="2018-06-12" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-13" date="2018-06-13" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>
+                                        <td title="2018-06-14" date="2018-06-14" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-15" date="2018-06-15" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-16" date="2018-06-16" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="saturday  day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-17" date="2018-06-17" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="sunday   day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-18" date="2018-06-18" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-19" date="2018-06-19" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-20" date="2018-06-20" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-21" date="2018-06-21" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-22" date="2018-06-22" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-23" date="2018-06-23" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="saturday  day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-24" date="2018-06-24" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="sunday   day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-25" date="2018-06-25" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-26" date="2018-06-26" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-27" date="2018-06-27" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-28" date="2018-06-28" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-29" date="2018-06-29" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-06-30" date="2018-06-30" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="saturday  day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-01" date="2018-07-01" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="sunday   day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-02" date="2018-07-02" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-03" date="2018-07-03" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-04" date="2018-07-04" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-05" date="2018-07-05" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-06" date="2018-07-06" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-07" date="2018-07-07" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="saturday  day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-08" date="2018-07-08" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="sunday   day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-09" date="2018-07-09" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-10" date="2018-07-10" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-11" date="2018-07-11" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-12" date="2018-07-12" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-13" date="2018-07-13" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-14" date="2018-07-14" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="saturday  day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-15" date="2018-07-15" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="sunday   day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-16" date="2018-07-16" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-17" date="2018-07-17" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-18" date="2018-07-18" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-19" date="2018-07-19" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-20" date="2018-07-20" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-21" date="2018-07-21" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="saturday  day">		
+                                            <div class="job-count"></div>		
+                                        </td>	
+                                        <td title="2018-07-22" date="2018-07-22" holiday-nm="" mcn-id="M0001" mcn-nm="머신11" class="sunday   day">		
+                                            <div class="job-count"></div>		
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="function-area">
+                    <div class="align-left">
+                        <input type="text" placeholder="사출기" style="width:150px">
+                        <span class="period">
+                            <input type="text" class="calendar" placeholder="시작일자" >
+                            <input type="text" class="calendar" placeholder="종료일자" >
+                        </span>
+                    </div>
+                    <div class="align-right">
+                        <button class="btn blue wide">다음</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- <div class="juno-contextmenu-panel" style="position: absolute; left: 306px; top: 432px; display: block;">
+            <div class="tooltip-menu">	
+                <time>2018-06-16</time>	
+                <strong>머신9</strong>	
+                <p class="btns">		
+                    <button type="button" class="start" onclick="sg_choice_startPoint('M0009', '머신9', '2018-06-16')">시작지점으로 설정</button>		
+                    <button type="button" class="end" onclick="sg_choice_endPoint('M0009', '머신9', '2018-06-16')">종료지점으로 설정</button>	
+                </p>
+            </div>
+        </div> -->
+    </main>
+</body>
+</html>

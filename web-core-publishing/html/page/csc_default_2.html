@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>YUDO SUNS 방문 예약 시스템</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/csc_page.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+
+
+	<script src="./../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="./../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="./../../resources/js/bower/moment/moment.min.js"></script>
+	<script src="./../../resources/js/bower/moment/moment-with-locales.min.js"></script>
+	<script src="./../../resources/js/imc/imc-utils.js"></script>
+	<script src="./../../resources/js/imc/imc-ajax.js"></script>
+	<script src="./../../resources/js/imc/imc-dialog.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-grid.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-box.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-pager.js"></script>
+	<script src="./../../resources/js/imc/imc-datepicker.js"></script>
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				changeMonth: false,
+				changeYear: false,
+				showOtherMonths: true,
+				selectOtherMonths: false
+			});
+			$("#datepicker > div > table > tbody > tr:nth-child(2) > td:nth-child(3)").append('<span class="cnt">총 <strong>2</strong>건</span><ul class="reservation-list"><li><span>13:30~14:00</span><span>홍길동홍길동홍길동홍길동</span></li><li><span>13:30~14:00</span><span>홍길동홍길동홍길동홍길동</span></li></ul>');
+			$("#datepicker > div > table > tbody > tr:nth-child(2) > td:nth-child(5)").addClass("cant-add");
+			$("#datepicker > div > table > tbody > tr:nth-child(3) > td:nth-child(4)").addClass("cant-add");
+			$("#datepicker > div > table > tbody > tr:nth-child(3) > td:nth-child(4)").append('<span class="cnt">총 <strong>2</strong>건</span><ul class="reservation-list"><li><span>13:30~14:00</span><span>홍길동홍길동홍길동홍길동</span></li><li><span>13:30~14:00</span><span>홍길동홍길동홍길동홍길동</span></li></ul>')
+		} );
+	</script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+				<li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+					<div class="bookmark-list">
+						<ul>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+						</ul>
+						<!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+					</div>
+				</li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>YUDO SUNS 방문 신청 예약 시스템</h2>
+		</header>
+		<div class="contents-wrap no-footer csc-calendar">
+			<section>
+				<div class="calendar-wrap">
+					<div id="datepicker"></div>
+					<div class="legend-wrap">
+						<ul>
+							<li class="today"><span>오늘 </span></li>
+							<li class="reservation"><span>확정된 예약</span></li>
+							<li class="cant-add"><span>예약 불가일</span></li>
+						</ul>
+					</div>
+				</div>
+				
+			</section>
+		</div>
+		<div class="contents-wrap aside-csc no-footer">
+			<section>
+				<div class="tab-list-wrap tab-container tab-type2">
+					<input id="tab1" type="radio" name="tabs" checked="">
+					<label for="tab1">미 승인 목록</label>
+					<input id="tab2" type="radio" name="tabs">
+					<label for="tab2">승인 목록</label>
+					<section class="tab-content tab01">
+						<p class="list-cnt">예약 승인 대기 <strong>2</strong>건</p>
+						<div id="grid" class="grid-wrap">
+							<div class="sfp-grid-panel">
+								<div class="sfp-grid-header-panel" >
+									<table class="sfp-grid">
+										<colgroup>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>날짜/시간</th>
+												<th>예약 내역</th>
+												<th></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div class="sfp-grid-body-panel">
+									<table class="sfp-grid">
+										<colgroup>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead style="display: none;">
+											<tr>
+												<th>날짜/시간</th>
+												<th>예약 내역</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>MFER</td>
+												<td>C</td>
+												<td><button class="btn">보기</button></td>
+											</tr>
+											<tr>
+												<td>MFER</td>
+												<td>C</td>
+												<td><button class="btn">보기</button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="tab-content tab02">
+						<p class="list-cnt">예약 승인 <strong>3</strong>건</p>
+						<div id="grid" class="grid-wrap">
+							<div class="sfp-grid-panel">
+								<div class="sfp-grid-header-panel" >
+									<table class="sfp-grid">
+										<colgroup>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>날짜/시간</th>
+												<th>예약 내역</th>
+												<th></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div class="sfp-grid-body-panel">
+									<table class="sfp-grid">
+										<colgroup>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead style="display: none;">
+											<tr>
+												<th>날짜/시간</th>
+												<th>예약 내역</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>MFER</td>
+												<td>C</td>
+												<td><button class="btn">보기</button></td>
+											</tr>
+											<tr>
+												<td>MFER</td>
+												<td>C</td>
+												<td><button class="btn">보기</button></td>
+											</tr>
+											<tr>
+												<td>MFER</td>
+												<td>C</td>
+												<td><button class="btn">보기</button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div>
+					<h3 class="aside-title">차량 미 등록 건</h3>
+					<div id="grid" class="mgt10">
+						<div class="sfp-grid-panel">
+							<div class="sfp-grid-header-panel" >
+								<table class="sfp-grid">
+									<colgroup>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>날짜/시간</th>
+											<th>예약 내역</th>
+											<th></th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="sfp-grid-body-panel" style="height:200px">
+								<table class="sfp-grid">
+									<colgroup>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead style="display: none;">
+										<tr>
+											<th>날짜/시간</th>
+											<th>예약 내역</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>MFER</td>
+											<td>C</td>
+											<td><button class="btn">보기</button></td>
+										</tr>
+										<tr>
+											<td>MFER</td>
+											<td>C</td>
+											<td><button class="btn">보기</button></td>
+										</tr>
+										<tr>
+											<td>MFER</td>
+											<td>C</td>
+											<td><button class="btn">보기</button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+</body>
+</html>

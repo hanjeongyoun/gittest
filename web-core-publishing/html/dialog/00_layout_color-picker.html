@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SFP 2.0 Dialog 기본 레이아웃</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+    <link href="../../resources/css/bower/jquery-colpick/colpick.css" rel="stylesheet">
+    <script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+    <script src="../../resources/js/bower/jquery-colpick/colpick.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h2>워크센터 등록</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap">
+            <section>
+                <div class="register-table">
+                    <p class="required">필수항목</p>
+                    <ul>
+                        <li>
+                            <div class="title required">워크센터 명</div>
+                            <div class="cont">
+                                <div class="line-wrap">
+                                    <span><input type="text" placeholder="워크센터 명을 입력하세요." /></span><span class="no-flex"><button class="btn">중복확인</button></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">면적(가로x세로)</div>
+                            <div class="cont">
+                                <div class="line-wrap">
+                                    <span><input type="text" readonly="readonly"/></span>
+                                    <span class="no-flex">x</span>
+                                    <span><input type="text"/></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">도면</div>
+                            <div class="cont">
+                                <div class="line-wrap">
+                                    <span><input type="text" /></span><span class="no-flex"><button class="btn">파일찾기</button></span>
+                                </div>
+                                <p class="description">※ 5MB 이하의 jpg, png, gif 파일만 등록이 가능합니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">도면</div>
+                            <div class="cont">
+                                <div class="line-wrap">
+                                    text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text
+                                </div>
+                                <div class="line-wrap">
+                                    text text
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">도면</div>
+                            <div class="cont">
+                                <div class="line-wrap">
+                                    <select>
+                                        <option value="6" selected="">부서</option>
+                                        <option value="7">부서2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">색상선택</div>
+                            <div class="cont">
+                                <div class="line-wrap">
+                                    <input type="text" id="picker" class="color" value="#1ca44c"/>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">색상선택</div>
+                            <div class="cont">
+                                <div class="line-wrap">
+                                    <input type="text" id="picker2" class="color" value="#1ca44c"/>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <script>
+                        /* $('.color-input').each( function( i, elem ) {
+                            var hueb = new Huebee( elem, {
+                                notation: 'hex'
+                            });
+                        }); */
+                        /* $('.btn-colpick').colpick(); */
+                        $('input.color').each(function(){
+                            var $item = $(this);
+                            $item.colpick({
+                                submit:0,
+                                onChange:function(hsb,hex,rgb) {
+                                    $item.val('#'+hex).css('border-color','#'+hex);
+                                }
+                            })
+                        });
+                        $('input.color').keyup(function(){
+                            $(this).colpickSetColor(this.value);
+                        });
+                        /* $('input.color').colpick({
+                            
+                            submit:0,
+                            onChange:function(hsb,hex,rgb) {
+                                $('#picker').val('#'+hex).css('border-color','#'+hex);
+                            }
+                        });
+                        $('#picker').keyup(function(){
+                            $(this).colpickSetColor(this.value);
+                        }); */
+                    </script>
+                </div>
+            </section>
+            <footer><button class="btn-cancel">취소</button><button class="btn-add">등록</button></footer>
+        </div>
+        
+    </main>
+</body>
+</html>

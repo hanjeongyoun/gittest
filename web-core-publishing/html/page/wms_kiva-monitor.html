@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>키바 모니터링</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<style>
+		.kiva-map{height:100%}
+		.function-area + .kiva-map{height:calc(100% - 70px)}
+		.kiva-map{position:relative;}
+		.kiva-map [class*="-zone"]{overflow:hidden;height:100%;}
+		.kiva-map [class*="-zone"] li{float:left;height:10%;padding:10px;font-size:12px;text-align:center;box-sizing:border-box}
+		.kiva-map [class*="-zone"] li > div{position:relative;width:100%;height:100%;border-radius:3px;background:#fff;box-sizing:border-box}
+		.kiva-map .work-zone{position:absolute;top:0;left:0;width:9.1%;}
+		.kiva-map .work-zone li{width:100%;}
+		.kiva-map .work-zone li > div{padding:3px;font-weight:700;font-size:16px;box-sizing:border-box;}
+		.kiva-map .work-zone li > div:before{content:'';display:inline-block;height:100%;vertical-align:middle}
+		.kiva-map .work-zone li.picking > div{background-color:#ffbd20;color:#000;}
+		.kiva-map .work-zone li.recevie > div{background-color:#219244;color:#fff;}
+		.kiva-map .map-zone{padding-left:calc(9.1% + 10px)}
+		.kiva-map .map-zone li{width:10%}
+		.map-zone > ul{height:100%}
+		.map-zone > ul > li > div{padding:3px 0}
+		.map-zone > ul > li > div > strong{display:block;padding:0 0 2px 5px;margin-bottom:3px;text-align:left;border-bottom:1px solid #717171}
+		.map-zone > ul > li > div > span{display:block;width:100%;line-height:20px;font-size:14px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+		.map-zone > ul > li.pod > div {background-color:#05a6aa;color:#fff}
+		.kiva-map [class*="-zone"] li.select > div:after {content:'';display:block;position:absolute;left:0;right:0;top:0;bottom:0;border:3px solid #ff6519 ;border-radius:3px}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="#">Material</a>
+				<ul>
+					<li><a href="">자재 유형 관리 1</a></li>
+					<li><a href="">자재 관리 1</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Machine</a>
+				<ul>
+					<li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+						<ul>
+							<li><a href="">자재 유형 관리 2-1</a></li>
+							<li><a href="">자재 유형 관리 2-2</a></li>
+							<li><a href="">자재 유형 관리 2-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="has-depth">자재 관리 2</a>
+						<ul>
+							<li><a href="">자재 관리 2-1</a></li>
+							<li><a href="" class="has-depth">자재 관리 2-2</a>
+								<ul>
+									<li><a href="">자재 관리 3-1</a></li>
+									<li><a href="">자재 관리 3-2</a></li>
+									<li><a href="">자재 관리 3-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">자재 관리 2-3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Men</a>
+				<ul>
+					<li><a href="">자재 유형 관리 3</a></li>
+					<li><a href="">자재 관리 3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Method</a>
+				<ul>
+					<li><a href="">자재 유형 관리 4</a></li>
+					<li><a href="">자재 관리 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<header>
+			<h2>키바 모니터링</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">창고1</option>
+							<option value="7">창고2</option>
+						</select>
+						<button class="btn-srch ico">조회</button>
+						<button class="btn-reset image">초기화</button>
+					</div>
+				</div>
+				<div class="kiva-map">
+					<ul class="work-zone">
+						<li class="recevie select"><div>입고</div></li>
+						<li class="recevie"><div>입고</div></li>
+						<li class="picking"><div>출고</div></li>
+						<li class="picking"><div>출고</div></li>
+						<li><div></div></li>
+						<li><div></div></li>
+						<li><div></div></li>
+						<li><div></div></li>
+						<li><div></div></li>
+						<li><div></div></li>
+					</ul>
+					<div class="map-zone">
+						<ul>
+							<li class="pod select"><div><strong>QR코드</strong><span>포드ID</span><span>AGV ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li class="pod"><div><strong>QR코드</strong><span>포드ID</span></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							<li><div><strong>QR코드</strong></div></li>
+							
+							<!-- <li>
+								<div><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div class="pod"><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div class="pod"><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div class="pod"><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div class="pod"><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div class="pod"><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div class="pod"><span><strong>QR코드</strong><strong>포드ID</strong><strong>AGV ID</strong></span></div>
+								<div class="receive"><span>입고</span></div>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+				
+				
+			</section>
+		</div>
+
+	</main>
+
+</body>
+</html>

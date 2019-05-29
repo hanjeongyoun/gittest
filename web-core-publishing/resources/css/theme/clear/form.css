@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* label{vertical-align:inherit;} */
+/*input */
+input[readonly="readonly"],input[readonly]{background-color:#e3e3e3}
+input[type="text"]:disabled{background-color:#e3e3e3}
+
+input[type="checkbox"] + .check-mark:before{border:1px solid #a2a2a2;}
+
+input[class*="validate"]:read-only{ background-color:#e3e3e3 !important;}
+input[class*="validate"]:disabled{ background-color:#e3e3e3 !important;}

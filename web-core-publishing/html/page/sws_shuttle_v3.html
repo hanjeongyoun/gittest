@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SFP 2.0 Page 기본 레이아웃</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>인력관리<span>PO에 배치되어 아이템 생산을 담당하는 모든 인력리스트 및 인력정보를 관리합니다.</span></h2>
+        </header>
+        <style>
+            .sws-shuttle-v2.fix-card h3{font-size:14px}
+            .sws-shuttle-v2 .shuttle-box .list-style{height:51px}
+            .sws-shuttle-v2.card-area .card-inner .card-cont{padding-right:0}
+            .sws-shuttle-v2 .shuttle-box .list-style li:first-child{margin-top:0}
+            .sws-shuttle-v2.fix-card > ul > li{margin-top:10px;height:50%}
+            .sws-shuttle-v2.card-area .card-wrap{height:100%;box-sizing:border-box}
+            .sws-shuttle-v2 .shuttle-box > img{display:block;width:auto;height:200px;margin:0 auto 10px}
+        </style>
+		<div class="contents-wrap no-footer">
+			<section>
+                <div class="function-area">
+                    <div class="align-left">
+                        <select>
+                            <option value="6" selected="">창고1</option>
+                            <option value="7">창고2</option>
+                        </select>
+                        <button class="btn-srch ico">조회</button>
+                        <button class="btn-reset image">초기화</button>
+                    </div>
+                    <div class="align-right">
+                        <button class="btn">버튼</button>
+                    </div>
+                </div>
+                <div class="card-area fix-card four-col sws-shuttle-v2">
+                    <ul class="card-wrap">
+                        <li  class="card-inner">
+                            <h3 class="card-title">셔틀ID</h3>
+                            <div class="battery-wrap">
+                                100%
+                                <div class="battery"><span class="value" style="width:100%"></span></div>
+                            </div>
+                            <div class="card-cont shuttle-box">
+                                <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                <div class="register-table small">
+                                    <ul>
+                                        <li class="vertical">
+                                            <div class="title">셔틀 상태</div>
+                                            <div class="title">층 정보</div>
+                                            <div class="title">리프트 탑승 상태</div>
+                                        </li>
+                                        <li class="vertical center">
+                                            <div class="cont">
+                                                <div class="line-wrap">
+                                                    <span>
+                                                        정지
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="cont">
+                                                <div class="line-wrap">
+                                                    <span>
+                                                        1F
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="cont">
+                                                <div class="line-wrap">
+                                                    <span>
+                                                        NO
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns blue">SKIP</button>
+                                    <button class="btns green">RETRY</button>
+                                    <button class="btns gray">CANCEL</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card-inner">
+                            <h3 class="card-title">셔틀ID</h3>
+                            <div class="battery-wrap">
+                                100%
+                                <div class="battery"><span class="value" style="width:100%"></span></div>
+                            </div>
+                            <div class="card-cont shuttle-box">
+                                <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                <div class="register-table small">
+                                    <ul>
+                                        <li class="vertical">
+                                            <div class="title">셔틀 상태</div>
+                                            <div class="title">층 정보</div>
+                                            <div class="title">리프트 탑승 상태</div>
+                                        </li>
+                                        <li class="vertical center">
+                                            <div class="cont">
+                                                <div class="line-wrap">
+                                                    <span>
+                                                        정지
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="cont">
+                                                <div class="line-wrap">
+                                                    <span>
+                                                        1F
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="cont">
+                                                <div class="line-wrap">
+                                                    <span>
+                                                        NO
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btns blue">SKIP</button>
+                                    <button class="btns green">RETRY</button>
+                                    <button class="btns gray">CANCEL</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card-inner">
+                                <h3 class="card-title">셔틀ID</h3>
+                                <div class="battery-wrap">
+                                    100%
+                                    <div class="battery"><span class="value" style="width:100%"></span></div>
+                                </div>
+                                <div class="card-cont shuttle-box">
+                                    <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                    <div class="register-table small">
+                                        <ul>
+                                            <li class="vertical">
+                                                <div class="title">셔틀 상태</div>
+                                                <div class="title">층 정보</div>
+                                                <div class="title">리프트 탑승 상태</div>
+                                            </li>
+                                            <li class="vertical center">
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span>
+                                                            정지
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span>
+                                                            1F
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span>
+                                                            NO
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <button class="btns blue">SKIP</button>
+                                        <button class="btns green">RETRY</button>
+                                        <button class="btns gray">CANCEL</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card-inner">
+                                    <h3 class="card-title">셔틀ID</h3>
+                                    <div class="battery-wrap">
+                                        100%
+                                        <div class="battery"><span class="value" style="width:100%"></span></div>
+                                    </div>
+                                    <div class="card-cont shuttle-box">
+                                        <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                        <div class="register-table small">
+                                            <ul>
+                                                <li class="vertical">
+                                                    <div class="title">셔틀 상태</div>
+                                                    <div class="title">층 정보</div>
+                                                    <div class="title">리프트 탑승 상태</div>
+                                                </li>
+                                                <li class="vertical center">
+                                                    <div class="cont">
+                                                        <div class="line-wrap">
+                                                            <span>
+                                                                정지
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont">
+                                                        <div class="line-wrap">
+                                                            <span>
+                                                                1F
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont">
+                                                        <div class="line-wrap">
+                                                            <span>
+                                                                NO
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btns blue">SKIP</button>
+                                            <button class="btns green">RETRY</button>
+                                            <button class="btns gray">CANCEL</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="card-inner">
+                                        <h3 class="card-title">셔틀ID</h3>
+                                        <div class="battery-wrap">
+                                            100%
+                                            <div class="battery"><span class="value" style="width:100%"></span></div>
+                                        </div>
+                                        <div class="card-cont shuttle-box">
+                                            <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                            <div class="register-table small">
+                                                <ul>
+                                                    <li class="vertical">
+                                                        <div class="title">셔틀 상태</div>
+                                                        <div class="title">층 정보</div>
+                                                        <div class="title">리프트 탑승 상태</div>
+                                                    </li>
+                                                    <li class="vertical center">
+                                                        <div class="cont">
+                                                            <div class="line-wrap">
+                                                                <span>
+                                                                    정지
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cont">
+                                                            <div class="line-wrap">
+                                                                <span>
+                                                                    1F
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cont">
+                                                            <div class="line-wrap">
+                                                                <span>
+                                                                    NO
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btns blue">SKIP</button>
+                                                <button class="btns green">RETRY</button>
+                                                <button class="btns gray">CANCEL</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="card-inner">
+                                            <h3 class="card-title">셔틀ID</h3>
+                                            <div class="battery-wrap">
+                                                100%
+                                                <div class="battery"><span class="value" style="width:100%"></span></div>
+                                            </div>
+                                            <div class="card-cont shuttle-box">
+                                                <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                                <div class="register-table small">
+                                                    <ul>
+                                                        <li class="vertical">
+                                                            <div class="title">셔틀 상태</div>
+                                                            <div class="title">층 정보</div>
+                                                            <div class="title">리프트 탑승 상태</div>
+                                                        </li>
+                                                        <li class="vertical center">
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span>
+                                                                        정지
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span>
+                                                                        1F
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span>
+                                                                        NO
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btn-wrap">
+                                                    <button class="btns blue">SKIP</button>
+                                                    <button class="btns green">RETRY</button>
+                                                    <button class="btns gray">CANCEL</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="card-inner">
+                                                <h3 class="card-title">셔틀ID</h3>
+                                                <div class="battery-wrap">
+                                                    100%
+                                                    <div class="battery"><span class="value" style="width:100%"></span></div>
+                                                </div>
+                                                <div class="card-cont shuttle-box">
+                                                    <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                                    <div class="register-table small">
+                                                        <ul>
+                                                            <li class="vertical">
+                                                                <div class="title">셔틀 상태</div>
+                                                                <div class="title">층 정보</div>
+                                                                <div class="title">리프트 탑승 상태</div>
+                                                            </li>
+                                                            <li class="vertical center">
+                                                                <div class="cont">
+                                                                    <div class="line-wrap">
+                                                                        <span>
+                                                                            정지
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont">
+                                                                    <div class="line-wrap">
+                                                                        <span>
+                                                                            1F
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cont">
+                                                                    <div class="line-wrap">
+                                                                        <span>
+                                                                            NO
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-wrap">
+                                                        <button class="btns blue">SKIP</button>
+                                                        <button class="btns green">RETRY</button>
+                                                        <button class="btns gray">CANCEL</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="card-inner">
+                                                    <h3 class="card-title">셔틀ID</h3>
+                                                    <div class="battery-wrap">
+                                                        100%
+                                                        <div class="battery"><span class="value" style="width:100%"></span></div>
+                                                    </div>
+                                                    <div class="card-cont shuttle-box">
+                                                        <img src="./../../resources/images/machine/img_shuttle.jpg" alt="">
+                                                        <div class="register-table small">
+                                                            <ul>
+                                                                <li class="vertical">
+                                                                    <div class="title">셔틀 상태</div>
+                                                                    <div class="title">층 정보</div>
+                                                                    <div class="title">리프트 탑승 상태</div>
+                                                                </li>
+                                                                <li class="vertical center">
+                                                                    <div class="cont">
+                                                                        <div class="line-wrap">
+                                                                            <span>
+                                                                                정지
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cont">
+                                                                        <div class="line-wrap">
+                                                                            <span>
+                                                                                1F
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cont">
+                                                                        <div class="line-wrap">
+                                                                            <span>
+                                                                                NO
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="btn-wrap">
+                                                            <button class="btns blue">SKIP</button>
+                                                            <button class="btns green">RETRY</button>
+                                                            <button class="btns gray">CANCEL</button>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                    </ul>
+                </div>
+			</section>
+		</div>
+		
+	</main>
+</body>
+</html>

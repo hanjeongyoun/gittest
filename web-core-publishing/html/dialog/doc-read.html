@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>문서열람</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>문서열람</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+            	<div class="function-area">
+            		<div class="align-right">
+            			<select>
+            				<option>문서유형</option>
+            				<option>제품도면</option>
+            			</select>
+            			<input type="text" class="select" value="사출기" style="width:150px" />
+            			<input type="text" class="select" value="제품" style="width:150px" />
+            			<input type="text" placeholder="문서" style="width:150px" />
+						<button class="btn-srch ico black">검색</button>
+            		</div>
+            	</div>
+                <div id="grid" class="border-style">
+                    <div class="sfp-grid-panel">
+                        <div class="sfp-grid-header-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+									<col style="width:20%">
+									<col style="width:20%">
+									<col style="width:20%">
+									<col>
+									<col style="width:10%">
+								</colgroup>
+                                <thead>
+                                    <tr>
+										<th>문서유형</th>
+										<th>사출기</th>
+										<th>제품</th>
+										<th>문서</th>
+										<th>작업</th>
+									</tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel" style="height:550px">
+                            <table class="sfp-grid">
+                                <colgroup>
+									<col style="width:20%">
+									<col style="width:20%">
+									<col style="width:20%">
+									<col>
+									<col style="width:10%">
+								</colgroup>
+                                <thead style="display: none;">
+                                    <tr>
+										<th>문서유형</th>
+										<th>사출기</th>
+										<th>제품</th>
+										<th>문서</th>
+										<th>작업</th>
+									</tr>
+                                </thead>
+                                <tbody>
+                                    <tr>	
+                                    	<td>제품도면</td>	
+                                    	<td>머신4</td>	
+                                    	<td>GIGA1</td>	
+                                    	<td>hana2</td>	
+                                    	<td><button type="button" class="btn">다운</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            	<div class="footer-wrap">
+					<div class="footer-title">Total <strong>35</strong></div>
+					<div class="paging-wrap">
+						<a href="#" class="first">처음</a>
+						<a href="#" class="prev">이전</a>
+						<a href="#" class="on">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#" class="next">다음</a>
+						<a href="#" class="last">끝</a>
+					</div>
+				</div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

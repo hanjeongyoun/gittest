@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>WES Pop 입고</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/wes/pop.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../resources/js/imc/imc-utils.js"></script>
+	<script>
+		$( function() {
+			var col = 3;
+			var row = 4;
+
+			var _width = 100/col;
+			var _height = 100/row;
+
+			var _html = [];
+			for (var i = 0; i < (col*row); i++){
+				_html.push('<a href="#" class="cell" style="width:'+_width+'%;height:'+_height+'%;"></a>');
+			}
+			
+			$("#blocks").html(_html);
+			
+		});
+	</script>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>입고</h2>
+			<div class="user-info">
+				<span>W.S 번호: Station01</span>
+				<span>작업자: 홍길동</span>
+				<span>작업상태 : 작업중</span>
+			</div>
+		</header>
+		<section class="footer-have">
+			<div class="item-wrap container-info">
+				<div class="item-inner no-after">
+					<h3>입고 위치</h3>
+					<div class="item-cont">
+						<ul class="id-info">
+							<li><strong class="title">컨테이너 ID</strong><span class="cont">C_0001</span></li>
+							<li><strong class="title">면 ID</strong><span class="cont">E_0001</span></li>
+						</ul>
+						<div class="container-area">
+							<div class="container-item-wrap" id="blocks">
+								
+							</div>
+							<button class="btn-pop blue full">컨테이너 입고 목록</button>
+						</div>
+						<div class="area-info">
+							<div class="cell-value">A001</div>
+							<button class="btn-pop orange">만재</button>
+						</div>
+					</div>
+				</div>
+            </div>
+			<div class="col">
+				<div class="item-wrap row item-detail-info no-flex">
+					<div class="item-inner">
+						<h3>입고 물품</h3>
+						<div class="item-cont row multi-col-wrap">
+							<div class="item-img">
+								<img src="./../../resources/images/temp/temp_item02.jpg" alt="" />
+								<span class="item-validation" data-validation="error">error</span>
+							</div>
+							<div>
+								<dl class="item-names">
+									<dt>제품명</dt>
+									<dd>곰돌이 푸. 행복한 일은 매일 있어</dd>
+									<dt>제품코드</dt>
+									<dd>c20181218</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item-wrap col">
+						<div class="item-inner">
+							<h3>입고 가능한 수량</h3>
+							<div class="item-cont store-value">
+								<span>3</span>
+							</div>
+						</div>
+					</div>
+					<div class="item-wrap col">
+						<div class="item-inner no-after">
+							<h3>입고 수량</h3>
+							<div class="item-cont store-value highlight">
+								<input type="number" value="3" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row no-flex store-button">
+					<button class="btn-pop green">입고 완료</button>
+				</div>
+			</div>
+		</section>
+		<footer class="state-info-wrap">
+			<div class="state-info">작업 진척율 <span class="value"><strong>10%</strong>(<strong>100</strong>/1000)</span></div>
+			<button class="btn sky">배치 목록</button>
+			<button class="btn orange">작업 종료</button>
+		</footer>
+	</main>
+</body>
+</html>

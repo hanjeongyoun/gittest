@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>공급, 수요 밸런스</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../resources/js/imc/imc-utils.js"></script>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="#">Material</a>
+				<ul>
+					<li><a href="">자재 유형 관리 1</a></li>
+					<li><a href="">자재 관리 1</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Machine</a>
+				<ul>
+					<li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+						<ul>
+							<li><a href="">자재 유형 관리 2-1</a></li>
+							<li><a href="">자재 유형 관리 2-2</a></li>
+							<li><a href="">자재 유형 관리 2-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="has-depth">자재 관리 2</a>
+						<ul>
+							<li><a href="">자재 관리 2-1</a></li>
+							<li><a href="" class="has-depth">자재 관리 2-2</a>
+								<ul>
+									<li><a href="">자재 관리 3-1</a></li>
+									<li><a href="">자재 관리 3-2</a></li>
+									<li><a href="">자재 관리 3-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">자재 관리 2-3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Men</a>
+				<ul>
+					<li><a href="">자재 유형 관리 3</a></li>
+					<li><a href="">자재 관리 3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Method</a>
+				<ul>
+					<li><a href="">자재 유형 관리 4</a></li>
+					<li><a href="">자재 관리 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main class="sws-store">
+		<header>
+			<h2>공급·수요 밸런스</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="card-area same-size type4">
+					<div class="row">
+						<div class="card-wrap col">
+							<div class="card-inner">
+								<h3 class="card-title">Supply-Demand Balance</h3>
+								<!-- <ul class="title-area-data">
+									<li></li>
+								</ul> -->
+								<div class="card-cont">
+									<ul class="summary-sec tp2">
+										<li>
+											<div class="summary-item-wrap">
+												<strong>재고 수량</strong>
+												<div class="value"><strong>982</strong>ea</div>
+												<span class="compare">이전일 대비 <em class="point">+ 9.8%</em></span>
+											</div>
+										</li>
+										<li class="bar-item">
+											<div class="summary-item-wrap enter">
+												<strong>출고 비율</strong>
+												<div class="value"><strong>72.2</strong>%</div>
+												<span class="compare">이전일 대비 <em class="point">+ 9.8%</em></span>
+											</div>
+											<div class="summary-item-wrap stick-bar">
+												<div class="bar-text">
+													<span class="left"><strong><em>91</em>/120</strong>  품목 / Order 10 건 </span>
+													<span class="right"><strong><em>8</em>/30</strong>  품목 / 납품 4건 </span>
+												</div>
+												<div class="progress-bar both-side" data-value="20">
+													<span style="width:72.2%" class="left"></span>
+													<span style="width:27.2%" class="right"></span>
+												</div>
+											</div>
+											<div class="summary-item-wrap release">
+												<strong>입고 비율</strong>
+												<div class="value"><strong>27.2</strong>%</div>
+												<span class="compare">이전일 대비 <em class="point">+ 5.4%</em></span>
+											</div>
+										</li>
+									</ul>
+									<div class="data-area"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+	</main>
+
+</body>
+</html>

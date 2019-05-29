@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SFP 2.0 Page 기본 레이아웃</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<style>
+		.map-ver{height:100%}
+		.function-area + .map-ver{height:calc(100% - 70px)}
+		.kiva-map{position:relative;}
+
+        .map-ver .sfp-grid-panel{position:relative;padding-bottom:36px;box-sizing:border-box}
+        .map-ver .sfp-grid-panel .sfp-grid-header-panel{position:absolute;left:0;right:0;bottom:0;height:36px}
+        .map-ver .sfp-grid thead th{border:1px solid #e7e7e7;border-top:0}
+        .map-ver .sfp-grid thead th:first-child{width:60px;background:#d7d7d7;border:0}
+        .map-ver .sfp-grid tbody td{height:30px;padding:0;border:1px solid #e7e7e7}
+        .map-ver .sfp-grid tbody td span{display:none;width:80%;line-height:20px;font-size:14px;color:#000;background:skyblue}
+        .map-ver .sfp-grid tbody td.POD span{display:inline-block;}
+        /* .map-ver .sfp-grid tbody tr:first-child td:first-child{border-top:0} */
+        .map-ver .sfp-grid tbody td:first-child{width:60px;color:#fff;background:#4b4e51}
+        .map-ver .sfp-grid tbody td.BLOCK{position:relative;background-color:#9a9a9a !important}
+		.map-ver .sfp-grid tbody td.BLOCK:after,.map-ver .sfp-grid tbody td.BLOCK:before{content:'';display:block;position:absolute;left:50%;top:50%;width:95%;height:2px;margin:-1px 0 0 -47%;background-color:#c3c3c3}
+		.map-ver .sfp-grid tbody td.BLOCK:after{transform:rotate(-40deg)}
+		.map-ver .sfp-grid tbody td.BLOCK:before{transform:rotate(40deg)}
+        .map-ver .sfp-grid tbody td.ROAD{background-color:#d3bf8f !important}
+        .map-ver .sfp-grid tbody td.BUFFER{background-color:#009a9a !important}
+        .map-ver .sfp-grid tbody td.STORAGE{background-color:#3f7cb6 !important}
+        .map-ver .sfp-grid tbody td.ROTATION_SPACE{background-color:#e86a17 !important}
+        .map-ver .sfp-grid tbody td.IN_PLACE{background-color:#219244 !important}
+        .map-ver .sfp-grid tbody td.OUT_PLACE{background-color:#ffbd20 !important}
+        .map-ver .sfp-grid tbody tr:last-child td:first-child{border-bottom:1px solid #e7e7e7}
+
+        .map-ver .sfp-grid tbody tr:hover td:first-child{background:#4b4e51}
+        .map-ver .sfp-grid tbody tr:hover td{background-color:#fff;color:#fff}
+        
+
+		.function-area .status{border-radius:0;margin-right:3px;background:#fff}
+		.function-area .status.BLOCK{position:relative;background-color:#9a9a9a}
+		.function-area .status.BLOCK:after,.function-area .status.BLOCK:before{content:'';display:block;position:absolute;left:50%;top:50%;width:90%;height:2px;margin:-1px 0 0 -42%;background-color:#c3c3c3}
+		.function-area .status.BLOCK:after{transform:rotate(-40deg)}
+		.function-area .status.BLOCK:before{transform:rotate(40deg)}
+		.function-area .status.ROAD{background-color:#d3bf8f}
+		.function-area .status.BUFFER{background-color:#009a9a}
+		.function-area .status.STORAGE{background-color:#3f7cb6}
+		.function-area .status.ROTATION_SPACE{background-color:#e86a17}
+		.function-area .status.IN_PLACE{background-color:#219244}
+		.function-area .status.OUT_PLACE{background-color:#ffbd20}
+		.function-area .status.pod,.function-area .status.agv{background-color:#f769b2}
+		.function-area .align-right > span + span{margin-left:10px}
+
+		.containerId, .deviceId {cursor: pointer;}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+				<li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+					<div class="bookmark-list">
+						<ul>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+						</ul>
+						<!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+					</div>
+				</li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>키바 모니터링</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+                    <div class="align-left">
+                        <select>
+                            <option value="6" selected="">창고1</option>
+                            <option value="7">창고2</option>
+                        </select>
+                        <button class="btn-srch ico">조회</button>
+                        <button class="btn-reset image">초기화</button>
+                    </div>
+					<div class="align-right">
+                        <span><span class="status pod"></span>포드위치</span>
+                        <span><span class="status IN_PLACE"></span>입고장</span>
+                        <span><span class="status OUT_PLACE"></span>출고장</span>
+                        <span><span class="status BUFFER"></span>버퍼공간</span>
+                        <span><span class="status STORAGE"></span>저장소</span>
+                        <span><span class="status ROTATION_SPACE"></span>회전구간</span>
+                        <span><span class="status ROAD"></span>길</span>
+                        <span><span class="status BLOCK"></span>기둥</span>
+                        <span><span class="status"></span>공간</span>
+                    </div>
+				</div>
+				<div id="grid" class="map-ver">
+					<div class="sfp-grid-panel">
+                        <div class="sfp-grid-header-panel" >
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>0</th>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                        <th>5</th>
+                                        <th>6</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel" style="height:631px">
+							<table class="sfp-grid">
+								<colgroup>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+								</colgroup>
+								<thead style="display: none;">
+									<tr>
+										<th> </th>
+										<th>0</th>
+										<th>1</th>
+										<th>2</th>
+										<th>3</th>
+										<th>4</th>
+										<th>5</th>
+										<th>6</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>20</td>
+										<td class="EMPTY_SPACE"></td>
+										<td class="BLOCK"></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>19</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>18</td>
+										<td></td>
+										<td class="BUFFER"></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>17</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>16</td>
+										<td></td>
+										<td class="ROAD"></td>
+										<td class="BUFFER"></td>
+										<td class="STORAGE"></td>
+										<td class="ROTATION_SPACE"></td>
+										<td class="IN_PLACE POD"><span>포드ID</span></td>
+										<td class="OUT_PLACE"></td>
+									</tr>
+									<tr>
+										<td>15</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>14</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>13</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+									
+								</tbody>
+								<tfoot style="display: none;"></tfoot>
+							</table>
+						</div>
+						<!-- <div class="sfp-grid-footer-panel">
+							<table class="sfp-grid">
+								<colgroup>
+									<col style="width:34px">
+									<col>
+									<col style="width:200px">
+									<col>
+									<col style="width:100px">
+									<col style="width:100px">
+									<col style="width:100px">
+									<col style="width:100px">
+								</colgroup>
+								<tfoot>
+									<tr>
+										<td colspan="5">합계</td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tfoot>
+							</table>
+                        </div> -->
+                        
+					</div>
+				</div>
+			</section>
+		</div>
+		
+	</main>
+</body>
+</html>

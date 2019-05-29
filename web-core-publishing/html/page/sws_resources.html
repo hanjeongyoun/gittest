@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>자원 효율 | SWS </title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>자원 효율</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section class="visual-sec">
+				<div class="visual">
+					<ul class="visual-select">
+						<li>
+							<label><input type="checkbox"><span class="check-mark">CAPA</span></label>
+							<label><input type="checkbox" checked=""><span class="check-mark">SHUTTLE</span></label>
+							<label><input type="checkbox" checked=""><span class="check-mark">COST</span></label>
+						</li>
+						<li>
+							<span><em class="status"></em>0~30</span>
+							<span><em class="status blue"></em>30~50</span>
+							<span><em class="status yellow"></em>50~80</span>
+							<span><em class="status red"></em>80~100</span>
+							<div class="group">
+								<span><em class="status machine-stop"></em>대기 STOP</span>
+								<span><em class="status machine-off"></em>전원 OFF</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="visual-info-sec type2">
+					<ul>
+						<li>
+							<div class="title">Capacity</div>
+							<div class="cont">
+								<div class="left graph-area">graph</div>
+								<div class="right">
+									<ul class="list-style type2">
+										<li><span class="left">현재 보관 수량</span><span class="right">789</span></li>
+										<li><span class="left">보관 가능 수량</span><span class="right">900</span></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">Cost per Order</div>
+							<div class="cont">
+								<div class="left graph-area">graph</div>
+								<div class="right">
+									<ul class="list-style type2">
+										<li><span class="left">현재 보관 수량</span><span class="right">789</span></li>
+										<li><span class="left">보관 가능 수량</span><span class="right">900</span></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+        </div>
+        <!-- fold-button 에 'close' class 넣으면 aside-tagon div는 display:none 됩니다. -->
+        <button class="fold-button"></button>
+		<div class="contents-wrap no-footer aside-tagon">
+			<div class="tagon-header">
+				<div class="graph-text">
+					<span>전체 이송장비 가동률(%)</span>
+					<strong>매우높음</strong>
+				</div>
+				<div class="graph-gauge right">
+					<div class="gauge animate">
+						<dl>
+							<dt><span>30</span><span>50</span><span>80</span></dt>
+							<dd class="bg"></dd>
+							<dd class="needle" style="transform: rotate(180deg);"></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="tagon-list">
+				<ul>
+					<li class="active">
+						<h3>
+							<span class="tagon-name">TAGON No.1</span> 
+							<span class="battery-wrap">
+								30%
+								<span class="battery red"><em class="value" style="width:30%"></em></span>
+                            </span>
+						</h3>
+						<div class="tagon-info">
+							<div class="info-inner yellow">
+								<span><img src="./../../resources/images/machine/img_shuttle_mini.png" alt="" /></span>
+								<span>OEE<strong class="value">89.5%</strong></span>
+								<span><button class="btns small">상세</button></span>
+							</div>
+							<div class="graph-wrap">
+								<div class="progress-bar multi square">
+									<span class="auto" style="width:25%"></span>
+									<span class="setup" style="width:25%"></span>
+									<span class="idle" style="width:25%"></span>
+									<span class="alarm" style="width:25%"></span>
+								</div>
+							</div>
+						</div>
+						<div class="tagon-info-bottom">
+							<span>FA5-5</span>
+							<span class="stack">INOLES SEAL</span>
+						</div>
+					</li> 
+					<li>
+						<h3>
+							<span class="tagon-name stop">TAGON No.1</span> 
+							<span class="battery-wrap">
+								90%
+								<span class="battery"><em class="value" style="width:90%"></em></span>
+							</span>
+						</h3>
+						<div class="tagon-info">
+							<div class="info-inner yellow">
+								<span><img src="./../../resources/images/machine/img_shuttle_mini.png" alt="" /></span>
+								<span>OEE<strong class="value">89.5%</strong></span>
+								<span><button class="btns small">상세</button></span>
+							</div>
+							<div class="graph-wrap">
+								<div class="progress-bar multi square">
+									<span class="auto" style="width:25%"></span>
+									<span class="setup" style="width:25%"></span>
+									<span class="idle" style="width:25%"></span>
+									<span class="alarm" style="width:25%"></span>
+								</div>
+							</div>
+						</div>
+						<div class="tagon-info-bottom">
+							<span>FA5-5</span>
+							<span class="stack">INOLES SEAL</span>
+						</div>
+					</li> 
+					<li>
+						<h3>
+							<span class="tagon-name off">TAGON No.1</span> 
+							<span class="battery-wrap">
+								30%
+								<span class="battery red"><em class="value" style="width:30%"></em></span>
+							</span>
+						</h3>
+						<div class="tagon-info">
+							<div class="info-inner yellow">
+								<span><img src="./../../resources/images/machine/img_shuttle_mini.png" alt="" /></span>
+								<span>OEE<strong class="value">89.5%</strong></span>
+								<span><button class="btns small">상세</button></span>
+							</div>
+							<div class="graph-wrap">
+								<div class="progress-bar multi square">
+									<span class="auto" style="width:25%"></span>
+									<span class="setup" style="width:25%"></span>
+									<span class="idle" style="width:25%"></span>
+									<span class="alarm" style="width:25%"></span>
+								</div>
+							</div>
+						</div>
+						<div class="tagon-info-bottom">
+							<span>FA5-5</span>
+							<span class="stack">INOLES SEAL</span>
+						</div>
+					</li> 
+				</ul>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

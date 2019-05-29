@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반입지시 생성</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/page.css">
+    <link rel="stylesheet" href="../../resources/css/left_gnb.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+        <div class="util-menu">
+            <ul>
+                <li><time>2018-05-09 20:12:10</time></li>
+                <li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+                <li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+                <li><a href="#" class="user"><span>사용자 정보</span></a></li>
+                <li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+                <li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+                    <div class="bookmark-list">
+                        <ul>
+                            <li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+                            <li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+                        </ul>
+                        <!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+                    </div>
+                </li>
+                <li><a href="#" class="logout"><span>로그아웃</span></a></li>
+                <li>
+                    <a href="#" class="app-menu"><span>메뉴</span></a>
+                    <div class="app-menu-list">
+                        <ul>
+                            <li><a href="#" class="mdm">MDM</a></li>
+                            <li><a href="#" class="mes">MES</a></li>
+                            <li><a href="#" class="wms">WMS</a></li>
+                            <li><a href="#" class="vmi">VMI</a></li>
+                            <li><a href="#" class="lms">LMS</a></li>
+                            <li><a href="#" class="oee">OEE</a></li>
+                            <li><a href="#" class="bom">BOM</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="system">시스템</a></li>
+                            <li><a href="#" class="option">설정</a></li>
+                        </ul>
+                    </div>
+                    <div class="dimmed"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" disabled>Material</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 1</a></li>
+                    <li><a href="">자재 관리 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Machine</a>
+                <ul>
+                    <li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 유형 관리 2-1</a></li>
+                            <li><a href="">자재 유형 관리 2-2</a></li>
+                            <li><a href="">자재 유형 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="has-depth">자재 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 관리 2-1</a></li>
+                            <li><a href="" class="has-depth">자재 관리 2-2</a>
+                                <ul>
+                                    <li><a href="">자재 관리 3-1</a></li>
+                                    <li><a href="">자재 관리 3-2</a></li>
+                                    <li><a href="">자재 관리 3-3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">자재 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Men</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 3</a></li>
+                    <li><a href="">자재 관리 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Method</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 4</a></li>
+                    <li><a href="">자재 관리 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>반입지시 생성<span>반입지시를 생성합니다.</span></h2>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+                <div class="function-area">
+                    <div class="align-left">
+                        <input type="text" placeholder="배치번호"/>
+                        <input type="text" placeholder="지시번호"/>
+                        <input type="text" placeholder="LOT번호"/>
+                        <input type="text" placeholder="품목 ID"/>
+                        <button class="btn-srch ico">조회</button>
+                        <button class="btn-reset image">초기화</button>
+                    </div>
+                </div>
+                <div class="multi-cont">
+                    <div style="width:50%">
+                        <h3 class="grid-title">출고배치</h3>
+                        <div id="grid">
+                            <div class="sfp-grid-panel">
+                                <div class="sfp-grid-header-panel" >
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:34px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                                <th>자재내역</th>
+                                                <th>저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="sfp-grid-body-panel" style="height:225px">
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:34px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead style="display: none;">
+                                            <tr>
+                                                <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                                <th>자재내역</th>
+                                                <th>저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                                <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>E</td>
+                                                <td>MFER</td>
+                                                <td>C</td>
+                                                <td>수정</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot style="display: none;"></tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="grid-title mgt20">출고지시</h3>
+                        <div id="grid">
+                            <div class="sfp-grid-panel">
+                                <div class="sfp-grid-header-panel" >
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:34px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                                <th>자재내역</th>
+                                                <th>저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="sfp-grid-body-panel" style="height:225px">
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:34px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead style="display: none;">
+                                            <tr>
+                                                <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                                <th>자재내역</th>
+                                                <th>저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                                <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>E</td>
+                                                <td>MFER</td>
+                                                <td>C</td>
+                                                <td>수정</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot style="display: none;"></tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width:50%">
+                        <h3 class="grid-title">출고 품목</h3>
+                        <div id="grid">
+                            <div class="sfp-grid-panel">
+                                <div class="sfp-grid-header-panel" >
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:34px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                                <th>자재내역</th>
+                                                <th>저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="sfp-grid-body-panel" style="height:535px">
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:34px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead style="display: none;">
+                                            <tr>
+                                                <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                                <th>자재내역</th>
+                                                <th>저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                                <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>E</td>
+                                                <td>MFER</td>
+                                                <td>C</td>
+                                                <td>수정</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                        <tfoot style="display: none;"></tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="function-area">
+                    <div class="align-left">
+                        <h3 class="grid-title">반입지시</h3>
+                    </div>
+                    <div class="align-right">
+                        <button class="btn small">반입지시 생성</button>
+                    </div>
+                </div>
+                <div id="grid">
+                    <div class="sfp-grid-panel">
+                        <div class="sfp-grid-header-panel" >
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:34px">
+                                    <col>
+                                    <col style="width:200px">
+                                    <col>
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                        <th>자재내역</th>
+                                        <th>저장빈</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>자재유형</th>
+                                        <th>처리유형</th>
+                                        <th>작업</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel" style="height:185px">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:34px">
+                                    <col>
+                                    <col style="width:200px">
+                                    <col>
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                </colgroup>
+                                <thead style="display: none;">
+                                    <tr>
+                                        <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                        <th>자재내역</th>
+                                        <th>저장빈</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>자재유형</th>
+                                        <th>처리유형</th>
+                                        <th>작업</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot style="display: none;"></tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>

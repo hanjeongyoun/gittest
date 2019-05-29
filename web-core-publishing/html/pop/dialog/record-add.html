@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>실적등록</title>
+	<link rel="stylesheet" href="../../../resources/css/common.css">
+	<link rel="stylesheet" href="../../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../../resources/css/button.css">
+	<link rel="stylesheet" href="../../../resources/css/form.css">
+	<link rel="stylesheet" href="../../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../../resources/css/dialog.css">
+	<link rel="stylesheet" href="../../../resources/css/dialog_pop.css">
+	<script src="../../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../../resources/js/imc/imc-utils.js"></script>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>실적등록</h2>
+			<a href="#" class="close-btn">닫기</a>
+		</header>
+		<div class="contents-wrap">
+			<section>
+				<div class="card-area direction-row">
+					<div class="col" style="width:60%">
+						<div class="card-wrap no-title row no-flex">
+							<div class="card-inner">
+								<div class="card-cont">
+									<div class="register-table simple-list title-left">
+										<ul>
+											<li class="vertical">
+												<div class="title">작업장</div>
+												<div class="title">작업지시 번호</div>
+											</li>
+											<li class="vertical">
+												<div class="cont">
+													<input type="text" />
+												</div>
+												<div class="cont">
+													<input type="text" />
+												</div>
+											</li>
+											<li class="vertical">
+												<div class="title">제품</div>
+											</li>
+											<li class="vertical">
+												<div class="cont">
+													<input type="text" />
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-wrap no-title row">
+							<div class="card-inner">
+								<div class="function-area">
+									<div class="align-left dir-col">
+										<label>
+											<span class="label-text">실적일자</span>
+											<input type="text" class="calendar border">
+										</label>
+									</div>
+									<div class="align-right dir-col">
+										<span class="single-wrap">
+											<button class="btn-add ico">불량유형 선택</button>
+										</span>	
+										
+									</div>
+								</div>
+								<div class="grid">
+									<div class="sfp-grid border-style">
+										<table style="width:100%">
+											<colgroup>
+												<col style="width:150px">
+												<col>
+												<col style="width:200px">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>불량코드</th>
+													<th>불량유형</th>
+													<th>불량수량</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>1</td>
+													<td><input type="text" /></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col no-flex" style="width:40%">
+						<div class="card-wrap no-title row no-flex">
+							<div class="card-inner">
+								<div class="card-cont">
+									<div class="register-table simple-list title-left">
+										<ul>
+											<li class="vertical">
+												<div class="title">생산실적</div>
+											</li>
+											<li class="vertical">
+												<div class="cont">
+													<input type="text" />
+												</div>
+											</li>
+											<li class="vertical">
+												<div class="title">양품실적</div>
+												<div class="title">불량실적</div>
+											</li>
+											<li class="vertical">
+												<div class="cont">
+													<input type="text" />
+												</div>
+												<div class="cont">
+													<input type="text" />
+												</div>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-wrap no-title row">
+							<div class="card-inner">
+								<div class="card-cont key-wrap">
+									<div class="number-key">
+										<span><button>1</button></span>
+										<span><button>2<span>ABC</span></button></span>
+										<span><button>3<span>DEF</span></button></span>
+										<span><button>4<span>GHI</span></button></span>
+										<span><button>5<span>JKL</span></button></span>
+										<span><button>6<span>MNO</span></button></span>
+										<span><button>7<span>PQRS</span></button></span>
+										<span><button>8<span>TUV</span></button></span>
+										<span><button>9<span>WXYZ</span></button></span>
+										<span><button class="remove">DEL</button></span>
+										<span><button>0</button></span>
+										<span><button class="reset">초기화</button></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<footer>
+				<div class="align-right">
+					<button class="btn-cancel">닫기</button>
+					<button class="btn olive">저장</button>
+				</div>
+			</footer>
+		</div>
+		
+	</main>
+</body>
+</html>

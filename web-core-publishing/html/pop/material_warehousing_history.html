@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자재 입고 내역</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/mes_pop.css">
+    <script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../resources/js/bower/moment/moment.min.js"></script>
+<script src="../../resources/js/bower/moment/moment-with-locales.min.js"></script>
+<script src="../../resources/js/imc/imc-utils.js"></script>
+<script src="../../resources/js/imc/imc-ajax.js"></script>
+<script src="../../resources/js/imc/imc-dialog.js"></script>
+<script src="../../resources/js/imc/imc-ui-grid.js"></script>
+<script src="../../resources/js/imc/imc-ui-box.js"></script>
+<script src="../../resources/js/imc/imc-ui-pager.js"></script>
+<script src="../../resources/js/imc/imc-datepicker.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 class="txt-logo"><a href="#">MES</a></h1>
+            <h2>자재 입고 내역</h2>
+        </header>
+        <section>
+            <div class="col">
+                <div class="row no-flex">
+                    <div class="function-area col pdt15">
+                        <div class="align-right">
+                            <button class="btn">자재 입고처리</button>
+                            <button class="btn blue">자재 입고내역</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-flex">
+                    <div class="item-wrap col">
+                        <div class="function-area">
+                            <div class="align-left dir-col">
+                                <label>
+                                    <span class="label-text">입고일자</span>
+                                    <input type="text" class="calendar"/>
+                                    <button class="btn">달력</button>
+                                </label>
+                                <label class="single-wrap">
+                                    <input type="text" class="calendar"/>
+                                    <button class="btn">달력</button>
+                                </label>
+                                <label class="big">
+                                    <span class="label-text">자재코드</span>
+                                    <input type="text"/>
+                                    <button class="btn blue">찾기</button>
+                                </label>
+                                <label class="big">
+                                    <span class="label-text">납품처</span>
+                                    <input type="text"/>
+                                    <button class="btn blue">찾기</button>
+                                </label>
+                                <label>
+                                    <span class="label-text">납품번호</span>
+                                    <input type="text"/>
+                                </label>
+                                <span class="single-wrap">
+                                    <button class="btn">검색</button>
+                                </span>
+                                <span class="single-wrap">
+                                    <label><input type="radio"><span class="radio-mark">원자재</span></label>
+                                    <label><input type="radio"><span class="radio-mark">부자재</span></label>
+                                </span>
+                                
+                            </div>
+                            <div class="align-right dir-col">
+                                <span class="single-wrap">
+                                    <button class="btn wide gray">검색</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item-wrap col">
+                        <div class="grid">
+                            <div class="sfp-grid-panel">
+                                <div class="sfp-grid-header-panel">
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:50px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th><label><input type="checkbox"><span class="check-mark"></span></label></th>
+                                                <th class="order">자재내역</th>
+                                                <th class="order reverse">저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="sfp-grid-body-panel" style="height: 600px">
+                                    <table class="sfp-grid">
+                                        <colgroup>
+                                            <col style="width:50px">
+                                            <col>
+                                            <col style="width:200px">
+                                            <col>
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead style="display: none;">
+                                            <tr>
+                                                <th><label><input type="checkbox"><span class="check-mark"></span></label></th>
+                                                <th>자재내역</th>
+                                                <th>저장빈</th>
+                                                <th>설명</th>
+                                                <th>조달유형</th>
+                                                <th>자재유형</th>
+                                                <th>처리유형</th>
+                                                <th>작업</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                                <td>
+                                                    <select style="width:80px;">
+                                                        <option>셀렉트01</option>
+                                                    </select>
+                                                    <select style="width:80px;">
+                                                        <option>셀렉트02</option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                                <td>E</td>
+                                                <td>MFER</td>
+                                                <td>C</td>
+                                                <td><button class="select-line">선택</button></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot style="display: none;"></tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-flex">
+                    <div class="col">
+                        <div class="function-area pdl15">
+                            <div class="align-right">
+                                <button class="btn-pop blue wide">바코트 라벨 출력</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <span class="logo">studio3s</span>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

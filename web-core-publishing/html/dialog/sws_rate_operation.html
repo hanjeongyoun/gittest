@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>이송장비별 가동률</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/dialog.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>이송장비별 가동률</h2>
+			<a href="#" class="close-btn">닫기</a>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section class="rate-operation">
+				<div class="tagon-info">
+					<ul class="info-list">
+						<li class="info-item tagon-profile">
+							<figure class="empty">
+								<img src="./../../resources/images/machine/img_tagon_full.png" alt=""/>
+							</figure>
+							<span class="tagon-name off"><strong>TAGON No.1</strong>이동</span>
+						</li>
+						<li class="info-item">
+							<ul class="operation-rate">
+								<li class="big red"><span class="title">가동률 : <em>매우높음</em></span><span class="cont"><em>89.5</em>%</span></li>
+								<li><span class="title">총 이동 횟수</span><span class="cont"><em>154</em>회</span></li>
+								<li><span class="title">총 운반 수량</span><span class="cont"><em>5,500</em>ea</span></li>
+								<li><span class="title">평균 운반 수량</span><span class="cont"><em>450</em>ea</span></li>
+							</ul>
+						</li>
+						<li class="info-item">
+							<ul class="tagon-now">
+								<li>
+									<div class="left"><span class="title">현재 이동 경로</span> </div>
+									<div class="right">
+										<span class="from"><strong>FA5-5</strong>투입</span>
+										<span class="to"><strong>FA5-6</strong>적재</span>
+									</div>
+								</li>
+								<li>
+									<div class="left"><span class="title">현재 적재 정보</span> </div>
+									<div class="right">
+										<span><strong>INOLES SEAL 1</strong></span>
+										<span>(원자재 / BALA25CPSPGB1)</span> 
+										<span><strong>1,000</strong> ea</span>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="rate-info">
+					<div class="day-operation">
+						<h3 class="sec-title">24시간 가동현황</h3>
+						<div class="status-wrap">
+							<span class="auto"><em class="status"></em>적재 이동</span>
+							<span><em class="status"></em>미적재 이동</span>
+							<span class="idle"><em class="status"></em>대기 STOP</span>
+							<span class="alarm"><em class="status"></em>기타 정지(충전/Off)</span>
+						</div>
+						<div class="oee-chart imc-oee-tooltip">
+
+						</div>
+					</div>
+					<div class="factor">
+						<h3 class="sec-title">Factor 비율</h3>
+						<div>
+							<table class="table-rate sfp-grid small">
+								<thead>
+								<tr>
+									<th class="col-state">구분</th>
+									<th class="col-progress">
+										<span>
+											<em>0</em>
+											<em>10</em>
+											<em>20</em>
+											<em>30</em>
+											<em>40</em>
+											<em>50</em>
+											<em>60</em>
+											<em>70</em>
+											<em>80</em>
+											<em>90</em>
+											<em>100</em>	
+										</span>						
+									</th>
+									<th class="col-percent">%</th>
+									<th class="col-time">횟수</th>
+									<th class="col-count">총 시간</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td class="col-state"><strong class="load">적재 이동</strong></td>
+									<td class="col-progress"><span class="load"><em></em></span></td>
+									<td class="col-percent"></td>
+									<td class="col-count"></td>
+									<td class="col-time"></td>
+								</tr>
+								<tr>
+									<td class="col-state"><strong class="non-load">미적재 이동</strong></td>
+									<td class="col-progress"><span class="non-load"><em></em></span></td>
+									<td class="col-percent"></td>
+									<td class="col-count"></td>
+									<td class="col-time"></td>
+								</tr>
+								<tr>
+									<td class="col-state"><strong class="pause">대기 STOP</strong></td>
+									<td class="col-progress"><span class="pause"><em></em></span></td>
+									<td class="col-percent"></td>
+									<td class="col-count"></td>
+									<td class="col-time"></td>
+								</tr>
+								<tr>
+									<td class="col-state"><strong class="stop">충전 STOP</strong></td>
+									<td class="col-progress"><span class="stop"><em style="left:60%;width:40%"></em></span></td>
+									<td class="col-percent"></td>
+									<td class="col-count"></td>
+									<td class="col-time"></td>
+								</tr>
+								<tr>
+									<td class="col-state"><strong class="stop">전원 OFF</strong></td>
+									<td class="col-progress"><span class="stop"><em></em></span></td>
+									<td class="col-percent"></td>
+									<td class="col-count"></td>
+									<td class="col-time"></td>
+								</tr>
+								</tbody>
+							</table>
+	
+						</div>
+					</div>
+				</div>
+				
+			</section>
+		</div>
+		
+	</main>
+</body>
+</html>

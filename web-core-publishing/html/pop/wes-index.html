@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WES POP html guide</title>
+    <link rel="stylesheet" href="/resources/css/common.css">
+    <style>
+        body{ overflow-y:auto; }
+        .wrap{padding-bottom:50px;background:#efefef}
+        h1{ height:33px;color:#fff;padding-left:20px;line-height:33px;font-size:20px;font-family:'notokr';font-weight:500;
+             background-color:#019fca;
+            background-image:-webkit-linear-gradient( left, #07aa9b, #019fca );
+            background-image:linear-gradient( to right, #07aa9b, #019fca );
+            background-repeat:no-repeat;
+        }
+        h2{ height:23px;padding:3px 0 3px 20px;background-color:#4b4e51;color:#fff;font-size:14px;font-family:'notokr';font-weight:500;border-top:1px solid #e7e7e7; }
+        h2 strong{ display:inline-block;width:180px;font-weight:normal;font-size:16px; }
+        .flist{ position:relative;padding-left:180px;border-top:1px solid #e7e7e7; font-family:'notokr';font-weight:500;}
+        .flist h3{ position:absolute;left:0;top:0;bottom:0;width:180px;background-color:#07aa9b;color:#fff;padding:0 0 0 20px;font-size:16px;box-sizing:border-box; }
+        .flist h3 strong{ position:absolute;left:20px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);font-weight:normal; }
+        .flist h3 strong em{ display:block;font-size:13px;text-transform:uppercase; }
+        .flist dl{ position:relative;background-color:#fff;padding:0 0 0 140px;border-top:1px solid #e7e7e7; font-size:14px;}
+        .flist dl:first-of-type{ border-top:none; }
+        .flist dl dt{ position:absolute;left:0;top:0;bottom:0;width:140px;padding:0 0 0 20px;border-right:1px solid #e7e7e7;box-sizing:border-box;background-color:#f2f2f2; }
+        .flist dl dt.guide{ background-color:#777;color:#fff; }
+        .flist dl dt.imc3{background-color:#019fca;color:#fff}
+        .flist.new dl dt{background-color:#f74b90}
+        .flist dl dt strong{ position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);font-weight:normal;}
+        .flist dd{ border-top:1px solid #e7e7e7; }
+        .flist dl dd:first-of-type{ border-top:none; }
+        .flist dd a{ position:relative;display:block;padding:3px 20px; }
+        .flist dd a:hover{ background-color:#e3f3f1;color:#078f98; }
+        .flist dd a strong{ display:inline-block;width:250px;margin-right:10px;font-weight:normal; }
+        .flist dd a i{ display:inline-block;width:230px;margin-right:10px;font-weight:normal; }
+        .flist dd a i:before{ content:' => '; }
+        .flist dd.end a:after{ content:'-';position:absolute;left:740px;background-color:#04a5b1;color:#fff;padding:1px 10px 0; }
+        .flist dd.overlap a{ opacity:0.5;text-decoration:line-through; }
+        .flist dl dd.ver2{background-color:#fed9b1}
+        .flist.black-theme h3{background-color:#f58d1e}
+        .flist.black-theme dl dt.guide{background-color:#30373f}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>WES HTML FILE LIST</h1>
+        <h2>COMMON POP GUIDE</h2>
+        <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">POP 공통 스타일</dt>
+                <dd><a href="/html/pop/common_module_pop.html"><strong>POP 공통 스타일가이드</strong><em>/pop/common_module_pop.html</em></a></dd>
+
+            </dl>
+        </div>
+        <!-- <h2>New</h2>
+        <div class="flist new">
+            <h3>New add</h3>
+            <dl>
+                <dt class="guide">신규 추가 및 수정</dt>
+                <dd><a href="./html/page/wms_inventory.html"><strong>재공 회전율</strong><em>/page/wms_inventory.html</em></a></dd>
+                <dd><a href="./html/page/wms_out-time.html"><strong>출고 소요 시간</strong><em>/page/wms_out-time.html</em></a></dd>
+                <dd><a href="./html/page/wms_in-history.html"><strong>입고 내역</strong><em>/page/wms_in-history.html</em></a></dd>
+                <dd><a href="./html/page/wms_carry-direction.html"><strong>반입지시 생성</strong><em>/page/wms_carry-direction.html</em></a></dd>
+            </dl>
+        </div> -->
+        <h2>POP PAGE GUIDE /page</h2>
+        <div class="flist">
+            <h3></h3>
+            <dl>
+                <dt class="guide">POP layout</dt>
+                <dd><a href="/html/pop/wes_register-1-1.html"><strong>컨테이너박스 등록</strong><em>/pop/wes_register-1-1.html</em></a></dd>
+                <dd><a href="/html/pop/wes_store-1-1.html"><strong>입고</strong><em>/pop/wes_store-1-1.html</em></a></dd>
+                <dd><a href="/html/pop/wes_picking-1-1.html"><strong>개별 피킹</strong><em>/pop/wes_picking-1-1.html</em></a></dd>
+                <dd><a href="/html/pop/wes_picking-1-2.html"><strong>묶음 피킹</strong><em>/pop/wes_picking-1-2.html</em></a></dd>
+                <!-- <dd><a href="./html/page/00_layout_right_gnb.html"><strong>오른쪽 gnb 레이아웃</strong><em>/page/00_layout_right_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_top_gnb.html"><strong>상단 gnb 레이아웃</strong><em>/page/00_layout_top_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_multi_gnb.html"><strong>상단 + 왼쪽 gnb 레이아웃</strong><em>/page/00_layout_multi_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_hidden-gnb.html"><strong>숨김메뉴</strong><em>/page/00_layout_hidden-gnb.html</em></a></dd> -->
+            </dl>
+        </div>
+        <h2>DIALOG GUIDE /dialog</h2>
+        <!-- <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">POP dialog</dt>
+                <dd><a href="./html/dialog/00_layout.html"><strong>기본 레이아웃</strong><em>/dialog/00_layout.html</em></a></dd>
+            </dl>
+        </div> -->
+        <h2>POP GUIDE /pop</h2>
+        <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">POP 기본 grid</dt>
+                <dd><a href="/html/pop/00_layout.html"><strong>POP 레이아웃 가이드</strong><em>/pop/00_layout.html</em></a></dd>
+                <dd><a href="/html/pop/01_layout.html"><strong>기본 레이아웃(1단,1줄,컨텐츠 영역1개)</strong><em>/pop/01_layout.html</em></a></dd>
+                <dd><a href="/html/pop/02_layout.html"><strong>기본 레이아웃(2단,1줄,컨텐츠 영역2개)</strong><em>/pop/02_layout.html</em></a></dd>
+                <dd><a href="/html/pop/03_layout.html"><strong>기본 레이아웃(2단,2줄,컨텐츠 영역3개)</strong><em>/pop/03_layout.html</em></a></dd>
+                <dd><a href="/html/pop/04_layout.html"><strong>기본 레이아웃(2단,2줄,컨텐츠 영역4개)</strong><em>/pop/04_layout.html</em></a></dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

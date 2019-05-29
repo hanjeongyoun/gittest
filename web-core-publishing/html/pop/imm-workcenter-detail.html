@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>사출 작업장 상세</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/mes_pop.css">
+</head>
+<body>
+	<style>
+		
+		/* pop  */
+		
+	</style>
+	<main>
+		<header>
+            <h1 class="txt-logo">MES1.0</h1>
+			<h2>IMM-001호기</h2>
+			<span class="machine-state">가동중</span>
+		</header>
+		<section>
+			<div class="col">
+				<div class="row no-flex">
+					<div class="col pdt15">
+						<div class="menu-btn">
+							<a href="#">홈</a>
+							<a href="#">작업장 목록</a>
+							<a href="#" class="active">실적등록</a>
+							<a href="#">실적조회</a>
+							<a href="#">부폼식별표</a>
+							<a href="#">금형교체</a>
+							<a href="#">작업교체</a>
+							<a href="#">작업자</a>
+							<a href="#">작업표준</a>
+							<a href="#">F/Proof</a>
+							<a href="#">비가동</a>
+						</div>
+					</div>
+				</div>
+				<div class="row same-size no-flex">
+					<div class="col">
+						<div class="row item-wrap no-flex">
+							<div class="item-inner tp2">
+								<h3 class="item-title">작업장</h3>
+								<div class="item-cont register-table wide">
+									<ul>
+										<li>
+											<div class="title">톤수</div>
+											<div class="cont">150 ton</div>
+											<div class="title">작업자</div>
+											<div class="cont">김봉균</div>
+										</li>
+										<li>
+											<div class="title">금일 가동 시간</div>
+											<div class="cont">260 분</div>
+										</li>
+										<li>
+											<div class="title">금일 비가동 시간</div>
+											<div class="cont">12 분</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="row item-wrap">
+							<div class="item-inner tp2">
+								<h3 class="item-title">금형</h3>
+								<div class="item-cont register-table wide">
+									<ul>
+										<li>
+											<div class="title">금형번호</div>
+											<div class="cont">MOLD-001-01</div>
+										</li>
+										<li>
+											<div class="title">차수</div>
+											<div class="cont">1</div>
+											<div class="title">캐비티</div>
+											<div class="cont">2 cavity</div>
+										</li>
+									</ul>
+									<div class="function-area pdt15 pdr0">
+										<div class="align-right">
+											<button class="btn">작업시작</button>
+											<button class="btn">작업중지</button>
+											<button class="btn">작업완료</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="row item-wrap no-flex">
+							<div class="item-inner tp2">
+								<h3 class="item-title">작업지시</h3>
+								<div class="item-cont register-table wide">
+									<ul>
+										<li>
+											<div class="title">작업지시번호</div>
+											<div class="cont">JOB-001-203-1</div>
+										</li>
+										<li>
+											<div class="title">제품번호</div>
+											<div class="cont">PDT-10023-10</div>
+										</li>
+										<li>
+											<div class="title">제품명</div>
+											<div class="cont">SMART-HP-01-CASE</div>
+										</li>
+										<li>
+											<div class="title">모델명</div>
+											<div class="cont">XXXX-XXXX-XXXX-XXX</div>
+										</li>
+										<li>
+											<div class="title">원재료명</div>
+											<div class="cont">ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</div>
+										</li>
+										<li>
+											<div class="title">원재료번호</div>
+											<div class="cont">PP-001-GRADE</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="row item-wrap no-flex">
+							<div class="item-inner tp2">
+								<h3 class="item-title">실적</h3>
+								<div class="item-cont register-table">
+									<ul>
+										<li>
+											<div class="title">계획수량</div>
+											<div class="cont">500</div>
+											<div class="title">생산수량</div>
+											<div class="cont">360</div>
+										</li>
+										<li>
+											<div class="title">양품</div>
+											<div class="cont">350</div>
+											<div class="title">불량</div>
+											<div class="cont">10</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row no-flex item-wrap">
+					<div class="item-inner tp2 no-after">
+						<h3 class="item-title">F/Proof</h3>
+						<div class="item-cont">
+							<div class="sfp-grid border-style">
+								<table style="width:100%">
+									<thead>
+										<tr>
+											<th colspan="3">금형고정1</th>
+											<th colspan="3">금형고정2</th>
+											<th colspan="3">금형이동1</th>
+											<th colspan="3">금형이동2</th>
+											<th colspan="3">냉각수1</th>
+											<th colspan="3">냉각수2</th>
+											<th colspan="3">온수기</th>
+											<th colspan="3">작동유</th>
+										</tr>
+									</thead>
+									<tr>
+										<td colspan="3">&nbsp;</td>
+										<td colspan="3"></td>
+										<td colspan="3"></td>
+										<td colspan="3"></td>
+										<td colspan="3"></td>
+										<td colspan="3"></td>
+										<td colspan="3"></td>
+										<td colspan="3"></td>
+									</tr>
+									<tr>
+										<td>110</td>
+										<td>120</td>
+										<td>130</td>
+			
+										<td></td>
+										<td></td>
+										<td></td>
+			
+										<td></td>
+										<td></td>
+										<td></td>
+			
+										<td></td>
+										<td></td>
+										<td></td>
+			
+										<td></td>
+										<td></td>
+										<td></td>
+			
+										<td></td>
+										<td></td>
+										<td></td>
+										
+										<td></td>
+										<td></td>
+										<td></td>
+			
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						
+					</div>
+					
+					
+				</div>
+            </div>
+            <footer>
+                <span class="logo">studio 3s</span>
+            </footer>
+        </section>
+	</main>
+</body>
+</html>

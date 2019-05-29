@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>입고 내역</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+
+
+	<script src="./../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="./../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="./../../resources/js/bower/moment/moment.min.js"></script>
+	<script src="./../../resources/js/bower/moment/moment-with-locales.min.js"></script>
+	<script src="./../../resources/js/imc/imc-utils.js"></script>
+	<script src="./../../resources/js/imc/imc-ajax.js"></script>
+	<script src="./../../resources/js/imc/imc-dialog.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-grid.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-box.js"></script>
+	<script src="./../../resources/js/imc/imc-ui-pager.js"></script>
+	<script src="./../../resources/js/imc/imc-datepicker.js"></script>
+	<script>
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				changeMonth: false,
+				changeYear: false,
+				showOtherMonths: true,
+				selectOtherMonths: false
+			});
+			$("#datepicker > div > table > tbody > tr:nth-child(2) > td:nth-child(3) > a").addClass('range01');
+			$("#datepicker > div > table > tbody > tr:nth-child(2) > td:nth-child(2) > a").addClass('range02');
+			$("#datepicker > div > table > tbody > tr:nth-child(3) > td:nth-child(5) > a").addClass('range03');
+			$("#datepicker > div > table > tbody > tr:nth-child(4) > td:nth-child(4) > a").addClass('range04');
+			$("#datepicker > div > table > tbody > tr:nth-child(5) > td:nth-child(5) > a").addClass('range05');
+		} );
+	</script>
+	<style>
+		.wms-report-wrap.history-search{height:calc(100% - 70px);background-color:#373c4f}
+		.wms-report-wrap .report-inner{height:100%;padding:18px 29px 39px 29px;box-sizing:border-box}
+		.wms-report-wrap .report-inner > .multi-cont{height:100%}
+		.wms-report-wrap .report-inner > .multi-cont > div{height:100%}
+		.history-search .calendar-wrap{position:relative;height:100%;padding:0 75px 23px 0;box-sizing:border-box}
+		.history-search .calendar-wrap:before,.history-search .calendar-wrap:after{content:'';display:block;position:absolute;border-radius:5px;}
+		.history-search .calendar-wrap:after{z-index:2;top:12px;left:18px;right:56px;bottom:11px;background-color:#cdd1d2}
+		.history-search .calendar-wrap:before{z-index:1;top:23px;left:37px;right:39px;bottom:0;background-color:#9598a1}
+		.history-search .calendar-inner{z-index:3;position:relative;height:100%;padding:48px 60px 70px 60px;background:#fff;border-radius:5px;box-sizing:border-box}
+		.history-search .ui-datepicker{padding:0;width:100%;box-shadow:none;border-radius:0;border:0}
+		.history-search .ui-datepicker-calendar{width:100%;margin-top:45px}
+		.history-search .ui-datepicker-calendar th{font-size:21px;text-align:center}
+		.history-search .ui-datepicker-title{font-size:21px;line-height:22px;}
+		.history-search .ui-datepicker-calendar td{height:90px;padding:10px;border:1px solid #bfbfbf;font-size:21px;box-sizing:border-box}
+		.history-search .ui-datepicker-calendar td a{width:100%;height:100%;line-height:70px;font-size:21px;border-radius:5px;}
+		.history-search .ui-datepicker-calendar td a[class*="range0"]{color:#fff !important;}
+		.history-search .ui-datepicker-calendar tr td a.range01{background-color:#41ccc9 !important}
+		.history-search .ui-datepicker-calendar tr td a.range02{background-color:#00b7ee !important}
+		.history-search .ui-datepicker-calendar tr td a.range03{background-color:#4873a6 !important}
+		.history-search .ui-datepicker-calendar tr td a.range04{background-color:#5a5386 !important}
+		.history-search .ui-datepicker-calendar tr td a.range05{background-color:#05666f !important}
+		.history-search .ui-datepicker-calendar tbody tr td:first-child a{color:#555}
+		.calendar-inner td a:hover{border-color:#fff;color:#555 !important;background:#fff}
+		.calendar-inner td a.ui-state-active{border-color:#fff;color:#555 !important;background:#fff;}
+		.history-search .ui-datepicker-prev,.history-search .ui-datepicker-next{width:13px;height:21px;cursor:pointer;background-image:url("./../../resources/images/btn/btn_arrow.png");background-position:0 0}
+		.history-search .ui-datepicker-prev{}
+		.history-search .ui-datepicker-next{background-position:0 -21px}
+		.history-search .sec-title{color:#fff}
+		.history-search .sec-title h3{font-size:21px;}
+		.history-search .sec-title .value{font-size:21px}
+		.history-search .sec-title .value strong{margin-right:10px;font-size:72px;}
+		.history-search .other-value{margin-top:30px;font-size:21px;color:#fff}
+		.history-search .other-value .value{margin-left:10px}
+		.history-search .progress-wrap{width:100%;margin-top:80px;color:#fff;font-size:21px}
+		.history-search .progress-wrap tr:first-child td{padding-top:0}
+		.history-search .progress-wrap td{padding-top:16px;height:48px;}
+		.history-search .progress-wrap td:first-child{padding-right:18px;text-align:right}
+		.history-search .progress-wrap .progress-bar{height:100%;border-radius:0;background:none}
+		.history-search .progress-wrap .progress-bar > span{border-radius:0;box-shadow:none}
+		.history-search .progress-wrap tr:nth-child(1) .progress-bar > span{background-color:#41ccc9}
+		.history-search .progress-wrap tr:nth-child(2) .progress-bar > span{background-color:#00b7ee}
+		.history-search .progress-wrap tr:nth-child(3) .progress-bar > span{background-color:#4873a6}
+		.history-search .progress-wrap tr:nth-child(4) .progress-bar > span{background-color:#5a5386}
+		.history-search .progress-wrap tr:nth-child(5) .progress-bar > span{background-color:#05666f}
+		.history-search .multi-cont .history-sec{padding-left:20px;box-sizing:border-box;}
+		.history-search .wrap-history{margin-top:87px;color:#fff;background: #5f6272; /* Old browsers */
+			background: -moz-linear-gradient(left, #5f6272 0%, #383d50 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, #5f6272 0%,#383d50 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, #5f6272 0%,#383d50 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f6272', endColorstr='#383d50',GradientType=1 ); /* IE6-9 */
+		}
+		.history-search .wrap-history td{height:63px;border-bottom:1px solid #373c4f}
+		.history-search .wrap-history td:first-child{padding-right:30px;text-align:right;font-size:36px;box-sizing:border-box}
+		.history-search .wrap-history td .number{font-size:14px}
+		.history-search .wrap-history td .name{display:block;font-size:21px;}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+				<li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+					<div class="bookmark-list">
+						<ul>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+						</ul>
+						<!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+					</div>
+				</li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="#" disabled>Material</a>
+				<ul>
+					<li><a href="">자재 유형 관리 1</a></li>
+					<li><a href="">자재 관리 1</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Machine</a>
+				<ul>
+					<li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+						<ul>
+							<li><a href="">자재 유형 관리 2-1</a></li>
+							<li><a href="">자재 유형 관리 2-2</a></li>
+							<li><a href="">자재 유형 관리 2-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="has-depth">자재 관리 2</a>
+						<ul>
+							<li><a href="">자재 관리 2-1</a></li>
+							<li><a href="" class="has-depth">자재 관리 2-2</a>
+								<ul>
+									<li><a href="">자재 관리 3-1</a></li>
+									<li><a href="">자재 관리 3-2</a></li>
+									<li><a href="">자재 관리 3-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">자재 관리 2-3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Men</a>
+				<ul>
+					<li><a href="">자재 유형 관리 3</a></li>
+					<li><a href="">자재 관리 3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Method</a>
+				<ul>
+					<li><a href="">자재 유형 관리 4</a></li>
+					<li><a href="">자재 관리 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<header>
+			<h2>입고 내역<span>입고 내역 레포트</span></h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">창고</option>
+						</select>
+						<select>
+							<option value="1" selected="">2018년</option>
+						</select>
+						<select>
+							<option value="2" selected="">11월</option>
+						</select>
+						<button class="btn-srch ico">조회</button>
+						<button class="btn-reset image">초기화</button>
+					</div>
+				</div>
+				<div class="wms-report-wrap history-search">
+					<div class="report-inner">
+						<div class="multi-cont">
+							<div style="width:50%">
+								<div class="calendar-wrap">
+									<div class="calendar-inner">
+										<div id="datepicker"></div>
+									</div>
+								</div>
+							</div>
+							<div style="width:50%">
+								<div class="multi-cont">
+									<div style="width:38%">
+										<div class="sec-title">
+											<h3>총 입고량</h3>
+											<span class="value"><strong>79,897</strong></span>
+										</div>
+										<ul class="other-value">
+											<li>전월 출고량 <span class="value">75,024</span></li>
+											<li>전월 대비 증감량 <span class="value">+ 15,873</span></li>
+										</ul>
+										<table class="progress-wrap">
+											<colgroup>
+												<col style="width:104px">
+												<col>
+											</colgroup>
+											<tr>
+												<td>
+													~1,000
+												</td>
+												<td>
+													<div class="progress-bar">
+														<span style="width:10%"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													~5,000
+												</td>
+												<td>
+													<div class="progress-bar">
+														<span style="width:20%"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													~10,000
+												</td>
+												<td>
+													<div class="progress-bar">
+														<span style="width:30%"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													~15,000
+												</td>
+												<td>
+													<div class="progress-bar">
+														<span style="width:40%"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													~20,000
+												</td>
+												<td>
+													<div class="progress-bar">
+														<span style="width:50%"></span>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div style="width:62%" class="history-sec">
+										<div class="sec-title">
+											<h3>출고 이력</h3>
+											<span class="value"><strong>540</strong>건</span>
+										</div>
+										<div class="wrap-history">
+											<table>
+												<colgroup>
+													<col style="width:140px">
+													<col>
+												</colgroup>
+												<tr>
+													<td>90</td>
+													<td>
+														<span class="number">40320788</span>
+														<span class="name">ASSY SWING ARM FR L-CBH133</span>
+													</td>
+												</tr>
+												<tr>
+													<td>340</td>
+													<td>
+														<span class="number">40320788</span>
+														<span class="name">ASSY SWING ARM FR L-CBH133</span>
+													</td>
+												</tr>
+												<tr>
+													<td>90</td>
+													<td>
+														<span class="number">40320788</span>
+														<span class="name">ASSY SWING ARM FR L-CBH133</span>
+													</td>
+												</tr>
+												<tr>
+													<td>90</td>
+													<td>
+														<span class="number">40320788</span>
+														<span class="name">ASSY SWING ARM FR L-CBH133</span>
+													</td>
+												</tr>
+												<tr>
+													<td>340</td>
+													<td>
+														<span class="number">40320788</span>
+														<span class="name">ASSY SWING ARM FR L-CBH133</span>
+													</td>
+												</tr>
+												<tr>
+													<td>90</td>
+													<td>
+														<span class="number">40320788</span>
+														<span class="name">ASSY SWING ARM FR L-CBH133</span>
+													</td>
+												</tr>
+												<tr>
+													<td>90</td>
+													<td>
+														<span class="number">40320788</span>
+														<span class="name">ASSY SWING ARM FR L-CBH133</span>
+													</td>
+												</tr>
+
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+	</main>
+</body>
+</html>

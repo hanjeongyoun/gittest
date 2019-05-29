@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>PICKING</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/chart.css">
+    <link rel="stylesheet" href="../../resources/css/pop.css">
+	<link rel="stylesheet" href="../../resources/css/exhibition-pop.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../resources/js/imc/imc-utils.js"></script>
+	<script>
+		$( function() {
+			var col = 2;
+			var row = 4;
+
+			var _width = 100/col;
+			var _height = 100/row;
+
+			var _html = [];
+			for (var i = 0; i < (col*row); i++){
+				if(i == 6){
+					_html.push('<span class="cell active" style="width:'+_width+'%;height:'+_height+'%;"></span>');
+				}else{
+					_html.push('<span class="cell" style="width:'+_width+'%;height:'+_height+'%;"></span>');
+				}
+				
+			}
+			
+			$("#blocks").html(_html);
+			
+		});
+	</script>
+</head>
+<body>
+	<header>
+        <h1>3s studio</h1>
+		<h2>PICKING</h2>
+		<div class="search-box">
+			<ul class="top-info">
+				<li>
+					<span class="wrap-cont"><label>창고</label><input type="text" class="select"/></span>
+					<span class="wrap-cont"><label>작업자</label><input type="text" class="select"/></span>
+				</li>
+				<li>
+					<span class="wrap-cont"><label>작업장</label><input type="text" class="select" value="test"/></span>
+					<span class="wrap-cont"><label>작업상태</label><input type="text"/></span>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<section class="footer-have">
+			<div class="col shelf-area">
+				<div class="row">
+					<div class="item-wrap col">
+						<div class="item-inner">
+							<h3>출고 Shelf</h3>
+							<div class="item-cont">
+								<ul class="item-info">
+									<li><span class="title">Shelf ID</span><span class="cont">Shelf 0001</span></li>
+									<li><span class="title">Cell ID</span><span class="cont">Cell Number 0001</span></li>
+									<li><span class="title">Face ID</span><span class="cont">Face 4</span></li>
+                                </ul>
+                                <div class="container-area">
+                                    <img src="./../../resources/images/temp/shelf_bg.png" alt="" />
+                                    <div class="container-item-wrap" id="blocks" data-work="picking"></div>
+                                    <button class="btn send">SEND</button>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<div class="item-wrap col">
+						<div class="item-inner">
+							<h3>출고 물품</h3>
+							<div class="item-cont item-guide-area">
+                                <div class="left-img-sec">
+                                    <img src="./../../resources/images/exhibition/9788977152984.png" alt="" />
+                                    <!-- validation class: ok or ng, ok 이나 ng 클래스 추가하면 텍스트 보입니다 -->
+                                    <span class="validation ok"></span>
+                                </div>
+                                <div class="right-sec">
+                                    <ul class="item-info-list">
+                                        <li><span class="title">제품명</span><strong class="cont">박카스</strong></li>
+                                        <li><span class="title">제품코드</span><strong class="cont">S-00012345678910000</strong></li>
+                                        <li><span class="title">지시수량</span><strong class="cont"><span>00</span>ea</strong></li>
+                                        <li><span class="title">피킹수량</span><strong class="cont big">8</strong><em class="unit">ea</em></li>
+                                    </ul>
+                                    <button class="btn picking">PICKING</button>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+            <button class="pop-option event">EVENT</button>
+			<div class="btn-wrap">
+				<button class="pop-option start">작업 시작</button>
+                <button class="pop-option stop">작업 종료</button>
+                <button class="pop-option option">설정</button>
+			</div>
+			<div class="work-state-wrap">
+				<div class="state-info">
+					작업 진척율
+				</div>
+				<div class="gauge-wrap">
+					<div class="progress-bar">
+                        <span style="width:76%"></span>
+                        <div class="value-wrap"><strong>76%</strong><span>(10/16)</span></div>
+					</div>
+				</div>
+			</div>
+			
+		</footer>
+	</main>
+</body>
+</html>

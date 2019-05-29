@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SFP 2.0 메인페이지</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/page.css">
+    <link rel="stylesheet" href="../../resources/css/left_gnb.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+        <div class="util-menu">
+            <ul>
+                <li><time>2018-05-09 20:12:10</time></li>
+                <li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+                <li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+                <li><a href="#" class="user"><span>사용자 정보</span></a></li>
+                <li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+                <li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+                    <div class="bookmark-list">
+                        <ul>
+                            <li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+                            <li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+                        </ul>
+                        <!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+                    </div>
+                </li>
+                <li><a href="#" class="logout"><span>로그아웃</span></a></li>
+                <li>
+                    <a href="#" class="app-menu"><span>메뉴</span></a>
+                    <div class="app-menu-list">
+                        <ul>
+                            <li><a href="#" class="mdm">MDM</a></li>
+                            <li><a href="#" class="mes">MES</a></li>
+                            <li><a href="#" class="wms">WMS</a></li>
+                            <li><a href="#" class="vmi">VMI</a></li>
+                            <li><a href="#" class="lms">LMS</a></li>
+                            <li><a href="#" class="oee">OEE</a></li>
+                            <li><a href="#" class="bom">BOM</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="system">시스템</a></li>
+                            <li><a href="#" class="option">설정</a></li>
+                        </ul>
+                    </div>
+                    <div class="dimmed"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" disabled>Material</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 1</a></li>
+                    <li><a href="">자재 관리 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Machine</a>
+                <ul>
+                    <li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 유형 관리 2-1</a></li>
+                            <li><a href="">자재 유형 관리 2-2</a></li>
+                            <li><a href="">자재 유형 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="has-depth">자재 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 관리 2-1</a></li>
+                            <li><a href="" class="has-depth">자재 관리 2-2</a>
+                                <ul>
+                                    <li><a href="">자재 관리 3-1</a></li>
+                                    <li><a href="">자재 관리 3-2</a></li>
+                                    <li><a href="">자재 관리 3-3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">자재 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Men</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 3</a></li>
+                    <li><a href="">자재 관리 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Method</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 4</a></li>
+                    <li><a href="">자재 관리 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="main-wrap">
+        <div class="contents-wrap aside-main no-footer">
+            <section>
+                <ul class="main-left multi-list">
+                    <li>
+                        <h3>일간</h3>
+                        <div class="col-wrap">
+                            <div class="graph"></div>
+                            <div>
+                                <span class="percent-value big"><strong>0.0</strong>%</span>
+                                <ul class="list-style type2">
+                                    <li><span class="left"><span class="status"></span>양산</span><span class="right">0.0%</span></li>
+                                    <li><span class="left"><span class="status"></span>정지</span><span class="right">0.0%</span></li>
+                                    <li><span class="left"><span class="status"></span>기타</span><span class="right">0.0%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>일간</h3>
+                        <div class="col-wrap">
+                            <div class="graph"></div>
+                            <div>
+                                <span class="percent-value big"><strong>0.0</strong>%</span>
+                                <ul class="list-style type2">
+                                    <li><span class="left"><span class="status"></span>양산</span><span class="right">0.0%</span></li>
+                                    <li><span class="left"><span class="status"></span>정지</span><span class="right">0.0%</span></li>
+                                    <li><span class="left"><span class="status"></span>기타</span><span class="right">0.0%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>일간</h3>
+                        <div class="col-wrap">
+                            <div class="graph"></div>
+                            <div>
+                                <span class="percent-value big"><strong>0.0</strong>%</span>
+                                <ul class="list-style type2">
+                                    <li><span class="left"><span class="status"></span>양산</span><span class="right">0.0%</span></li>
+                                    <li><span class="left"><span class="status"></span>정지</span><span class="right">0.0%</span></li>
+                                    <li><span class="left"><span class="status"></span>기타</span><span class="right">0.0%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="contents-wrap no-footer">
+            <section>
+                <div class="top-area">
+                    <ul class="multi-list">
+                        <li>
+                            <h3>일간</h3>
+                            <div class="col-wrap">
+                                <div class="bar-graph">
+                                    <ul class="bar-value">
+                                        <li><span style="width:80%"></span></li>
+                                        <li><span style="width:80%"></span></li>
+                                    </ul>
+                                    <div class="x-axis">
+                                        <span>0</span>
+                                        <span>50</span>
+                                        <span>100(%)</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="list-style type2 small">
+                                        <li><span class="left half"><span class="status green"></span>양품율</span><span class="right">100.0%</span></li>
+                                        <li><span class="left half"><span class="status blue"></span>양품 수량</span><span class="right">100.0%</span></li>
+                                        <li><span class="left half"><span class="status red"></span>불량 수량</span><span class="right text-red">100.0%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>주간</h3>
+                            <div class="col-wrap">
+                                <div class="bar-graph">
+                                    <ul class="bar-value">
+                                        <li><span style="width:80%"></span></li>
+                                        <li><span style="width:80%"></span></li>
+                                    </ul>
+                                    <div class="x-axis">
+                                        <span>0</span>
+                                        <span>50</span>
+                                        <span>100(%)</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="list-style type2 small">
+                                        <li><span class="left half"><span class="status green"></span>양품율</span><span class="right">100.0%</span></li>
+                                        <li><span class="left half"><span class="status blue"></span>양품 수량</span><span class="right">100.0%</span></li>
+                                        <li><span class="left half"><span class="status red"></span>불량 수량</span><span class="right text-red">100.0%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>월간</h3>
+                            <div class="col-wrap">
+                                <div class="bar-graph">
+                                    <ul class="bar-value">
+                                        <li><span style="width:80%"></span></li>
+                                        <li><span style="width:80%"></span></li>
+                                    </ul>
+                                    <div class="x-axis">
+                                        <span>0</span>
+                                        <span>50</span>
+                                        <span>100(%)</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="list-style type2 small">
+                                        <li><span class="left half"><span class="status green"></span>양품율</span><span class="right">100.0%</span></li>
+                                        <li><span class="left half"><span class="status blue"></span>양품 수량</span><span class="right">100.0%</span></li>
+                                        <li><span class="left half"><span class="status red"></span>불량 수량</span><span class="right text-red">100.0%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fix-card bottom-area three-col">
+                    <ul class="multi-list">
+                        <li>
+                            <h4>IMM01</h4>
+                            <div class="col-wrap">
+                                <div class="graph-area">graph-area</div>
+                                <div class="percent">진척률 <br/><span class="percent-value"><strong>0.0</strong>%</span></div>
+                                <div>
+                                    <ul class="list-style type2 small">
+                                        <li><span class="left">작업번호</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">원재료</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">제품</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">양품</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">불량</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">불량율</span><span class="right text-red">100.0%</span></li>
+                                        <li><span class="left"><strong>목표</strong></span><span class="right">100.0%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="empty">
+                            <h4>IMM01</h4>
+                            <div class="col-wrap">
+                                <div class="graph-area"></div>
+                                <div class="percent">진척률 <br/><span class="percent-value"><strong>0.0</strong>%</span></div>
+                                <div>
+                                    <ul class="list-style type2 small">
+                                        <li><span class="left">작업번호</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">원재료</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">제품</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">양품</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">불량</span><span class="right">100.0%</span></li>
+                                        <li><span class="left">불량율</span><span class="right text-red">100.0%</span></li>
+                                        <li><span class="left"><strong>목표</strong></span><span class="right">100.0%</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

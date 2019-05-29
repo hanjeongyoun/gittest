@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>WMS 조회</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+    <link rel="stylesheet" href="../../resources/css/left_gnb.css">
+    <script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+    <script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../resources/js/bower/moment/moment.min.js"></script>
+    <script src="../../resources/js/bower/moment/moment-with-locales.min.js"></script>
+    <script src="../../resources/js/imc/imc-utils.js"></script>
+    <script src="../../resources/js/imc/imc-ajax.js"></script>
+    <script src="../../resources/js/imc/imc-dialog.js"></script>
+    <script src="../../resources/js/imc/imc-ui-grid.js"></script>
+    <script src="../../resources/js/imc/imc-ui-box.js"></script>
+    <script src="../../resources/js/imc/imc-ui-pager.js"></script>
+    <script src="../../resources/js/imc/imc-datepicker.js"></script>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+				<li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+					<div class="bookmark-list">
+						<ul>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+						</ul>
+						<!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+					</div>
+				</li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>조회</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">부서</option>
+							<option value="7">부서2</option>
+                        </select>
+                        <select>
+							<option value="6" selected="">부서</option>
+							<option value="7">부서2</option>
+                        </select>
+                        <select>
+							<option value="6" selected="">부서</option>
+							<option value="7">부서2</option>
+						</select>
+						<button class="btn-srch ico">조회</button>
+					</div>
+                </div>
+                <div class="multi-wrap">
+                    <div class="sec-wrap" style="width:6%">
+                        <div class="sfp-grid-panel">
+                            <div class="sfp-grid-header-panel">
+                                <table class="sfp-grid small">
+                                    <colgroup>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>층</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="sfp-grid-body-panel">
+                                <table class="sfp-grid small">
+                                    <colgroup>
+                                        <col>
+                                    </colgroup>
+                                    <thead style="display: none;">
+                                        <tr>
+                                            <th>층</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1층</td>
+                                        </tr>
+
+                                    </tbody>
+                                    <tfoot style="display: none;"></tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(function () {
+                            
+                            $('.scroll-table tbody').scroll(function(e) { //detect a scroll event on the tbody
+                            
+                              $('.scroll-table thead').css("left", -$(".scroll-table tbody").scrollLeft()); //fix the thead relative to the body scrolling
+                              $('.scroll-table thead th:nth-child(1)').css("left", $(".scroll-table tbody").scrollLeft()); //fix the first cell of the header
+                              $('.scroll-table tbody td:nth-child(1)').css("left", $(".scroll-table tbody").scrollLeft()); //fix the first column of tdbody
+                            });
+                        });
+                    </script>
+                    <div class="sec-wrap rack-wrap" style="width:94%">
+                        <div class="scroll-wrap">
+                            <table class="scroll-table">
+                                <thead>
+                                    <tr>
+                                        <th>자제내역</th>
+                                        <th>저장빈</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="height:835px">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+			</section>
+		</div>
+	</main>
+</body>
+</html>

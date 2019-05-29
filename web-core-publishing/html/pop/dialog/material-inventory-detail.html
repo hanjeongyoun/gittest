@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>자재 재고 상세</title>
+	<link rel="stylesheet" href="../../../resources/css/common.css">
+	<link rel="stylesheet" href="../../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../../resources/css/button.css">
+	<link rel="stylesheet" href="../../../resources/css/form.css">
+	<link rel="stylesheet" href="../../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../../resources/css/dialog.css">
+	<link rel="stylesheet" href="../../../resources/css/dialog_pop.css">
+	<script src="../../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../../resources/js/imc/imc-utils.js"></script>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>자재 재고 상세</h2>
+			<a href="#" class="close-btn">닫기</a>
+		</header>
+		<div class="contents-wrap">
+			<section>
+				<div class="card-area direction-row">
+					<div class="col no-flex">
+						<div class="card-wrap no-title row">
+							<div class="card-inner">
+								<div class="card-cont register-table simple-list title-left">
+									<ul>
+										<li class="vertical">
+											<div class="title">자재코드</div>
+										</li>
+										<li class="vertical">
+											<div class="cont">
+												<div class="line-wrap input-btn-wrap">
+													<span><input type="text" /></span>
+													<span class="no-flex"><button class="btn green">찾기</button></span>
+												</div>
+											</div>
+										</li>
+										<li class="vertical">
+											<div class="title">자재명</div>
+										</li>
+										<li class="vertical">
+											<div class="cont">
+												<div class="line-wrap">
+													<input type="text" />
+												</div>
+												<div class="line-wrap">
+													<label><input type="radio" name="select-bom"><span class="radio-mark">원자재</span></label>
+													<label><input type="radio" name="select-bom"><span class="radio-mark">부자재</span></label>
+												</div>
+											</div>
+										</li>
+										<li class="vertical">
+											<div class="title">수량</div>
+										</li>
+										<li class="vertical">
+											<div class="cont"><input type="text" /></div>
+										</li>
+										<li class="vertical">
+											<div class="title">단위</div>
+										</li>
+										<li class="vertical">
+											<div class="cont"><input type="text" /></div>
+										</li>
+										<li class="vertical">
+											<div class="title">비고</div>
+										</li>
+										<li class="vertical">
+											<div class="cont">
+												<textarea placeholder="30자 이내로 입력하세요"></textarea>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card-wrap no-title row">
+							<div class="card-inner">
+								<div class="card-cont">
+									<div class="graph-area">
+										<div class="graph-btn-area">
+											<button class="btn orange">자세히</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<footer>
+				<div class="align-right">
+					<button class="btn-cancel">닫기</button>
+				</div>
+			</footer>
+		</div>
+		
+	</main>
+</body>
+</html>

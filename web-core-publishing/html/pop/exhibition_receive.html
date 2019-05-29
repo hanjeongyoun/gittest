@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>RECEIVING</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/pop.css">
+	<link rel="stylesheet" href="../../resources/css/exhibition-pop.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../resources/js/imc/imc-utils.js"></script>
+	<script>
+		$( function() {
+			var col = 2;
+			var row = 4;
+
+			var _width = 100/col;
+			var _height = 100/row;
+
+			var _html = [];
+			for (var i = 0; i < (col*row); i++){
+				if(i == 4){
+					_html.push('<span class="cell active" style="width:'+_width+'%;height:'+_height+'%;"></span>');
+				}else{
+					_html.push('<span class="cell" style="width:'+_width+'%;height:'+_height+'%;"></span>');
+				}
+				
+			}
+			
+			$("#blocks").html(_html);
+			
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1>3s studio</h1>
+		<h2>RECEIVING</h2>
+		<div class="search-box">
+			<ul class="top-info">
+				<li>
+					<span class="wrap-cont"><label>창고</label><input type="text" class="select"/></span>
+					<span class="wrap-cont"><label>작업자</label><input type="text" class="select"/></span>
+				</li>
+				<li>
+					<span class="wrap-cont"><label>작업장</label><input type="text" class="select" value="test"/></span>
+					<span class="wrap-cont"><label>작업상태</label><input type="text" class="select"/></span>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<section class="footer-have">
+			<div class="col shelf-area">
+				<div class="row">
+					<div class="item-wrap col">
+						<div class="item-inner">
+							<h3>입고 Shelf</h3>
+							<div class="item-cont">
+								<ul class="item-info">
+									<li><span class="title">Shelf ID</span><span class="cont">Shelf 0001</span></li>
+									<li><span class="title">Cell ID</span><span class="cont">Cell Number 0001</span></li>
+									<li><span class="title">Face ID</span><span class="cont">Face 4</span></li>
+								</ul>
+								<div class="container-area">
+									<img src="./../../resources/images/temp/shelf_bg.png" alt="" />
+									<div class="container-item-wrap" id="blocks" data-work="receive"></div>
+									<button class="btn send">SEND</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<div class="col">
+						<div class="item-wrap row">
+							<div class="item-inner">
+								<h3>입고 물품</h3>
+								<div class="item-cont item-guide-area receive">
+									<div class="left-img-sec">
+										<img src="./../../resources/images/exhibition/9788977152984.png" alt="" />
+										<!-- validation class: ok or ng, ok 이나 ng 클래스 추가하면 텍스트 보입니다 -->
+										<span class="validation ok"></span>
+									</div>
+									<div class="right-sec">
+										<ul class="item-info-list">
+											<li><span class="title">제품명</span><strong class="cont">박카스</strong></li>
+											<li><span class="title">제품코드</span><strong class="cont">S-0001234567800</strong></li>
+											<li><span class="title">입고수량</span><strong class="cont big">8</strong><span class="unit">ea</span><button class="btn">입고</button></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-wrap row no-flex">
+							<div class="item-inner batch-list-wrap">
+								<div class="item-cont">
+									<h4 class="batch-id">배치 ID<strong>WWB1901161323396</strong></h4>
+									<div class="grid-area" id="work-batch-item-grid">
+										<div class="sfp-grid-header-panel">
+											<table class="sfp-grid">
+												<colgroup>
+													<col style="width:135px">
+													<col style="width:280px">
+													<col>
+													<col style="width:100px">
+													<col style="width:220px">
+												</colgroup>
+												<thead>
+													<tr>
+														<th>상태</th>
+														<th>품목ID</th>
+														<th>품목명</th>
+														<th>지시수량</th>
+														<th>완료수량</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+										<div class="sfp-grid-body-panel" style="height:213px">
+											<table class="sfp-grid">
+												<colgroup>
+													<col style="width:135px">
+													<col style="width:280px">
+													<col>
+													<col style="width:100px">
+													<col style="width:220px">
+												</colgroup>
+												<thead style="display: none;">
+													<tr>
+														<th>상태</th>
+														<th>품목ID</th>
+														<th>품목명</th>
+														<th>지시수량</th>
+														<th>완료수량</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="done">
+														<td><span class="flag-">DONE</span></td>
+														<td>ITEM 0001</td>
+														<td>글렌 미니 수납박스</td>
+														<td>2</td>
+														<td>4</td>
+													</tr>
+													<tr class="done">
+														<td><span class="flag-">DONE</span></td>
+														<td>ITEM 00045</td>
+														<td>글렌 커넥팅 철물</td>
+														<td>4</td>
+														<td>4</td>
+													</tr>
+													<tr class="ing">
+														<td><span class="flag-">ING</span></td>
+														<td>ITEM 00045</td>
+														<td>글렌 커넥팅 철물</td>
+														<td>4</td>
+														<td>4</td>
+													</tr>
+													<tr class="tobe">
+														<td><span class="flag-">TO-BE</span></td>
+														<td>ITEM 00045</td>
+														<td>글렌 커넥팅 철물</td>
+														<td>4</td>
+														<td>4</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="btn-wrap">
+				<button class="pop-option start" disabled="disabled">작업 시작</button>
+				<button class="pop-option stop">작업 종료</button>
+				<button class="pop-option option">설정</button>
+			</div>
+			<div class="work-state-wrap">
+				<div class="state-info">
+					작업 진척율
+				</div>
+				<div class="gauge-wrap">
+					<div class="progress-bar">
+						<span style="width:76%"><strong>76%</strong><span>(10/16)</span></span>
+					</div>
+				</div>
+			</div>
+			
+		</footer>
+	</main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* layout */
+body{overflow:hidden;background:#d7d7d7; 
+	scrollbar-3dlight-color:#d7d7d7;
+    scrollbar-darkshadow-color:#d7d7d7;
+    scrollbar-arrow-color:#d7d7d7;
+    scrollbar-track-color:#d7d7d7;
+}
+::-webkit-scrollbar-track{ background:#d7d7d7; }
+::-webkit-scrollbar-track-piece{ background:#d7d7d7; }
+::-webkit-scrollbar-corner{ background:#d7d7d7; }
+main{height:100%;/*max-width:1280px;margin:0 auto;*/}
+/* main:before{content:'';display:block;position:absolute;left:0;right:0;top:0;height:50px;background:#2b2f31} */
+
+select{font-size:15px}
+select option{font-size:16px}
+/*title-bar*/
+header{position:relative;height:50px;padding-left:10px;line-height:50px;font-size:14px;text-align:left;color:#fff;font-weight:700;background:#2b2f31}
+header .search-box{position:absolute;top:7px;right:10px;line-height:1}
+header .search-box select{vertical-align:top}
+header .search-box select + button{margin-left:5px}
+header .user-info{position:absolute;top:0;right:10px;bottom:0;line-height:50px;font-weight:500}
+header .user-info time{display:inline-block;margin-right:10px;font-size:12px}
+header .logo{display:inline-block;width:100px;height:50px;font-size:0;vertical-align:top;background:url('../images/logo/bi.png') no-repeat center}
+
+/* layout */
+main > section{display:flex;height:calc(100%);box-sizing:border-box;flex-direction:row}
+main > section .col{display:flex;flex: 1 1 auto;flex-direction:column;flex-grow: 1;flex-basis: 0;}
+main > section .row{display:flex;flex: 1 1 auto;flex-grow: 1;flex-basis: 0;}
+main > section .item-wrap{padding:10px;box-sizing:border-box}
+main > header + section{height:calc(100% - 50px)}
+header + main > section{height:calc(100% - 50px)}
+header + main > header + section{height:calc(100% - 100px)}
+.item-inner {position:relative;height:100%;width:100%;box-shadow:4px 4px 4px rgba(0,0,0,0.1)}
+.item-inner:after{content:'';display:block;position:absolute;left:0;right:0;bottom:0;height:20px;border-radius:0 0 5px 5px;background:#fff}
+.item-inner > h3{padding:0 5px 0 10px;height:35px;border-bottom:1px solid #a2a2a2;line-height:35px;border-radius:5px 5px 0 0;font-weight:500;color:#333;box-sizing:border-box;background:#f2f2f2}
+.item-inner .item-cont{height:calc(100% - 35px);border-radius:0 0 5px 5px;padding:10px 20px 30px 10px;box-sizing:border-box;background:#fff;overflow-x:hidden;overflow-y:auto;}
+.item-inner.no-title .item-cont{height:100%;border-radius:5px;padding:20px}
+.paging-in.item-inner:after{height:44px}
+.paging-in.item-inner .item-cont{padding-bottom:54px;padding-top:0;}
+.item-inner .paging{z-index:10;position:absolute;left:0;right:0;bottom:0;font-size:0;line-height:0;box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);border-top:1px solid #c3c3c3;border-radius:0 0 5px 5px;background:#fff}
+.item-inner .paging button{width:50%;height:44px;line-height:44px;font-size:0;text-align:center;border-radius:0 0 0 5px;background:#009ac0}
+.item-inner .paging button:after{content:'';display:inline-block;width:28px;height:44px;background:url('../images/arrow/chevron-up_w.png') no-repeat 0 40%;background-size:100% auto}
+.item-inner .paging button.bottom:after{background-image:url('../images/arrow/chevron-down_w.png')}
+.item-inner .paging button[disable]{opacity:0.5;cursor:default}
+.item-inner .paging button + button{border-left:1px solid #c3c3c3;border-radius:0 0 5px 0;}
+
+.item-inner .paging-tp2{z-index:10;position:absolute;left:0;right:0;bottom:0;padding-bottom:8px;font-size:0;line-height:0;border-radius:0 0 5px 5px;background:#fff}
+.item-inner .paging-tp2 button{position:relative;width:49%;height:44px;margin:0 0.5%;line-height:44px;font-size:0;text-align:center;border:3px solid #e3e3e3;border-radius:5px;-moz-box-shadow: 3px 4px 0px 0px #d7d7d7;-webkit-box-shadow: 3px 4px 0px 0px #d7d7d7;box-shadow: 3px 4px 0px 0px #d7d7d7;}
+.item-inner .paging-tp2 button:focus{outline: 0}
+.item-inner .paging-tp2 button:after{content:'';display:inline-block;width:28px;height:44px;background:url('../images/arrow/chevron-up_g.png') no-repeat 0 40%;background-size:100% auto}
+.item-inner .paging-tp2 button:active{position:relative;top:1px}
+.item-inner .paging-tp2 button:hover {background: #f2f2f2;}
+.item-inner .paging-tp2 button:disabled{opacity:0.5;cursor:default}
+.item-inner .paging-tp2 button.bottom:after{background-image:url('../images/arrow/chevron-down_g.png')}
+.item-inner .paging-tp2 button + button{}
+.item-inner {
+    scrollbar-3dlight-color:#fff;
+    scrollbar-darkshadow-color:#fff;
+    scrollbar-arrow-color:#fff;
+    scrollbar-track-color:#fff;
+}
+/* grid 예외 */
+.item-inner ::-webkit-scrollbar-track{ background:#fff; }
+.item-inner ::-webkit-scrollbar-track-piece{ background:#fff; }
+.item-inner ::-webkit-scrollbar-corner{ background:#fff; }
+
+
+/* gnb */
+.contents-wrap .col.pop-menu{}
+main > section aside.col{flex:0 0 auto;width:90px;background:#f2f2f2}
+main > section aside li{display:table;width:100%;min-height:80px;vertical-align:middle}
+main > section aside li a{display:table-cell;height:100%;padding:10px;font-weight:500;font-size:13px;text-align:center;vertical-align:middle;box-sizing:border-box;border-bottom:1px solid #e4e4e4;word-break:keep-all}
+main > section aside li a.active{color:#038390;background:#cae9eb}
+
+main > section .row.top-function{flex:0 0 55px}
+main > section .row.bottom-function{flex:0 0 55px}
+main > section .row.top-function .function-area,main > section .row.bottom-function .function-area{padding:0}
+
+.under-title{padding-bottom:5px;font-size:13px;font-weight:500;border-bottom:1px solid #9b9c9d }
+.under-title + .static-table{margin-top:15px}
+.static-table + .under-title {margin-top:25px}
+
+/* pop form */
+input[type="text"], input[type="password"], input[type="date"], input[type="tel"], input[type="number"]{font-size:16px;}
+input[type="checkbox"] + .check-mark{min-height:30px;padding-left:30px;line-height:28px;font-size:16px}
+input[type="checkbox"] + .check-mark:before{content:'';display:block;position:absolute;left:0;top:50%;width:28px;height:28px;margin-top:-14px;cursor: pointer;border:1px solid #ced3da;box-sizing:border-box;background:#fff}
+select{font-size:20px;}
+/* check, hover 스타일 설정 IE, Chrome */
+select option{font-size:26px}
+
+/*pop button */
+button[class*="btn"]{font-size:18px}
+button[class*="image"]{font-size:0;}

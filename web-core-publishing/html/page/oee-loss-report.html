@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OEE 손실 통계 보고서</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/page.css">
+    <link rel="stylesheet" href="../../resources/css/chart.css">
+    <link rel="stylesheet" href="../../resources/css/left_gnb.css">
+    <script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Material</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 1</a></li>
+                    <li><a href="">자재 관리 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Machine</a>
+                <ul>
+                    <li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 유형 관리 2-1</a></li>
+                            <li><a href="">자재 유형 관리 2-2</a></li>
+                            <li><a href="">자재 유형 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="has-depth">자재 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 관리 2-1</a></li>
+                            <li><a href="" class="has-depth">자재 관리 2-2</a>
+                                <ul>
+                                    <li><a href="">자재 관리 3-1</a></li>
+                                    <li><a href="">자재 관리 3-2</a></li>
+                                    <li><a href="">자재 관리 3-3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">자재 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Men</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 3</a></li>
+                    <li><a href="">자재 관리 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Method</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 4</a></li>
+                    <li><a href="">자재 관리 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>OEE 손실 통계 보고서</h2>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+                <ul class="oee-value">
+                    <li>
+                        <div>
+                            비가동<span><strong>100.0</strong>%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            에러<span><strong>100.0</strong>%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            성능가동율<span><strong>100.0</strong>%</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            불량율<span><strong>100.0</strong>%</span>
+                        </div>
+                    </li>
+                </ul>
+                <h3>그룹 목록</h3>
+                <div class="fix-card three-col oee-group-list">
+                    <ul>
+                        <li><h3 class="fix-title">Electronics</h3>
+                            <div class="card-cont"></div>
+                        </li>
+                        <li><h3 class="fix-title">Electronics</h3>
+                            <div class="card-cont"></div>
+                        </li>
+                        <li><h3 class="fix-title">Electronics</h3>
+                            <div class="card-cont"></div>
+                        </li>
+                        <li><h3 class="fix-title">Electronics</h3>
+                            <div class="card-cont"></div>
+                        </li>
+                        <li><h3 class="fix-title">Electronics</h3>
+                            <div class="card-cont"></div>
+                        </li>
+                        <li><h3 class="fix-title">Electronics</h3>
+                            <div class="card-cont"></div>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+        </div>
+        <div class="contents-wrap no-footer aside-search">
+            <section>
+                <h3 class="aside-title">보고서 조회 설정</h3>
+                <div class="aside-inner">
+                    <div class="tab-container tab-type2">
+                        <input id="tab1" type="radio" name="tabs" checked="">
+                        <label for="tab1" style="width:25%">일</label>
+                        <input id="tab2" type="radio" name="tabs">
+                        <label for="tab2" style="width:25%">주</label>
+                        <input id="tab3" type="radio" name="tabs">
+                        <label for="tab3" style="width:25%">월</label>
+                        <input id="tab4" type="radio" name="tabs">
+                        <label for="tab4" style="width:25%">년</label>
+                        <section class="tab-content tab01">
+                            <select style="width:32.6%">
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+                            <select style="width:32.6%">
+                                <option>6 월</option>
+                                <option>5 월</option>
+                            </select>
+                            <select style="width:32.6%">
+                                <option>1 일</option>
+                                <option>2 일</option>
+                            </select>
+                        </section>
+                        <section class="tab-content tab02">
+                            <select style="width:49.5%">
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+                            <select style="width:49.5%">
+                                <option>1 주</option>
+                                <option>2 주</option>
+                            </select>
+                            <div class="period">
+                                <input type="text" class="calendar" placeholder="2018-06-08" />
+                                <input type="text" class="calendar" placeholder="2018-06-10" />
+                            </div>
+                        </section>
+                        <section class="tab-content tab03">
+                            <select style="width:49.5%">
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+                            <select style="width:49.5%">
+                                <option>1 주</option>
+                                <option>2 주</option>
+                            </select>
+                        </section>
+                        <section class="tab-content tab04">
+                            <select style="width:100%">
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+                        </section>
+                    </div>
+                    <div class="tab-container tab-type2">
+                        <input id="tab5" type="radio" name="tabs02" checked="">
+                        <label for="tab5" style="width:50%">그룹</label>
+                        <input id="tab6" type="radio" name="tabs02">
+                        <label for="tab6" style="width:50%">사출기</label>
+                        <section class="tab-content tab05">
+                            <div class="list-title">
+                                <label><input type="checkbox" /><span class="check-mark"></span></label>
+                                그룹
+                            </div>
+                            <ul class="list-style">
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">가공기1</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">가공기2</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">가공기3</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">가공기4</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">가공기5</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">가공기6</span></label></a></li>
+                            </ul>
+                        </section>
+                        <section class="tab-content tab06">
+                            <div class="list-title">
+                                <label><input type="checkbox" /><span class="check-mark"></span></label>
+                                사출기
+                            </div>
+                            <ul class="list-style">
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">IMM01</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">IMM02</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">IMM03</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">IMM04</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">IMM05</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">IMM06</span></label></a></li>
+                                <li><a href="#"><label><input type="checkbox" /><span class="check-mark">IMM07</span></label></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="btn-area">
+                        <button class="btn-srch black ico wide">조회</button>
+                        <button class="btn-print ico wide">인쇄</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

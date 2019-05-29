@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>the ONE*900</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+    <style>
+        .tab-container.full-size{height:100%}
+        .tab-container.full-size .tab-content{padding-bottom:0}
+        .lsmtron .tab-content{padding-left:0;padding-right:0;border:0;background:#d7d7d7}
+        .tab-container.full-size .tab-content{height:calc(100% - 47px);box-sizing:border-box}
+        .tab-content .image-section{position:relative;height:550px;text-align:center;border:1px solid #a4a4a4;background:#fff}
+        .tab-content .image-section img{max-width:100%;height:100%;width:auto}
+        .tab-content .image-section .img-info{position:absolute;display:block;padding:10px;text-align:left;color:#fff;font-size:18px;border-radius:5px;background:rgba(0,0,0,0.6)}
+        .tab-content .image-section .img-info .value{display:block;}
+        .lms-tab .register-table .cont span[class*="flag"]{display:inline-block}
+        .lms-tab span[class*="flag"]{height:30px;flex:none;min-width:60px;padding:0 20px;line-height:30px;font-size:18px;font-weight:700;text-align:center}
+        .lms-tab span[class*="flag"] + span[class*="flag"]{margin-left:10px}
+        .lms-tab .register-table .cont span[class*="flag"] + span[class*="flag"]{padding:0 10px}
+        
+        .static-table.horizon th{border:1px solid #555;}
+        .static-table.border-style td{border:1px solid #555}
+        
+        .lsmtron .image-section .img-info.info01{top:210px;left:17.54%}
+        .lsmtron .image-section .img-info.info02{top:280px;left:27.8%}
+        .lsmtron .image-section .img-info.info03{top:280px;left:54.3%}
+        .lsmtron .image-section .img-info.info04{top:280px;left:62.91%}
+        .lsmtron .image-section .img-info.info05{top:180px;left:54.3%}
+        .lsmtron .image-section .img-info.info06{top:180px;left:62.91%}
+        .lsmtron .image-section .img-info.info07{top:180px;left:71.52%}
+        .lsmtron .image-section .img-info.info08{top:180px;left:79.4%}
+
+        .monitoring .register-table .title{font-size:14px}
+        .monitoring .register-table .cont input{font-size:14px}
+        .monitoring .tab-container > label{font-size:14px}
+        .monitoring input.unit + em{font-size:14px}
+        .monitoring .register-table .cont .no-flex.unit{font-size:14px;color:#000}
+        .unit > sup{position:relative;top:-4px}
+
+        .lsmtron .tab04 input{text-align:right}
+        .lsmtron input.yellow{border:0;color:#000;background:yellow}
+        .lsmtron .row.card-wrap .card-inner{width:100%;height:auto}
+        .lsmtron .red{color:red}
+        .lsmtron .blue{color:blue}
+
+        .no-title.register-table ul {border:0}
+        .no-title.register-table .cont{padding-left:0;padding-right:0}
+        .no-layout.register-table ul{border:0}
+        .no-layout.register-table .title{padding-left:0;border:0;background-color:transparent}
+        .no-layout.register-table .unit{width:50px}
+        .no-layout.register-table .cont{border-bottom:0}
+        .line-margin.register-table li{margin-top:20px}
+        .card-area .card-inner h3.bg-title{color:#fff;background:#595959}
+
+        .monitoring-table{width:100%;}
+        .monitoring-table td {padding:10px 10px 5px;text-align:center;vertical-align:middle}
+        .monitoring-table td input{width:100%;text-align:center !important}
+        .monitoring-table td strong{display:inline-block;padding-bottom:5px;font-weight:300;font-size:13px}
+        .monitoring-table td.unit{vertical-align:bottom}
+        .monitoring-table td.unit > span{display:inline-block;width:100%;font-size:14px;text-align:left;line-height:35px;}
+        .monitoring-table tr.no-title td{padding-top:30px}
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h2>the ONE*900</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap no-footer monitoring lsmtron">
+            <section>
+                <div class="tab-container tab-type2 full-size lms-tab">
+                    <input id="tab1" type="radio" name="tabs">
+                    <label for="tab1">개요</label>
+                    <input id="tab2" type="radio" name="tabs">
+                    <label for="tab2">샷 데이터</label>
+                    <input id="tab3" type="radio" name="tabs">
+                    <label for="tab3">온도</label>
+                    <input id="tab4" type="radio" name="tabs" checked="">
+                    <label for="tab4">사출</label>
+                    <input id="tab5" type="radio" name="tabs">
+                    <label for="tab5">사출 그래프</label>
+               
+                    <section class="tab-content tab01">
+                        <div class="register-table">
+                            <ul>
+                                <li>
+                                    <div class="title required">운전모드</div>
+                                    <div class="cont">
+                                        <div class="line-wrap">
+                                            <div class="flag-wrap">
+                                                <span class="flag-SETUP">셋업</span>
+                                                <span class="flag-MANUAL">수동</span>
+                                                <span class="flag-HALF-AUTO">반자동</span>
+                                                <span class="flag-">자동</span>
+                                                <span class="flag-ALARM">알람</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title required">생산품목</div>
+                                    <div class="cont">
+                                        <div class="line-wrap">
+                                            <span><input type="text" placeholder="워크센터 명을 입력하세요."></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">목표수량</div>
+                                    <div class="cont">
+                                        <div class="line-wrap">
+                                            <label><input type="text" class="unit"><em>ea</em></label>
+                                        </div>
+                                    </div>
+                                    <div class="title">생산수량</div>
+                                    <div class="cont">
+                                        <div class="line-wrap">
+                                            <label><input type="text" class="unit"><em>ea</em></label>
+                                        </div>
+                                    </div>
+                                    <div class="title">남은수량</div>
+                                    <div class="cont">
+                                        <div class="line-wrap">
+                                            <label><input type="text" class="unit"><em>ea</em></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="image-section mgt20">
+                            <img src="./../../resources/images/machine/ls/M0001.png" alt="" />
+                            <span class="img-info info01">압출위치<strong class="value">-0.06<em class="unit">mm</em></strong></span>
+                            <span class="img-info info02">금형위치<strong class="value">118.15<em class="unit">cm<sup>3</sup></em></strong></span>
+                            <span class="img-info info03">스크류경<strong class="value">32<em class="unit">mm</em></strong></span>
+                            <span class="img-info info04">사출용적<strong class="value">80.43<em class="unit">cm<sup>3</sup></em></strong></span>
+                            <span class="img-info info05">HN<strong class="value">200<em class="unit">℃</em></strong></span>
+                            <span class="img-info info06">H1<strong class="value">200<em class="unit">℃</em></strong></span>
+                            <span class="img-info info07">H2<strong class="value">200<em class="unit">℃</em></strong></span>
+                            <span class="img-info info08">H3<strong class="value">200<em class="unit">℃</em></strong></span>
+                        </div>
+                    </section>
+                    <section class="tab-content tab02">
+                        <div class="sfp-grid-wrap border-style">
+                            <div id="grid">
+                                <div class="sfp-grid-panel">
+                                    <div class="sfp-grid-header-panel">
+                                        <table class="sfp-grid">
+                                            <colgroup>
+                                                <col style="width:34px">
+                                                <col>
+                                                <col style="width:200px">
+                                                <col>
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th><label><input type="checkbox"><span class="check-mark"></span></label></th>
+                                                    <th>자재내역</th>
+                                                    <th>저장빈</th>
+                                                    <th>설명</th>
+                                                    <th>조달유형</th>
+                                                    <th>자재유형</th>
+                                                    <th>처리유형</th>
+                                                    <th>작업</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="sfp-grid-body-panel">
+                                        <table class="sfp-grid">
+                                            <colgroup>
+                                                <col style="width:34px">
+                                                <col>
+                                                <col style="width:200px">
+                                                <col>
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                                <col style="width:100px">
+                                            </colgroup>
+                                            <thead style="display: none;">
+                                                <tr>
+                                                    <th><label><input type="checkbox"><span class="check-mark"></span></label></th>
+                                                    <th>자재내역</th>
+                                                    <th>저장빈</th>
+                                                    <th>설명</th>
+                                                    <th>조달유형</th>
+                                                    <th>자재유형</th>
+                                                    <th>처리유형</th>
+                                                    <th>작업</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr class="check">
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td><button class="btn small">수정</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td><button class="btn small blue">수정</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R41-MTRFMTAGMDNASHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>TR-R41-ERFFMTSBMDNASHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                                    <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>E</td>
+                                                    <td>MFER</td>
+                                                    <td>C</td>
+                                                    <td>수정</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot style="display: none;"></tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mgt20">
+                            <table class="static-table horizon border-style">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>Min</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>max</th>
+                                    <td>  </td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Average</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="tab-content tab03">
+                        <div class="card-area">
+                            <div class="row">
+                                <div class="col card-wrap">
+                                    <div class="card-inner">
+                                        <h3>ZONE1</h3>
+                                        <div class="card-cont"></div>
+                                    </div>
+                                </div>
+                                <div class="col card-wrap">
+                                    <div class="card-inner">
+                                        <h3>ZONE2</h3>
+                                        <div class="card-cont"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col card-wrap">
+                                    <div class="card-inner">
+                                        <h3>ZONE3</h3>
+                                        <div class="card-cont"></div>
+                                    </div>
+                                </div>
+                                <div class="col card-wrap">
+                                    <div class="card-inner">
+                                        <h3>ZONE4</h3>
+                                        <div class="card-cont"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tab-content tab04">
+                        <div class="card-area same-size">
+                            <div class="row no-flex">
+                                <div class="col card-wrap">
+                                    <div class="register-table">
+                                        <ul>
+                                            <li class="vertical">
+                                                <div class="title">사출속도</div>
+                                                <div class="title">스크류회전</div>
+                                                <div class="title">사출압력</div>
+                                                <div class="title">생산카운트</div>
+                                            </li>
+                                            <li class="vertical">
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">cm<sup>3</sup>/s</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">cm/s</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">bar</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cont">
+                                                    <div class="line-wrap">
+                                                        <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">cnt</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col no-flex" style="width:450px">
+                                    <div class="row card-wrap">
+                                        <div class="card-inner">
+                                            <h3 class="bg-title">보압</h3>
+                                            <div class="card-cont">
+                                                <div class="register-table no-layout no-title line-margin">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">s</span>
+                                                                    <span class="no-flex red">P1</span>
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">bar</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">s</span>
+                                                                    <span class="no-flex red">P2</span>
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">bar</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">s</span>
+                                                                    <span class="no-flex red">P3</span>
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">bar</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row card-wrap">
+                                        <div class="card-inner">
+                                            <h3 class="bg-title">보압절환</h3>
+                                            <div class="card-cont">
+                                                <div class="register-table no-layout">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="title">속도</div>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">cm<sup>3</sup>/s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="title">압력</div>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">bar</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="title">절환위치</div>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">cm<sup>3</sup>/s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="title">절환압력</div>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">bar</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="title">쿠션</div>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">cm<sup>3</sup></span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row card-wrap">
+                                        <div class="card-inner">
+                                            <h3 class="bg-title">사출</h3>
+                                            <div class="card-cont">
+                                                <table class="monitoring-table">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <td rowspan="2">
+                                                            <span>
+                                                                <strong class="blue">속도</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">압력5</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">압력4</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">압력3</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">압력2</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">압력1</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td class="unit">
+                                                            <span>bar</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도5</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도4</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도3</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도2</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도1</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td class="unit">
+                                                            <span>cm<sup>3</sup>/s</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="no-title">
+                                                        <td></td>
+                                                        <td>
+                                                            <span>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td class="unit">
+                                                            <span>cm<sup>3</sup></span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row card-wrap">
+                                        <div class="card-inner">
+                                            <h3 class="bg-title">계량</h3>
+                                            <div class="card-cont">
+                                                <table class="monitoring-table">
+                                                    <colgroup>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col>
+                                                        <col style="width:70px">
+                                                    </colgroup>
+                                                    <tr>
+                                                        <td rowspan="2">
+                                                            <span>
+                                                                <strong class="blue">석백속도1</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">속도1</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">속도2</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="red">속도3</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td rowspan="2">
+                                                            <span style="display:inline-block;width:65%">
+                                                                <strong class="red">석백속도2</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                            <span style="font-size:13px">mm/s</span>
+                                                        </td>
+                                                        <td class="unit">
+                                                            <span>bar</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도5</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도4</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td>
+                                                            <span>
+                                                                <strong class="blue">속도3</strong><br/>
+                                                                <input type="text" />
+                                                            </span>
+                                                        </td>
+                                                        <td class="unit">
+                                                            <span>cm<sup>3</sup>/s</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div style="padding-left:8%">
+                                                    <table class="monitoring-table">
+                                                        <colgroup>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col>
+                                                            <col style="width:70px">
+                                                        </colgroup>
+                                                        <tr class="no-title">
+                                                            <td>
+                                                                <span>
+                                                                    <input type="text" />
+                                                                </span>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                    <input type="text" />
+                                                                </span>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                    <input type="text" />
+                                                                </span>
+                                                            </td>
+                                                            <td>
+                                                                <span>
+                                                                    <input type="text" />
+                                                                </span>
+                                                            </td>
+                                                            <td style="padding-right:0">
+                                                                <span>
+                                                                    <input type="text" />
+                                                                </span>
+                                                            </td>
+                                                            <td class="unit">
+                                                                <span>cm<sup>3</sup></span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col no-flex" style="width:220px">
+                                    <div class="row card-wrap">
+                                        <div class="card-inner">
+                                            <h3>사출시간</h3>
+                                            <div class="card-cont">
+                                                <div class="register-table no-title">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row card-wrap no-flex">
+                                        <div class="card-inner">
+                                            <h3>보압시간</h3>
+                                            <div class="card-cont">
+                                                <div class="register-table no-title">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row card-wrap">
+                                        <div class="card-inner">
+                                            <h3>냉각시간</h3>
+                                            <div class="card-cont">
+                                                <div class="register-table no-title">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row card-wrap">
+                                        <div class="card-inner">
+                                            <h3>계량지연</h3>
+                                            <div class="card-cont">
+                                                <div class="register-table no-title">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0"></span><span class="no-flex unit">s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="cont">
+                                                                <div class="line-wrap">
+                                                                    <span><input type="text" placeholder="0.0" class="yellow"></span><span class="no-flex unit">s</span>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tab-content tab05">
+                        <div class="card-area">
+                            <div class="row">
+                                <div class="col card-wrap no-title">
+                                    <div class="card-inner">
+                                        <div class="card-cont"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>

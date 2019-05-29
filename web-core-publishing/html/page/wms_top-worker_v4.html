@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>작업자 랭킹 ver2</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<style>
+		.person-map{position:relative;height:100%;padding:10px;box-sizing:border-box;background:#fff}
+		.function-area + .person-map{height:calc(100% - 70px)}
+		.ranking-list{height:100%;overflow:hidden;}		
+		.ranking-list > li{float:left;width:50%;height:20%;padding:10px;box-sizing:border-box}
+		.ranking-list > li .inner{position:relative;width:100%;height:100%;box-sizing:border-box;font-size:0;background:#eaeaea}
+		.ranking-list > li .inner > div{display:inline-block;height:100%;vertical-align:top}
+		.ranking-list .num{width:120px;font-size:56px;font-weight:700;text-align:center;color:#fff;background:#757575}
+		.ranking-list .num > span{display:flex;justify-content: center;flex-direction:column;height:100%}
+		.ranking-list > li:nth-child(1) .num{background-color:#f1da36}
+		.ranking-list > li:nth-child(2) .num{background-color:#b3bead}
+		.ranking-list > li:nth-child(3) .num{background-color:#ed9017}
+		.ranking-list .person{width:350px}
+		.ranking-list .person .person-inner{display:flex;justify-content: center;flex-direction:column;height:100%;text-align:center}
+		.ranking-list .person .person-inner > strong{font-size:34px}
+		.ranking-list .person .person-inner > span{font-size:20px}
+		.ranking-list .graph-wrap{width:calc(100% - 470px);padding:15px 20px;font-size:12px;box-sizing:border-box}
+		.ranking-list .graph-wrap ul > li{position:relative;padding-left:120px}
+		.ranking-list .graph-wrap ul > li + li{margin-top:12px}
+		.ranking-list .graph-wrap ul > li .title{position:absolute;left:0;font-size:18px}
+		.ranking-list .graph-wrap ul > li .progress-bar{height:26px;background-color:#fff}
+		.ranking-list .graph-wrap ul > li .progress-bar span{font-weight:700;font-size:18px;line-height:26px;text-align:center}
+		.ranking-list .graph-wrap ul{display:flex;justify-content: center;flex-direction:column;height:100%;text-align:center}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>작업자 랭킹 ver2</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">창고1</option>
+							<option value="7">창고2</option>
+						</select>
+						<button class="btn-srch ico">조회</button>
+						<button class="btn-reset image">초기화</button>
+					</div>
+				</div>
+				<div class="person-map">
+					<ul class="ranking-list">
+						<li>
+							<div class="inner">
+								<div class="num"><span>1</span></div>
+								<div class="person">
+									<div class="person-inner">
+										<strong>최종철</strong>
+										<span>(B20170004)</span>
+									</div>
+								</div>
+								<div class="graph-wrap yellow">
+									<ul>
+										<li>
+											<strong class="title">배치 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목완료수량</strong>
+											<div class="progress-bar">
+												<span>124</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="inner">
+								<div class="num"><span>2</span></div>
+								<div class="person">
+									<div class="person-inner">
+										<strong>최종철</strong>
+										<span>(B20170004)</span>
+									</div>
+								</div>
+								<div class="graph-wrap yellow">
+									<ul>
+										<li>
+											<strong class="title">배치 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목완료수량</strong>
+											<div class="progress-bar">
+												<span>124</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="inner">
+								<div class="num"><span>3</span></div>
+								<div class="person">
+									<div class="person-inner">
+										<strong>최종철</strong>
+										<span>(B20170004)</span>
+									</div>
+								</div>
+								<div class="graph-wrap yellow">
+									<ul>
+										<li>
+											<strong class="title">배치 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목완료수량</strong>
+											<div class="progress-bar">
+												<span>124</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="inner">
+								<div class="num"><span>4</span></div>
+								<div class="person">
+									<div class="person-inner">
+										<strong>최종철</strong>
+										<span>(B20170004)</span>
+									</div>
+								</div>
+								<div class="graph-wrap yellow">
+									<ul>
+										<li>
+											<strong class="title">배치 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목 수</strong>
+											<div class="progress-bar">
+												<span style="width:50%">124</span>
+											</div>
+										</li>
+										<li>
+											<strong class="title">품목완료수량</strong>
+											<div class="progress-bar">
+												<span>124</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+								<div class="inner">
+									<div class="num"><span>4</span></div>
+									<div class="person">
+										<div class="person-inner">
+											<strong>최종철</strong>
+											<span>(B20170004)</span>
+										</div>
+									</div>
+									<div class="graph-wrap yellow">
+										<ul>
+											<li>
+												<strong class="title">배치 수</strong>
+												<div class="progress-bar">
+													<span style="width:50%">124</span>
+												</div>
+											</li>
+											<li>
+												<strong class="title">품목 수</strong>
+												<div class="progress-bar">
+													<span style="width:50%">124</span>
+												</div>
+											</li>
+											<li>
+												<strong class="title">품목완료수량</strong>
+												<div class="progress-bar">
+													<span>124</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+									<div class="inner">
+										<div class="num"><span>4</span></div>
+										<div class="person">
+											<div class="person-inner">
+												<strong>최종철</strong>
+												<span>(B20170004)</span>
+											</div>
+										</div>
+										<div class="graph-wrap yellow">
+											<ul>
+												<li>
+													<strong class="title">배치 수</strong>
+													<div class="progress-bar">
+														<span style="width:50%">124</span>
+													</div>
+												</li>
+												<li>
+													<strong class="title">품목 수</strong>
+													<div class="progress-bar">
+														<span style="width:50%">124</span>
+													</div>
+												</li>
+												<li>
+													<strong class="title">품목완료수량</strong>
+													<div class="progress-bar">
+														<span>124</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+										<div class="inner">
+											<div class="num"><span>4</span></div>
+											<div class="person">
+												<div class="person-inner">
+													<strong>최종철</strong>
+													<span>(B20170004)</span>
+												</div>
+											</div>
+											<div class="graph-wrap yellow">
+												<ul>
+													<li>
+														<strong class="title">배치 수</strong>
+														<div class="progress-bar">
+															<span style="width:50%">124</span>
+														</div>
+													</li>
+													<li>
+														<strong class="title">품목 수</strong>
+														<div class="progress-bar">
+															<span style="width:50%">124</span>
+														</div>
+													</li>
+													<li>
+														<strong class="title">품목완료수량</strong>
+														<div class="progress-bar">
+															<span>124</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li>
+											<div class="inner">
+												<div class="num"><span>4</span></div>
+												<div class="person">
+													<div class="person-inner">
+														<strong>최종철</strong>
+														<span>(B20170004)</span>
+													</div>
+												</div>
+												<div class="graph-wrap yellow">
+													<ul>
+														<li>
+															<strong class="title">배치 수</strong>
+															<div class="progress-bar">
+																<span style="width:50%">124</span>
+															</div>
+														</li>
+														<li>
+															<strong class="title">품목 수</strong>
+															<div class="progress-bar">
+																<span style="width:50%">124</span>
+															</div>
+														</li>
+														<li>
+															<strong class="title">품목완료수량</strong>
+															<div class="progress-bar">
+																<span>124</span>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li>
+												<div class="inner">
+													<div class="num"><span>4</span></div>
+													<div class="person">
+														<div class="person-inner">
+															<strong>최종철</strong>
+															<span>(B20170004)</span>
+														</div>
+													</div>
+													<div class="graph-wrap yellow">
+														<ul>
+															<li>
+																<strong class="title">배치 수</strong>
+																<div class="progress-bar">
+																	<span style="width:50%">124</span>
+																</div>
+															</li>
+															<li>
+																<strong class="title">품목 수</strong>
+																<div class="progress-bar">
+																	<span style="width:50%">124</span>
+																</div>
+															</li>
+															<li>
+																<strong class="title">품목완료수량</strong>
+																<div class="progress-bar">
+																	<span>124</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li>
+													<div class="inner">
+														<div class="num"><span>4</span></div>
+														<div class="person">
+															<div class="person-inner">
+																<strong>최종철</strong>
+																<span>(B20170004)</span>
+															</div>
+														</div>
+														<div class="graph-wrap yellow">
+															<ul>
+																<li>
+																	<strong class="title">배치 수</strong>
+																	<div class="progress-bar">
+																		<span style="width:50%">124</span>
+																	</div>
+																</li>
+																<li>
+																	<strong class="title">품목 수</strong>
+																	<div class="progress-bar">
+																		<span style="width:50%">124</span>
+																	</div>
+																</li>
+																<li>
+																	<strong class="title">품목완료수량</strong>
+																	<div class="progress-bar">
+																		<span>124</span>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+					</ul>
+					
+				</div>
+			</section>
+		</div>
+
+	</main>
+
+</body>
+</html>

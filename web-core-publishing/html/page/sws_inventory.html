@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>재고 회전율</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../resources/js/imc/imc-utils.js"></script>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="#">Material</a>
+				<ul>
+					<li><a href="">자재 유형 관리 1</a></li>
+					<li><a href="">자재 관리 1</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Machine</a>
+				<ul>
+					<li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+						<ul>
+							<li><a href="">자재 유형 관리 2-1</a></li>
+							<li><a href="">자재 유형 관리 2-2</a></li>
+							<li><a href="">자재 유형 관리 2-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="has-depth">자재 관리 2</a>
+						<ul>
+							<li><a href="">자재 관리 2-1</a></li>
+							<li><a href="" class="has-depth">자재 관리 2-2</a>
+								<ul>
+									<li><a href="">자재 관리 3-1</a></li>
+									<li><a href="">자재 관리 3-2</a></li>
+									<li><a href="">자재 관리 3-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">자재 관리 2-3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Men</a>
+				<ul>
+					<li><a href="">자재 유형 관리 3</a></li>
+					<li><a href="">자재 관리 3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Method</a>
+				<ul>
+					<li><a href="">자재 유형 관리 4</a></li>
+					<li><a href="">자재 관리 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<header>
+			<h2>재고 회전율</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">품목명</option>
+							<option value="7">품목명2</option>
+						</select>
+						<select>
+							<option value="1" selected="">품목 코드명</option>
+							<option value="2">품목 코드명2</option>
+						</select>
+						<button class="btn-srch ico black">검색</button>
+						<button class="btn-reset image">초기화</button>
+					</div>
+				</div>
+				<div class="card-area same-size type4">
+					<div class="row">
+						<div class="card-wrap col">
+							<div class="card-inner">
+								<h3 class="card-title">Inventory Turnover Ratio </h3>
+								<ul class="title-area-data">
+									<li>재고 금액 : 1,450 천원</li>
+									<li>장기 재고 금액 : 10개, 300천원</li>
+									<li>불용 재고 : 2개 200천원</li>
+								</ul>
+								<div class="card-cont">
+									<ul class="summary-sec tp2">
+										<li>
+											<div class="summary-item-wrap tp2 graph-wrap">
+												<strong class="graph-title">재고 회전율</strong>
+												<div class="graph-area" style="width:160px;height:160px">
+													<span class="graph-value"><em><strong>10</strong>.34</em><br/>cycle</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="summary-item-wrap tp2 vertical-bottom small">
+												<ul>
+													<li><span class="compare">이전일 대비 <em class="point green"><strong>+ 2</strong>cycle</em></span></li>
+													<li><span class="compare">기준 cycle <em class="point"><strong>11</strong>cycle</em></span><button class="btns small mgt10">설정</button></li>
+													<li class="border"><span class="compare">대상 품목수 <em class="point"><strong>211</strong>SKU</em></span></li>
+												</ul>
+											</div>
+										</li>
+										<li class="wide">
+											<div class="summary-item-wrap tp2">
+												<ul>
+													<li class="border">
+														<strong class="small-title">월 출고량</strong>
+														<div class="value"><strong>98</strong>ea</div>
+													</li>
+													<li class="border">
+														<strong class="small-title">월 평균 재고량</strong>
+														<div class="value"><strong>1,000</strong>ea</div>
+													</li>
+													<li class="border">
+														<strong class="small-title">재고 회전 일수</strong>
+														<div class="value"><strong>3</strong>days</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+									<div class="data-area sws-inventory">
+										<div class="sfp-grid-panel border-style">
+											<div class="sfp-grid-header-panel">
+												<table class="sfp-grid">
+													<colgroup>
+														<col>
+														<col style="width:75px">
+														<col style="width:105px">
+														<col style="width:120px">
+														<col style="width:120px">
+														<col style="width:120px">
+														<col style="width:120px">
+														<col style="width:295px">
+													</colgroup>
+													<thead>
+														<tr>
+															<th class="order" rowspan="2">품목 명 / 품목 코드</th>
+															<th rowspan="2">레벨</th>
+															<th rowspan="2">품목 분류</th>
+															<th class="order reverse" rowspan="2">재고회전수</th>
+															<th rowspan="2" class="order">기준 회전수</th>
+															<th rowspan="2" class="order">공정 투입수</th>
+															<th rowspan="2" class="order">평균 재고수</th>
+															<th class="vertical-middle"><span>그래프</span><button class="btns small">설정</button></th>
+														</tr>
+														<tr>
+															<th>
+																<div class="time-th">
+																	<span>1</span>
+																	<span>5</span>
+																	<span class="ico">시계</span>
+																	<span>15</span>
+																	<span>20</span>
+																</div>
+															</th>
+														</tr>
+													</thead>
+												</table>
+											</div>
+											<div class="sfp-grid-body-panel" style="height: 460px;">
+												<table class="sfp-grid">
+													<colgroup>
+														<col>
+														<col style="width:75px">
+														<col style="width:105px">
+														<col style="width:120px">
+														<col style="width:120px">
+														<col style="width:120px">
+														<col style="width:120px">
+														<col style="width:295px">
+													</colgroup>
+													<thead style="display: none;">
+														<tr>
+															<th class="order" rowspan="2">품목 명 / 품목 코드</th>
+															<th rowspan="2">레벨</th>
+															<th rowspan="2">품목 분류</th>
+															<th class="order reverse" rowspan="2">재고회전수</th>
+															<th rowspan="2" class="order">기준 회전수</th>
+															<th rowspan="2" class="order">공정 투입수</th>
+															<th rowspan="2" class="order">평균 재고수</th>
+															<th class="vertical-middle"><span>그래프</span><button class="btns small">설정</button></th>
+														</tr>
+														<tr>
+															<th>
+																<div class="time-th">
+																	<span>1</span>
+																	<span>5</span>
+																	<span class="ico">시계</span>
+																	<span>15</span>
+																	<span>20</span>
+																</div>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="green">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials01.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip bottom" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials03.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials04.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+														<tr class="red">
+															<td>
+																<div class="item-wrap">
+																	<img src="./../../resources/images/icons/icon_materials02.jpg" alt="" />
+																	<span class="item-txt">
+																		<strong>INOLES SEAL</strong>
+																		BALA25CPSPGB
+																	</span>
+																</div>
+															</td>
+															<td>1</td>
+															<td>반제품</td>
+															<td class="bg-col">15</td>
+															<td>22</td>
+															<td>403</td>
+															<td>13</td>
+															<td class="progress-wrap green">
+																<div class="progress-bar square">
+																	<span style="width:25%" class="tooltip" data-tooltip="tooltip내용"></span>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+													<tfoot style="display: none;"></tfoot>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+	</main>
+
+</body>
+</html>

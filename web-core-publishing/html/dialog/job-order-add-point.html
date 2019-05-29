@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>작업지시 등록 일정</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>작업지시 등록 일정</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap">
+            <section>
+                <h3 class="under-title">입력 정보</h3>
+                <table class="static-table small">
+                    <colgroup>
+                        <col style="width:50%">
+                        <col style="width:50%">
+                    </colgroup>
+                    <tr>
+                        <th class="required">사출기</th>
+                        <th class="required">일정</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text"/></td>
+                        <td><input type="text"/></td>
+                    </tr>
+                </table>
+                <h3 class="under-title">생산지시</h3>
+                <table class="static-table small">
+                    <colgroup>
+                        <col style="width:33.33%">
+                        <col style="width:33.33%">
+                        <col style="width:33.33%">
+                    </colgroup>
+                    <tr>
+                        <th class="required">생산지시</th>
+                        <th>제품</th>
+                        <th>발주처</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="select" value="321" /></td>
+                        <td><input type="text"/></td>
+                        <td><input type="text"/></td>
+                    </tr>
+                </table>
+                <h3 class="under-title">금형</h3>
+                <table class="static-table small">
+                    <colgroup>
+                        <col style="width:33.33%">
+                        <col style="width:33.33%">
+                        <col style="width:33.33%">
+                    </colgroup>
+                    <tr>
+                        <th class="required">금형</th>
+                        <th class="required">캐비티</th>
+                        <th class="required">사이클</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="select" value="금형" /></td>
+                        <td><input type="text"/></td>
+                        <td><label><input type="text" class="unit" placeholder="사이클" style="text-align:left"/><em>초</em></label></td>
+                    </tr>
+                </table>
+                <h3 class="under-title">작업사항</h3>
+                <table class="static-table small">
+                    <colgroup>
+                        <col style="width:50%">
+                        <col style="width:16.66%">
+                        <col style="width:16.66%">
+                        <col style="width:16.66%">
+                    </colgroup>
+                    <tr>
+                        <th class="required">목표설정방식</th>
+                        <th class="required">토요일</th>
+                        <th class="required">일요일</th>
+                        <th class="required">공휴일</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="option" checked><span class="radio-mark">시간</span></label>
+                            <label><input type="radio" name="option"><span class="radio-mark">수량</span></label>
+                        </td>
+                        <td>
+                            <label><input type="checkbox" checked="" disabled=""><span class="check-mark">제외</span></label>
+                        </td>
+                        <td>
+                            <label><input type="checkbox"><span class="check-mark">제외</span></label>
+                        </td>
+                        <td>
+                            <label><input type="checkbox"><span class="check-mark">제외</span></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="required">셋업시간</th>
+                        <th class="required" colspan="3">계획정지시간</th>
+                    </tr>
+                    <tr>
+                        <td><label><input type="text" class="unit" placeholder="00" style="text-align:left"/><em>분</em></label></td>
+                        <td colspan="3"><label><input type="text" class="unit" placeholder="00" style="text-align:left"/><em>분</em></label></td>
+                    </tr>
+                    <tr>
+                        <th class="required">목표수량</th>
+                        <th class="required" colspan="3">목표시간</th>
+                    </tr>
+                    <tr>
+                        <td><label><input type="text" class="unit" placeholder="0" style="text-align:left"/><em>ea</em></label></td>
+                        <td colspan="3"><label><input type="text" class="unit" placeholder="0" style="text-align:left"/><em>분</em></label></td>
+                    </tr>
+                </table>
+            </section>
+            <footer>
+                <div class="align-right">
+                    <button class="btn-copy blue">적용</button>
+                </div>
+            </footer>
+        </div>
+        <div class="contents-wrap">
+            <section>
+                <div id="grid">
+                    <div class="sfp-grid-panel">
+                        <div class="sfp-grid-header-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:5%">
+                                    <col style="width:15%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>실행일자</th>
+                                        <th>계획시간 (m)</th>
+                                        <th>계획정지 (m)</th>
+                                        <th>수량 (ea)</th>
+                                        <th>셋업시간 (m)</th>
+                                        <th>제외</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel" style="height:550px">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:5%">
+                                    <col style="width:15%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <thead style="display: none;">
+                                    <tr>
+                                        <th>순번</th>
+                                        <th>실행일자</th>
+                                        <th>계획시간 (m)</th>
+                                        <th>계획정지 (m)</th>
+                                        <th>수량 (ea)</th>
+                                        <th>셋업시간 (m)</th>
+                                        <th>제외</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="day">	
+                                        <td>1</td>	
+                                        <td><span class="goalExecYmd">2018-06-14</span></td>	
+                                        <td><input type="number" readonly="" required min="0" value="0"></td>	
+                                        <td><input type="number" readonly="" value="0"></td>	
+                                        <td><input type="number" readonly="" required min="1" value="0"></td>	
+                                        <td><input type="number" readonly="" required min="0" value="0"></td>	
+                                        <td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot style="display: none;"></tfoot>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-footer-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:5%">
+                                    <col style="width:15%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:15%">
+                                    <col style="width:15%">
+                                    <col style="width:10%">
+                                </colgroup>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">5/6</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="align-right">
+                    <button class="btn-save">저장</button>
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>

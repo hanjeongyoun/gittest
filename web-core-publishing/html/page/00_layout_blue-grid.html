@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SFP 2.0 Page 기본 레이아웃</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/page.css">
+    <link rel="stylesheet" href="../../resources/css/left_gnb.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+        <div class="util-menu">
+            <ul>
+                <li><time>2018-05-09 20:12:10</time></li>
+                <li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+                <li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+                <li><a href="#" class="user"><span>사용자 정보</span></a></li>
+                <li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+                <li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+                    <div class="bookmark-list">
+                        <ul>
+                            <li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+                            <li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+                        </ul>
+                        <!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+                    </div>
+                </li>
+                <li><a href="#" class="logout"><span>로그아웃</span></a></li>
+                <li>
+                    <a href="#" class="app-menu"><span>메뉴</span></a>
+                    <div class="app-menu-list">
+                        <ul>
+                            <li><a href="#" class="mdm">MDM</a></li>
+                            <li><a href="#" class="mes">MES</a></li>
+                            <li><a href="#" class="wms">WMS</a></li>
+                            <li><a href="#" class="vmi">VMI</a></li>
+                            <li><a href="#" class="lms">LMS</a></li>
+                            <li><a href="#" class="oee">OEE</a></li>
+                            <li><a href="#" class="bom">BOM</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="system">시스템</a></li>
+                            <li><a href="#" class="option">설정</a></li>
+                        </ul>
+                    </div>
+                    <div class="dimmed"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" disabled>Material</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 1</a></li>
+                    <li><a href="">자재 관리 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Machine</a>
+                <ul>
+                    <li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 유형 관리 2-1</a></li>
+                            <li><a href="">자재 유형 관리 2-2</a></li>
+                            <li><a href="">자재 유형 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="has-depth">자재 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 관리 2-1</a></li>
+                            <li><a href="" class="has-depth">자재 관리 2-2</a>
+                                <ul>
+                                    <li><a href="">자재 관리 3-1</a></li>
+                                    <li><a href="">자재 관리 3-2</a></li>
+                                    <li><a href="">자재 관리 3-3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">자재 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Men</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 3</a></li>
+                    <li><a href="">자재 관리 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Method</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 4</a></li>
+                    <li><a href="">자재 관리 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>인력관리<span>PO에 배치되어 아이템 생산을 담당하는 모든 인력리스트 및 인력정보를 관리합니다.</span></h2>
+        </header>
+        <div class="contents-wrap">
+            <section>
+                <div class="function-area">
+                    <div class="align-left">
+                        <select>
+                            <option value="6" selected="">부서</option>
+                            <option value="7">부서2</option>
+                        </select>
+                        <input type="text" placeholder="사원명, 사번" readonly="readonly"/>
+                        <button class="btn-srch ico">조회</button>
+                        <button class="btn-reset image">초기화</button>
+                    </div>
+                    <div class="align-center"><button class="btn">기본버튼</button><button class="btn blue">블루버튼</button><button class="btn sky">스카이버튼</button><button class="btn gray">그레이버튼</button><button class="btn black">블랙버튼</button><button class="btn orange">오렌지버튼</button></div>
+                    <div class="align-right">
+                        <button class="btn-download ico">엑셀다운로드</button>
+                        <button class="btn-del ico">삭제</button>
+                        <button class="btn-add ico">등록</button>
+                    </div>
+                </div>
+                <div id="grid" class="blue-style">
+                    <div class="sfp-grid-panel">
+                        <div class="sfp-grid-header-panel" >
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:34px">
+                                    <col>
+                                    <col style="width:200px">
+                                    <col>
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                        <th>자재내역</th>
+                                        <th>저장빈</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>자재유형</th>
+                                        <th>처리유형</th>
+                                        <th>작업</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:34px">
+                                    <col>
+                                    <col style="width:200px">
+                                    <col>
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                </colgroup>
+                                <thead style="display: none;">
+                                    <tr>
+                                        <th><label><input type="checkbox" /><span class="check-mark"></span></label></th>
+                                        <th>자재내역</th>
+                                        <th>저장빈</th>
+                                        <th>설명</th>
+                                        <th>조달유형</th>
+                                        <th>자재유형</th>
+                                        <th>처리유형</th>
+                                        <th>작업</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr class="selected">
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R36-ERFFMTSBMDNASHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td><button class="btn small">수정</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td><button class="btn small blue">수정</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R41-MTRFMTAGMDNASHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>TR-R41-ERFFMTSBMDNASHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label><input type="checkbox" /><span class="check-mark"></span></label></td>
+                                        <td>*TR-R39-DMRFMTSBMDNAAHNA</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>E</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                    
+                                </tbody>
+                                <tfoot style="display: none;"></tfoot>
+                            </table>
+                        </div>
+                        <!-- <div class="sfp-grid-footer-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:34px">
+                                    <col>
+                                    <col style="width:200px">
+                                    <col>
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                </colgroup>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">합계</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="footer-wrap">
+                    <div class="footer-title">Total <strong>35</strong></div>
+                    <div class="paging-wrap">
+                        <a href="#" class="first">처음</a>
+                        <a href="#" class="prev">이전</a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="next">다음</a>
+                        <a href="#" class="last">끝</a>	
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    </main>
+</body>
+</html>

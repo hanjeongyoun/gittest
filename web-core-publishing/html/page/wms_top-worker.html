@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>작업자 TOP 10</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<style>
+		.person-map{position:relative;height:100%;padding:10px;box-sizing:border-box;background:#fff}
+        .function-area + .person-map{height:calc(100% - 70px)}
+        .person-map:after{content:'';display:block;position:absolute;}
+        .person-map .person-list{height:100%;font-size:0;text-align:center}
+        .person-map .person-list > li{display:inline-block;height:25%;padding:10px;text-align:center;box-sizing:border-box}
+        .person-map .person-list > li .person-inner{display:inline-block;position:relative;width:410px;height:100%;font-size:16px;border-radius:3px;background:#efefef;-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);}
+        .person-map .person-list > li .person-inner:after{content:'';display:block;position:absolute;top:0;left:0;right:0;bottom:0;border-radius:3px;border:2px solid #f44b50}
+        .person-map .person-list > li:nth-child(1){width:100%}
+        .person-map .person-list > li:nth-child(1) ~ li{width:50%}
+        .person-map .person-list > li:nth-child(3) ~ li{width:33.33%}
+        .person-map .person-list > li:nth-child(6) ~ li{width:auto}
+        .person-map .person-list > li:nth-child(2),.person-map .person-list > li:nth-child(4){text-align:right}
+        .person-map .person-list > li:nth-child(3),.person-map .person-list > li:nth-child(6){text-align:left}
+        /* .person-map .person-list > li:nth-child(2){text-align:right}
+        .person-map .person-list > li:nth-child(3){text-align:left} */
+        /* .person-map .person-list > li:nth-child(4){margin-left:calc(33.33% - 430px)} */
+        .person-map .person-list > li:nth-child(5){width:auto !important}
+    
+        .person-map .person-list > li .person-inner{box-sizing:border-box;}
+        .person-inner h3{overflow:hidden;padding:10px;border-radius:3px 3px 0 0;color:#fff;border-bottom:1px solid #a2a2a2;background-color:#f44b50}
+        .person-inner h3 > strong{float:left;}
+        .person-inner h3 > span{float:right}
+        .person-inner .list-style{padding:5px 10px 0;}
+        .person-inner .list-style li{padding:6px 0;font-size:16px;}
+        .person-inner .list-style li .tit{font-weight:700}
+        .person-inner .list-style li + li{border-top:1px dotted #a2a2a2}
+        .person-list > li{position:relative;}
+        .person-list > li:nth-child(1) .person-inner:after{border-color:#0cb5c6}
+        .person-list > li:nth-child(1) h3{color:#fff;background-color:#0cb5c6}
+        .person-list > li:nth-child(2) .person-inner:after,.person-list > li:nth-child(3) .person-inner:after{border-color:#79b104}
+        .person-list > li:nth-child(2) h3,.person-list > li:nth-child(3) h3{color:#fff;background-color:#79b104}
+        .person-list > li:nth-child(4) .person-inner:after,.person-list > li:nth-child(5) .person-inner:after,.person-list > li:nth-child(6) .person-inner:after{border-color:#f9ad23}
+        .person-list > li:nth-child(4) h3,.person-list > li:nth-child(5) h3,.person-list > li:nth-child(6) h3{background-color:#f9ad23}
+        .person-list > li:nth-child(4) .person-inner:after,.person-list > li:nth-child(5) .person-inner:after,.person-list > li:nth-child(6) .person-inner:after{border-color:#f9ad23}
+        .person-list > li:nth-child(4) h3,.person-list > li:nth-child(5) h3,.person-list > li:nth-child(6) h3{color:#fff;background-color:#f9ad23}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="#">Material</a>
+				<ul>
+					<li><a href="">자재 유형 관리 1</a></li>
+					<li><a href="">자재 관리 1</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Machine</a>
+				<ul>
+					<li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+						<ul>
+							<li><a href="">자재 유형 관리 2-1</a></li>
+							<li><a href="">자재 유형 관리 2-2</a></li>
+							<li><a href="">자재 유형 관리 2-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="has-depth">자재 관리 2</a>
+						<ul>
+							<li><a href="">자재 관리 2-1</a></li>
+							<li><a href="" class="has-depth">자재 관리 2-2</a>
+								<ul>
+									<li><a href="">자재 관리 3-1</a></li>
+									<li><a href="">자재 관리 3-2</a></li>
+									<li><a href="">자재 관리 3-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">자재 관리 2-3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Men</a>
+				<ul>
+					<li><a href="">자재 유형 관리 3</a></li>
+					<li><a href="">자재 관리 3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Method</a>
+				<ul>
+					<li><a href="">자재 유형 관리 4</a></li>
+					<li><a href="">자재 관리 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<header>
+			<h2>작업자 TOP 10</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">창고1</option>
+							<option value="7">창고2</option>
+						</select>
+						<button class="btn-srch ico">조회</button>
+						<button class="btn-reset image">초기화</button>
+					</div>
+				</div>
+				<div class="person-map">
+					<ul class="person-list">
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top1</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top2</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top3</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top4</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top5</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top6</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top7</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top8</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top9</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="person-inner">
+								<h3><strong>Top10</strong><span>조재현(ID)</span></h3>
+								<ul class="list-style">
+									<li><span class="tit left">수행 배치 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 수</span><span class="cont right">10000</span></li>
+									<li><span class="tit left">수행 아이템 카운트 수</span><span class="cont right">10000</span></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+	</main>
+
+</body>
+</html>

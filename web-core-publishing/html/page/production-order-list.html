@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>생산지시</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/page.css">
+    <link rel="stylesheet" href="../../resources/css/left_gnb.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+        <div class="util-menu">
+            <ul>
+                <li><time>2018-05-09 20:12:10</time></li>
+                <li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+                <li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+                <li><a href="#" class="user"><span>사용자 정보</span></a></li>
+                <li><a href="#" class="logout"><span>로그아웃</span></a></li>
+                <li>
+                    <a href="#" class="app-menu"><span>메뉴</span></a>
+                    <div class="app-menu-list">
+                        <ul>
+                            <li><a href="#" class="mdm">MDM</a></li>
+                            <li><a href="#" class="mes">MES</a></li>
+                            <li><a href="#" class="wms">WMS</a></li>
+                            <li><a href="#" class="vmi">VMI</a></li>
+                            <li><a href="#" class="lms">LMS</a></li>
+                            <li><a href="#" class="oee">OEE</a></li>
+                            <li><a href="#" class="bom">BOM</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="system">시스템</a></li>
+                            <li><a href="#" class="option">설정</a></li>
+                        </ul>
+                    </div>
+                    <div class="dimmed"></div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Material</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 1</a></li>
+                    <li><a href="">자재 관리 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Machine</a>
+                <ul>
+                    <li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 유형 관리 2-1</a></li>
+                            <li><a href="">자재 유형 관리 2-2</a></li>
+                            <li><a href="">자재 유형 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="has-depth">자재 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 관리 2-1</a></li>
+                            <li><a href="" class="has-depth">자재 관리 2-2</a>
+                                <ul>
+                                    <li><a href="">자재 관리 3-1</a></li>
+                                    <li><a href="">자재 관리 3-2</a></li>
+                                    <li><a href="">자재 관리 3-3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">자재 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Men</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 3</a></li>
+                    <li><a href="">자재 관리 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Method</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 4</a></li>
+                    <li><a href="">자재 관리 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>생산지시</h2>
+        </header>
+        <div class="contents-wrap">
+            <section>
+                <div class="function-area">
+                    <div class="align-right">
+                        <select>
+                            <option>생산지시상태</option>
+                            <option>등록</option>
+                        </select>
+                        <input type="text" placeholder="생산번호" style="width:150px"/>
+                        <input type="text" class="select" placeholder="제품"/>
+                        <input type="text" class="select" placeholder="발주처"/>
+                        <span class="period">
+                            <input type="text" class="calendar hasDatepicker" style="width:110px" placeholder="2018.06.07">
+                            <input type="text" class="calendar hasDatepicker" style="width:110px" placeholder="2018.06.07">
+                        </span>
+                        <button class="btn-srch ico black">검색</button>
+                        <button class="btn-download ico">엑셀</button>
+                        <button class="btn-add ico">신규 등록</button>
+                    </div>
+                </div>
+                <div id="grid">
+                    <div class="sfp-grid-panel border-style">
+                        <div class="sfp-grid-header-panel" >
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col title="생산번호">
+                                    <col style="width:8%" title="제품">
+                                    <col style="width:8%" title="모델명">
+                                    <col style="width:8%" title="발주처">
+                                    <col style="width:8%" title="목표수량">
+                                    <col style="width:8%" title="납기일">
+                                    <col style="width:80px" title="등록">
+                                    <col style="width:80px" title="준비">
+                                    <col style="width:80px" title="시작">
+                                    <col style="width:80px" title="완료">
+                                    <col style="width:80px" title="생산">
+                                    <col style="width:80px" title="불량">
+                                    <col style="width:80px" title="상태">
+                                    <col style="width:120px" title="등록일">
+                                    <col style="width:70px" title="현황">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">생산번호</th>
+                                        <th rowspan="2">제품</th>
+                                        <th rowspan="2">Model</th>
+                                        <th rowspan="2">발주처</th>
+                                        <th rowspan="2">목표 수량</th>
+                                        <th rowspan="2">납기일</th>
+                                        <th colspan="4">작업지시</th>
+                                        <th colspan="2">실적</th>
+                                        <th rowspan="2">상태</th>
+                                        <th rowspan="2">등록일</th>
+                                        <th rowspan="2">현황</th>
+                                    </tr>
+                                    <tr>
+                                        <th>등록</th>
+                                        <th>준비</th>
+                                        <th>시작</th>
+                                        <th>완료</th>
+                                        <th>생산</th>
+                                        <th>불량</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col title="생산번호">
+                                    <col style="width:8%" title="제품">
+                                    <col style="width:8%" title="모델명">
+                                    <col style="width:8%" title="발주처">
+                                    <col style="width:8%" title="목표수량">
+                                    <col style="width:8%" title="납기일">
+                                    <col style="width:80px" title="등록">
+                                    <col style="width:80px" title="준비">
+                                    <col style="width:80px" title="시작">
+                                    <col style="width:80px" title="완료">
+                                    <col style="width:80px" title="생산">
+                                    <col style="width:80px" title="불량">
+                                    <col style="width:80px" title="상태">
+                                    <col style="width:120px" title="등록일">
+                                    <col style="width:70px" title="현황">
+                                </colgroup>
+                                <thead style="display:none">
+                                    <tr>
+                                        <th rowspan="2">생산번호</th>
+                                        <th rowspan="2">제품</th>
+                                        <th rowspan="2">Model</th>
+                                        <th rowspan="2">발주처</th>
+                                        <th rowspan="2">목표 수량</th>
+                                        <th rowspan="2">납기일</th>
+                                        <th colspan="4">작업지시</th>
+                                        <th colspan="2">실적</th>
+                                        <th rowspan="2">상태</th>
+                                        <th rowspan="2">등록일</th>
+                                        <th rowspan="2">현황</th>
+                                    </tr>
+                                    <tr>
+                                        <th>등록</th>
+                                        <th>준비</th>
+                                        <th>시작</th>
+                                        <th>완료</th>
+                                        <th>생산</th>
+                                        <th>불량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>	
+                                        <td>PO1</td>	
+                                        <td>PD-010</td>	
+                                        <td>PDNO-001</td>	
+                                        <td>Samgsung Meca</td>	
+                                        <td>100,000</td>	
+                                        <td>2017-03-31</td>	
+                                        <td></td>	
+                                        <td>8</td>	
+                                        <td></td>	
+                                        <td>280</td>	
+                                        <td>772,883</td>	
+                                        <td>39,043</td>	
+                                        <td>시작</td>	
+                                        <td>2017-03-10 17:09</td>	
+                                        <td><button type="button" class="btn small">상세</button></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot style="display: none;"></tfoot>
+                            </table>
+                        </div>
+                        <!-- <div class="sfp-grid-footer-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:34px">
+                                    <col>
+                                    <col style="width:200px">
+                                    <col>
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                    <col style="width:100px">
+                                </colgroup>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">합계</td>
+                                        <td>MFER</td>
+                                        <td>C</td>
+                                        <td>수정</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="footer-wrap">
+                    <div class="footer-title">Total <strong>35</strong></div>
+                    <div class="paging-wrap">
+                        <a href="#" class="first">처음</a>
+                        <a href="#" class="prev">이전</a>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" class="next">다음</a>
+                        <a href="#" class="last">끝</a>	
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    </main>
+</body>
+</html>

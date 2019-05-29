@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>입출고 진척 | SWS </title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/chart.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>입출고 진척</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section class="visual-sec">
+				<div class="visual">
+					<ul class="visual-select">
+						<li>
+							<label><input type="checkbox"><span class="check-mark">A Rack</span></label>
+							<label><input type="checkbox" checked=""><span class="check-mark">B Rack</span></label>
+						</li>
+						<li>
+							<span><em class="status yellow"></em>Tote Box</span>
+							<span><em class="status"></em>Empty</span>
+						</li>
+					</ul>
+				</div>
+				<div class="visual-info-sec">
+					<ul>
+						<li>
+							<div class="title">입고 진척률 <button class="btns black small pause">실행중..</button></div>
+							<div class="cont">
+								<div class="value">
+									Piece <strong>28.8%</strong> <em>13/45</em>
+								</div>
+								<div class="progress-bar square" >
+									<span style="width:30%">
+										<em class="bar-value">30</em>
+									</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="title">출고 진척률 <button class="btns black small">실행중..</button></div>
+							<div class="cont">
+								<div class="value">
+									<span>Piece <strong>28.8%</strong> <em>13/45</em></span>
+									<span>Order <strong>60.6%</strong> <em>6/10</em></span>
+								</div>
+								<div class="progress-bar square">
+									<span style="width:30%">
+										<em class="bar-value">30</em>
+									</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<div class="contents-wrap no-footer aside-timeline">
+			<div class="timeline-header">
+				<div class="timeline-title">
+					<h3>물류 이동 Timeline</h3>
+					<time>09:12:29</time>
+				</div>
+				<div class="timeline-info">
+					<select style="width:195px">
+						<option value="6" selected="">Shuttle 선택</option>
+						<option value="7">Shuttle 선택2</option>
+					</select>
+					<select style="width:105px">
+						<option value="1" selected="">구분 선택</option>
+						<option value="2">구분 선택2</option>
+					</select>
+				</div>
+				<ul class="count-info">
+					<li><span>입고</span><strong>32</strong></li>
+					<li><span>출고</span><strong>32</strong></li>
+					<li><span>보관</span><strong>45</strong></li>
+				</ul>
+			</div>
+			<div class="timeline-list">
+				<ul class="time-data">
+					<li class="in">
+						<span class="line"></span>
+						<div class="data-wrap">
+							<div class="data-inner">
+								<div class="top-data"><span>Shuttle No.2</span><time>09:12:21</time></div>
+								<div class="data-num">ITEM 02</div>
+								<div class="data-course">
+									<span class="count">5000ea</span>
+									<span class="course-wrap">
+										<em class="from">A-2-3</em>
+										<em class="to">B-2-6</em>
+									</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="out">
+						<span class="line"></span>
+						<div class="data-wrap">
+							<div class="data-inner">
+								<div class="top-data"><span>Shuttle No.2</span><time>09:12:21</time></div>
+								<div class="data-num">ITEM 02</div>
+								<div class="data-course">
+									<span class="count">5000ea</span>
+									<span class="course-wrap">
+										<em class="from">A-2-3</em>
+										<em class="to">B-2-6</em>
+									</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="store">
+						<span class="line"></span>
+						<div class="data-wrap">
+							<div class="data-inner">
+								<div class="top-data"><span>Shuttle No.2</span><time>09:12:21</time></div>
+								<div class="data-num">ITEM 02</div>
+								<div class="data-course">
+									<span class="count">5000ea</span>
+									<span class="course-wrap">
+										<em class="from">A-2-3</em>
+										<em class="to">B-2-6</em>
+									</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="in on">
+						<span class="line"></span>
+						<div class="data-wrap">
+							<div class="data-inner">
+								<div class="top-data"><span>Shuttle No.2</span><time>09:12:21</time></div>
+								<div class="data-num">ITEM 02</div>
+								<div class="data-course">
+									<span class="count">5000ea</span>
+									<span class="course-wrap">
+										<em class="from">A-2-3</em>
+										<em class="to">B-2-6</em>
+									</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="out on">
+						<span class="line"></span>
+						<div class="data-wrap">
+							<div class="data-inner">
+								<div class="top-data"><span>Shuttle No.2</span><time>09:12:21</time></div>
+								<div class="data-num">ITEM 02</div>
+								<div class="data-course">
+									<span class="count">5000ea</span>
+									<span class="course-wrap">
+										<em class="from">A-2-3</em>
+										<em class="to">B-2-6</em>
+									</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="store on">
+						<span class="line"></span>
+						<div class="data-wrap">
+							<div class="data-inner">
+								<div class="top-data"><span>Shuttle No.2</span><time>09:12:21</time></div>
+								<div class="data-num">ITEM 02</div>
+								<div class="data-course">
+									<span class="count">5000ea</span>
+									<span class="course-wrap">
+										<em class="from">A-2-3</em>
+										<em class="to">B-2-6</em>
+									</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

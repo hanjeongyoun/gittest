@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>컨테이너 입고 목록</title>
+	<link rel="stylesheet" href="../../../resources/css/common.css">
+	<link rel="stylesheet" href="../../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../../resources/css/button.css">
+	<link rel="stylesheet" href="../../../resources/css/form.css">
+	<link rel="stylesheet" href="../../../resources/css/dialog.css">
+	<link rel="stylesheet" href="../../../resources/css/wes/dialog_pop.css">
+</head>
+<body>
+	<main class="pop-view">
+		<header>
+			<h2>컨테이너 입고 목록</h2>
+			<a href="#" class="close-btn">닫기</a>
+		</header>
+		<div class="contents-wrap">
+			<section>
+                <div class="function-area">
+                    <div class="align-left">
+                        <input type="text" value="test"/>
+                        <select>
+                            <option value="1">1번선택</option>
+                            <option value="2">1번선택</option>
+                        </select>
+                        <button class="btn">조회</button>
+                        <button class="btn-reset image">초기화</button>
+                    </div>
+                </div>
+				<div id="grid">
+					<div class="sfp-grid-panel">
+						<div class="sfp-grid-header-panel" >
+							<table class="sfp-grid">
+								<colgroup>
+									<col style="width:80px">
+									<col>
+									<col style="width:200px">
+									<col style="width:150px">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>선택</th>
+										<th>제품명</th>
+										<th>입고 수량</th>
+										<th>수정 여부</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+						<div class="sfp-grid-body-panel" style="height:550px">
+							<table class="sfp-grid">
+								<colgroup>
+									<col style="width:80px">
+									<col>
+									<col style="width:200px">
+									<col style="width:150px">
+								</colgroup>
+								<thead style="display: none;">
+									<tr>
+										<th>선택</th>
+										<th>제품명</th>
+										<th>입고 수량</th>
+										<th>수정 여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+										<td>바나나 우유</td>
+										<td><input type="text"/></td>
+										<td>√</td>
+									</tr>
+									<tr>
+										<td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+										<td>딸기</td>
+										<td><input type="text"/></td>
+										<td><button class="btn">수정</button></td>
+									</tr>
+								</tbody>
+								<tfoot style="display: none;"></tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="align-center">
+					<button class="btn-cancel">취소</button><button class="btn blue">적용</button>
+				</div>
+				
+			</footer>
+		</div>
+		
+	</main>
+</body>
+</html>

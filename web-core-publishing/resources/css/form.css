@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+label{position:relative;vertical-align:middle;}
+label + label{margin-left:15px}
+label .label-text{display:inline-block;margin-right:5px;font-size:13px;font-weight:500}
+
+/*input */
+input[type="color"]{cursor:pointer;background-color:#fff;border-radius:3px;-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);}
+input[readonly="readonly"],input[readonly]{background:#f5f5f5}
+input[type="text"]:disabled{cursor:default;color: #969696;background-color:#f5f5f5}
+
+input[type="radio"]{position:absolute;left:0;right:0;bottom:0;top:0;opacity:0;width:100%;height:100%;cursor: pointer;}
+input[type="radio"] + .radio-mark{position:relative;display:inline-block;min-height:16px;padding-left:16px;line-height:14px;cursor: pointer;}
+input[type="radio"] + .radio-mark:before{content:'';display:inline-block;width:14px;height:14px;position:absolute;left:0;top:50%;margin-top:-7px;border:1px solid #c8c8c8;border-radius:50%;box-sizing:border-box;background:#fff}
+input[type="radio"] + .radio-mark:after{content:'';display:none;position:absolute;left:3px;top:50%;width:8px;height:8px;margin-top:-4px;background:#06a6b1;border-radius:50%}
+input[type="radio"]:checked + .radio-mark:after{display:inline-block}
+input[type="radio"]:disabled + .radio-mark{cursor:default;}
+input[type="radio"]:disabled + .radio-mark:before{background:#f5f5f5;}
+input[type="radio"]:disabled:checked + .radio-mark{}
+/* input:checked[type="checkbox"]{-webkit-appearance:checkbox;} */
+
+input[type="checkbox"]{position:absolute;left:0;right:0;bottom:0;top:0;opacity:0;width:100%;height:100%;cursor: pointer;}
+input[type="checkbox"] + .check-mark{position:relative;display:inline-block;min-height:16px;padding-left:16px;line-height:14px;cursor: pointer;}
+input[type="checkbox"] + .check-mark:before{content:'';display:block;position:absolute;left:0;top:50%;width:14px;height:14px;margin-top:-7px;cursor: pointer;border:1px solid #ced3da;box-sizing:border-box;background:#fff}
+input[type="checkbox"]:checked + .check-mark:before{background:#fff url('../images/icons/icon_ir_checked.png') no-repeat 0 0;background-size:100% auto}
+input[type="checkbox"]:disabled + .check-mark{cursor:default;}
+input[type="checkbox"]:disabled + .check-mark:before{background:#f5f5f5;}
+input[type="checkbox"]:disabled:checked + .check-mark{}
+input[type="checkbox"]:disabled:checked + .check-mark:before{background:#f5f5f5 url('../images/icons/icon_ir_checked.png') 0 0 no-repeat;background-size:100% auto}
+
+input[type="checkbox"] + .check-mark-button{position:relative;display:inline-block;min-height:26px;padding-left:26px;cursor: pointer;}
+input[type="checkbox"] + .check-mark-button:before{content:'';display:block;position:absolute;left:0;top:50%;width:26px;height:26px;margin-top:-13px;cursor: pointer;border:1px solid #ced3da;box-sizing:border-box;background:#fff url('../images/icons/icon_ir_checked_none.png') no-repeat 0 0;background-size:100% auto}
+input[type="checkbox"]:checked + .check-mark-button:before{background-image: url('../images/icons/icon_ir_checked.png')}
+input[type="checkbox"]:disabled + .check-mark-button{cursor:default;}
+input[type="checkbox"]:disabled + .check-mark-button:before{background:#f5f5f5;}
+input[type="checkbox"]:disabled:checked + .check-mark-button{}
+input[type="checkbox"]:disabled:checked + .check-mark-button:before{background:#f5f5f5 url('../images/icons/icon_ir_checked.png') 0 0 no-repeat;background-size:100% auto}
+
+label.label-text-front > span{display:inline-block;margin-right:5px}
+label.label-text-over > span{display:block;margin-bottom:5px}
+
+input[type="text"],
+input[type="password"], 
+input[type="date"], 
+input[type="tel"], 
+input[type="number"]{width:150px; height:35px; padding:0 10px;border:1px solid #d0d0d0;font-size:12px; line-height:35px;color:#444;box-sizing:border-box;border-radius:3px;text-overflow: ellipsis;}
+.small input[type="text"],
+.small input[type="password"], 
+.small input[type="date"], 
+.small input[type="tel"], 
+.small input[type="number"]{width:100px;}
+.big input[type="text"],
+.big input[type="password"], 
+.big input[type="date"], 
+.big input[type="tel"], 
+.big input[type="number"]{width:200px;}
+.short input[type="text"],
+.short input[type="password"], 
+.short input[type="date"], 
+.short input[type="tel"], 
+.short input[type="number"]{height:26px;line-height:26px}
+input[type=text]::-ms-clear {display:none;}
+input::-webkit-input-placeholder {color: #969696;}
+input::-moz-placeholder {color: #969696;}
+input:-ms-input-placeholder {color: #969696;}
+input:-moz-placeholder {color: #969696;}
+
+input[class*="select"]{width:150px;padding-right:34px;cursor:pointer;background:#fff url('../images/btn/btn_category.png') no-repeat right 50%}
+input[class*="select"]::-webkit-input-placeholder {color: #6c6c6c;}
+input[class*="select"]::-moz-placeholder {color: #6c6c6c;}
+input[class*="select"]:-ms-input-placeholder {color: #6c6c6c;}
+input[class*="select"]:-moz-placeholder {color: #6c6c6c;}
+input[class*="select"]:read-only{background-color:#fff}
+input[class*="select"].select-user-info{background-image:url('../images/icons/icon_man.png')}
+input[class*="select"].select-user-info:disabled{background-image:url('../images/icons/icon_man_disabled.png')}
+input[class*="select"].select-option{background-image:url('../images/icons/icon_man.png')}
+input[class*="select"].select-srch{background-image:url('../images/btn/btn_find.png')}
+label input.select + .btn-clear{position:absolute;right:0;top:0;padding:0;margin:0;width:34px;border-radius:0 3px 3px 0;border-left:0;background:#fff;}
+label input.select + .btn-clear:after{top:50%;right:5px;height:20px;width:20px;margin-top:-10px;border-radius:50%;}
+label input.select + .btn-clear.square{border-radius:3px}
+label input.select + .btn-clear.square:after{border-radius:3px}
+label.clear-wrap{display:inline-block;}
+.function-area label input.select + .btn-clear{border:0}
+/* button.btn-clear{background:#999999 url('../images/btn/btn_layer_close.png') no-repeat 50%;background-size:40% auto} */
+button.btn-clear{position:relative;margin-left:3px;border-radius:50%;border:1px solid #d0d0d0;}
+button.btn-clear:after{content:'';display:block;position:absolute;top:0;right:0;width:100%;height:100%;background:#999999 url('../images/btn/btn_layer_close.png') no-repeat 50%;background-size:40% auto}
+button.btn-clear.square{border-radius:3px}
+input.calendar{width:145px;padding-right:24px;cursor:pointer;background:#fff url('../images/icons/icon_cal.png') no-repeat 100% 50%;}
+input.calendar.border{border:1px solid #d0d0d0 !important}
+input[class*="validate"]{padding-right:34px;background:#fff url('../images/icons/icon_overlap.png') no-repeat 100% 50%}
+input[class*="validate"]:read-only{ background-color:#f5f5f5 !important;color:#444 !important; }
+input[class*="validate"]:disabled{ background-color:#f5f5f5 !important;color:#ccc;}
+input[class*="validate"].warning{ background-image:url('../images/icons/icon_overlap_warning.png');border-color:#ed1c24;color:#444 !important; }
+input[class*="validate"].pass{ background-image:url('../images/icons/icon_overlap_pass.png'); }
+input.unit{padding-right:30px;text-align:right}
+input.unit + em{position:absolute;right:5px;top:50%;margin-top:-0.5em;line-height:1;}
+input.time{width:145px;padding-right:30px;background:#fff url('../images/icons/icon_time.png') no-repeat calc(100% - 10px) 50%}
+input[type="time"]{box-sizing:border-box;padding:0 30px 0 10px;height:30px;line-height:30px;border:0;background:#fff url('../images/icons/icon_time.png') no-repeat calc(100% - 10px) 50%}
+input[type="text"].right,
+input[type="number"].right{text-align:right}
+input[type="text"].bold,input[type="number"].bold{font-weight:700;font-size:14px}
+.period{display:inline-block;position:relative;font-size:0;line-height:0;vertical-align:top}
+.period .calendar{border-right:0;border-radius:5px 0 0 5px}
+.period .calendar + .calendar{padding-left:15px;border-left:0;border-right:1px solid #d0d0d0;border-radius:0 5px 5px 0}
+.period:after{content:'~';display:block;position:absolute;left:49%;top:50%;font-size:14px;font-weight:700}
+.small .period input[type="text"]{width:110px}
+.function-area .period input{border-radius:5px 0 0 5px}
+.function-area .period input + input{margin:0;border-radius:0 5px 5px 0;}
+
+select{position:relative;z-index:5;width:150px;height:35px;padding: 0 20px 0 10px;line-height:35px;font-size:12px;border:0;background:#fff url('../images/form/select_arrow.png') no-repeat;background-size:9px auto;-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;appearance: none;cursor:pointer;border-radius:3px;box-shadow:1px 1px 2px rgba(0,0,0,0.06);background-position:calc(100% - 10px) 50%;}
+select:focus {outline: none;}
+select::-ms-expand {display: none;}
+select:disabled{color:#a2a2a2;background-color:#f5f5f5;cursor: default;background-image:url('../images/form/select_arrow_disabled.png')}
+/* check, hover 스타일 설정 IE, Chrome */
+select option{font-size:14px}
+select option:checked, select option:hover {background: #eee; color: #444;border:1px solid #d0d0d0}
+select option:checked, select option:hover { box-shadow: 0 0 10px 100px #eee inset;  color: #444;}
+select.border{border:1px solid #d0d0d0}
+textarea{padding:6px;width:100%;resize:none;box-sizing:border-box;border-radius:3px}
+
+.vertical > label{display:block}
+.vertical > label + label{margin:10px 0 0}
+
+.function-area input[type="text"],
+.function-area input[type="password"], 
+.function-area input[type="date"], 
+.function-area input[type="tel"]{border:0; box-shadow: 1px 1px 2px rgba(0,0,0,0.06);}
+.function-area input + input, 
+.function-area input + button, 
+.function-area button + button, 
+.function-area button + input,
+.function-area select + input,
+.function-area input + select,
+.function-area select + select,
+.function-area label + input[type="text"],
+.function-area input[type="text"] + label,
+.function-area label + .period,
+.function-area input + .period,
+.function-area select + .period,
+.function-area .period + button,
+.function-area select + button{margin-left:3px}
+.function-area label + select,
+.function-area button + label,
+.function-area label + button{margin-left:10px}
+.register-table input[type="text"],
+.register-table input[type="number"], 
+.register-table input[type="password"], 
+.register-table input[type="date"], 
+.register-table input[type="tel"]{height:30px;line-height:30px}
+.register-table textarea{height:60px;border:1px solid #d0d0d0}
+.register-table label + button,
+.register-table button + label{margin-left:10px}
+.register-table .cont input{width:100%}
+.sfp-grid input[type="text"],
+.sfp-grid input[type="number"], 
+.sfp-grid input[type="password"], 
+.sfp-grid input[type="date"], 
+.sfp-grid input[type="tel"]{width:100% !important;height:30px;line-height:30px;}
+.sfp-grid select, 
+.register-table select{width:100%;height:30px;line-height:30px;box-shadow:none;border:1px solid #d0d0d0}
+.sfp-grid.small input[type="text"],
+.sfp-grid.small input[type="number"], 
+.sfp-grid.small input[type="password"], 
+.sfp-grid.small input[type="date"], 
+.sfp-grid.small input[type="tel"],
+.register-table.small input[type="text"],
+.register-table.small input[type="number"], 
+.register-table.small input[type="password"], 
+.register-table.small input[type="date"], 
+.register-table.small input[type="tel"]{height:24px;line-height:24px;}
+.sfp-grid.small select,
+.register-table.small select{height:24px;line-height:24px;}
+.sfp-grid.small select,
+.sfp-grid.small input[type="text"],
+.sfp-grid.small input[type="number"]{vertical-align:top}
+
+.dir-col:before{content:'';display:inline-block;height:100%;vertical-align:bottom;}
+.dir-col label,.dir-col .dir-wrap{display:inline-table;}
+.dir-col label .label-text,.dir-col .dir-wrap .label-text{display:table-row;}
+.dir-col label .label-text ~ *,.dir-col .dir-wrap .label-text ~ *{margin-top:5px}
+.dir-col .single-wrap{display:inline-block;vertical-align:bottom;}
+.dir-wrap .label-text{display:inline-block;font-size:13px;font-weight:500}
+.dir-wrap + .dir-wrap{margin-left:10px}
+
+
+/* datepicker*/
+body > .ui-datepicker{display:none}
+.ui-datepicker{ z-index:20 !important;background:#fff;border:1px solid #aaaaaa;width:196px;padding:6px 3px;box-sizing:border-box;border-radius:3px;box-shadow:2px 5px 6px rgba(0, 0, 0, 0.13); }
+.ui-datepicker a{ color:#888;font-size:11px; }
+.ui-datepicker-header{ position:relative;font-weight:700;font-size:12px; }
+.ui-datepicker-title{ height:26px;color:#555;text-align:center;font-size:12px;line-height:26px; }
+.ui-datepicker-prev, .ui-datepicker-next{ position:absolute;width:16px;height:16px;top:5px;text-indent:-5000em;overflow:hidden;background:url('../images/btn/set_btn_cal.png') no-repeat; }
+.ui-datepicker-prev{ left:5px;background-position:1px 1px; }
+.ui-datepicker-next{ right:5px;background-position:1px -13px; }
+.ui-datepicker-calendar{ width:183px;margin:6px 0 3px;table-layout:fixed;border-collapse:collapse; }
+.ui-datepicker-calendar th{ width:26px;font-weight:normal;text-align:right;padding:0 4px 4px 0;box-sizing:border-box;font-size:11px; }
+.ui-datepicker-calendar td{ text-align:center;padding:0 0 1px;box-sizing:border-box; }
+.ui-datepicker-calendar td a{ display:inline-block;width:23px;height:22px;padding-top:1px;color:#555;font-family:tahoma;font-size:11px;border:1px solid #fff;box-sizing:border-box;border-radius:3px; }
+.ui-datepicker-calendar td.ui-datepicker-today a{ color:#555;background-color:#eaeaea;border-color:#eaeaea; }
+.ui-datepicker-calendar td.ui-state-disabled{opacity:.35;}
+.ui-datepicker-calendar td a:hover{ border-color:#e3f3f1;background-color:#e1f4fc;color:#1f8bc5; }
+.ui-datepicker-calendar td a.ui-state-active{ border-color:#009ac0;color:#fff !important;background-color:#009ac0; }
+.ui-datepicker-calendar td a.ui-datepicker-current-day{ border-color:#00a4b9;color:#fff !important;background-color:#00a4b9; }
+.ui-datepicker-calendar tbody tr td:first-child a,.ui-datepicker-calendar tbody tr td.ui-datepicker-sunday a,.ui-datepicker-calendar tbody tr td.ui-datepicker-holiday a{ color:#f20f08; }
+.ui-datepicker-calendar tbody tr td.ui-datepicker-saturday a{color:#2b58ff}
+.ui-datepicker select{width:51px;height:26px;line-height:18px;font-family:'roboto';font-weight:700;padding:4px 10px 4px 10px;box-shadow:none;border-radius:0;background:url('../images/form/bul_datepicker_select.gif') right 11px no-repeat;vertical-align:top;}
+.ui-datepicker .ui-datepicker-year{margin-right:5px;}
+.ui-datepicker .ui-datepicker-month{width:48px}
+
+.login-box input::-webkit-input-placeholder {color: #bbbbbb;}
+.login-box input::-moz-placeholder {color: #bbbbbb;}
+.login-box input:-ms-input-placeholder {color: #bbbbbb;}
+.login-box input:-moz-placeholder {color: #bbbbbb;}
+
+.file-srch{position:relative;min-width:63px;height:30px;overflow:hidden;white-space:nowrap;line-height:28px;text-align:center;border:1px solid;border-color: #d8d8d8 #c1c1c1 #b8b8b8 #d8d8d8;box-sizing: border-box;border-radius:3px;box-shadow: inset -1px -1px 0 rgba(0,0,0,0.05)}
+.file-srch input[type="file"]{position:absolute;right:0;top:0;height:100%;width:auto;opacity:0.01;cursor:pointer}
+.file-srch em{display:block}
+.small .file-srch{height:24px;line-height:24px}
+
+/* colorpicker */
+input.color {cursor: pointer;width:100px;border-right-width:30px;}
+.small input.color{border-right-width:24px}
+
+/* input look like span*/
+input.no-style{border:0;color:#444;font-family: 'roboto','notokr';}
+input.no-style:disabled{color:#444;background:#fff}
+.sfp-grid tbody tr:hover input.no-style{background-color: #e3f3f1; color:#078f98;}
+.sfp-grid .selected input.no-style {background-color: #d7edf6; color: #076ea5;}

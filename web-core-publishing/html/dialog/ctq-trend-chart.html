@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CTQ 추이</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>CTQ 추이</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap no-footer ctq-trend">
+            <section>
+                <div class="card-area direction-row">
+                    <div class="col left-col">
+                        <div class="row card-wrap">
+                            <div class="card-inner">
+                                <h3>CTQ</h3>
+                                <div class="card-cont">
+                                    <ul class="list-style btn-list">
+                                        <li class="check"><a href="#" class="list-cont">금형 상측 온도</a></li>
+                                        <li><a href="#" class="list-cont">금형 하측 온도</a></li>
+                                        <li><a href="#" class="list-cont">냉각수 압력</a></li>
+                                        <li><a href="#" class="list-cont">냉각수 온도</a></li>
+                                        <li><a href="#" class="list-cont">노즐 온도</a></li>
+                                        <li><a href="#" class="list-cont">에어 압력</a></li>
+                                        <li><a href="#" class="list-cont">온조기 고정측 온도</a></li>
+                                        <li><a href="#" class="list-cont">작동유 온도</a></li>
+                                        <li><a href="#" class="list-cont">호퍼 온도</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row card-wrap no-title">
+                            <div class="card-inner">
+                                <div class="card-cont">
+                                    <div class="tab-container">
+                                        <input id="tab1" type="radio" name="tabs">
+                                        <label for="tab1">실시간</label>
+                                        <input id="tab2" type="radio" name="tabs" checked="">
+                                        <label for="tab2">목록</label>
+                                        <section class="tab-content tab01">
+                                            그래프영역
+                                        </section>
+                                        <section class="tab-content tab02">
+                                            <div class="function-area">
+                                                <div class="align-right">
+                                                    <label>일자: <input type="text" class="calendar" style="width:110px" value="2019-07-04"/></label>
+                                                    <select class="border" style="width:70px">
+                                                        <option>10</option>
+                                                    </select>
+                                                    <button class="btn-srch ico">검색</button>
+                                                    <button class="btn blue">차트</button>
+                                                    <button class="btn-download ico">엑셀</button>
+                                                </div>
+                                            </div>
+                                            <div id="grid" class="border-style">
+                                                <div class="sfp-grid-panel">
+                                                    <div class="sfp-grid-header-panel">
+                                                        <table class="sfp-grid">
+                                                            <colgroup>
+                                                                <col style="width:20%">
+                                                                <col>
+                                                                <col style="width:10%">
+                                                                <col style="width:8%">
+                                                                <col style="width:8%">
+                                                                <col style="width:12%">
+                                                                <col style="width:8%">
+                                                                <col style="width:8%">
+                                                                <col style="width:6%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>일시</th>
+                                                                    <th>CTQ</th>
+                                                                    <th>값</th>
+                                                                    <th>하한2</th>
+                                                                    <th>하한1</th>
+                                                                    <th>기준값</th>
+                                                                    <th>상한1</th>
+                                                                    <th>상한2</th>
+                                                                    <th>단위</th>
+                                                                </tr>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
+                                                    <div class="sfp-grid-body-panel">
+                                                        <table class="sfp-grid">
+                                                            <colgroup>
+                                                                <col style="width:20%">
+                                                                <col>
+                                                                <col style="width:10%">
+                                                                <col style="width:8%">
+                                                                <col style="width:8%">
+                                                                <col style="width:12%">
+                                                                <col style="width:8%">
+                                                                <col style="width:8%">
+                                                                <col style="width:6%">
+                                                            </colgroup>
+                                                            <thead style="display: none;">
+                                                                <tr>
+                                                                    <th>일시</th>
+                                                                    <th>CTQ</th>
+                                                                    <th>값</th>
+                                                                    <th>하한2</th>
+                                                                    <th>하한1</th>
+                                                                    <th>기준값</th>
+                                                                    <th>상한1</th>
+                                                                    <th>상한2</th>
+                                                                    <th>단위</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>	
+                                                                    <td>2018-07-05 09:24:55</td>	
+                                                                    <td>금형 상측 온도</td>	
+                                                                    <td>39.7</td>	
+                                                                    <td>20</td>	
+                                                                    <td>15</td>	
+                                                                    <td>40</td>	
+                                                                    <td>20</td>	
+                                                                    <td>25</td>	
+                                                                    <td>℃</td>
+                                                                </tr>
+                                                                <tr>	
+                                                                    <td>2018-07-05 09:24:55</td>	
+                                                                    <td>금형 상측 온도</td>	
+                                                                    <td>39.7</td>	
+                                                                    <td>20</td>	
+                                                                    <td>15</td>	
+                                                                    <td>40</td>	
+                                                                    <td>20</td>	
+                                                                    <td>25</td>	
+                                                                    <td>℃</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

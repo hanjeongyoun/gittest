@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+.unavailable{padding:10px 5px;text-align:center;border:1px solid #8d8d8d;background:#fff}
+.unavailable .top-copy {padding-bottom:15px;font-size:14px;font-weight:700;line-height:30px;vertical-align:middle}
+.unavailable .top-copy > span{position:relative;display:inline-block;width:30px;height:30px;font-size:0;border-radius:50%;background:#e85050;vertical-align:middle}
+.unavailable .top-copy > span:before,.unavailable .top-copy > span:after{content:'';display:inline-block;position:absolute;left:50%;top:50%;width:20px;height:2px;margin-left:-10px;background:#fff;}
+.unavailable .top-copy > span:before{transform:rotate(225deg)}
+.unavailable .top-copy > span:after{transform:rotate(-225deg)}
+.unavailable .top-copy strong{display:inline-block;padding-left:10px}
+.unavailable > p {font-size:13px;line-height:1.4;word-break:keep-all}
+
+.sfp-grid-panel > div.empty{}
+.sfp-grid-panel .empty-list{position:absolute;left:0;right:0;bottom:0;top:0;text-align:center;}
+.sfp-grid-panel .empty-list:before{content:'';display:inline-block;height:100%;vertical-align:middle}
+.sfp-grid-panel .empty-list > span{vertical-align:middle}
+
+input[type="checkbox"] + .check-mark,input[type="radio"] + .radio-mark{line-height:16px}

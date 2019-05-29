@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* layout */
+body{overflow:hidden;background:#d7d7d7; 
+	scrollbar-3dlight-color:#d7d7d7;
+    scrollbar-darkshadow-color:#d7d7d7;
+    scrollbar-arrow-color:#d7d7d7;
+    scrollbar-track-color:#d7d7d7;
+}
+::-webkit-scrollbar-track{ background:#d7d7d7; }
+::-webkit-scrollbar-track-piece{ background:#d7d7d7; }
+::-webkit-scrollbar-corner{ background:#d7d7d7; }
+
+
+/*title-bar*/
+header{position:relative;color:#fff;background:#2b2f31}
+header{}
+
+/* layout */
+.item-inner:after{background:#fff}
+.item-inner > h3{border-bottom:1px solid #a2a2a2;color:#333;background:#f2f2f2}
+.item-inner .item-cont{height:calc(100% - 35px);border-radius:0 0 5px 5px;padding:10px 20px 30px 10px;box-sizing:border-box;background:#fff;overflow-x:hidden;overflow-y:auto;}
+.item-inner .paging{z-index:10;position:absolute;left:0;right:0;bottom:0;font-size:0;line-height:0;box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);border-top:1px solid #c3c3c3;border-radius:0 0 5px 5px;background:#fff}
+.item-inner .paging button{width:50%;height:44px;line-height:44px;font-size:0;text-align:center;border-radius:0 0 0 5px;background:#009ac0}
+.item-inner .paging button:after{content:'';display:inline-block;width:28px;height:44px;background:url('../images/arrow/chevron-up_w.png') no-repeat 0 40%;background-size:100% auto}
+.item-inner .paging button + button{border-left:1px solid #c3c3c3;border-radius:0 0 5px 0;}
+
+.item-inner .paging-tp2{z-index:10;position:absolute;left:0;right:0;bottom:0;padding-bottom:8px;font-size:0;line-height:0;border-radius:0 0 5px 5px;background:#fff}
+.item-inner .paging-tp2 button{position:relative;width:49%;height:44px;margin:0 0.5%;line-height:44px;font-size:0;text-align:center;border:3px solid #e3e3e3;border-radius:5px;-moz-box-shadow: 3px 4px 0px 0px #d7d7d7;-webkit-box-shadow: 3px 4px 0px 0px #d7d7d7;box-shadow: 3px 4px 0px 0px #d7d7d7;}
+.item-inner .paging-tp2 button:after{content:'';display:inline-block;width:28px;height:44px;background:url('../images/arrow/chevron-up_g.png') no-repeat 0 40%;background-size:100% auto}
+.item-inner .paging-tp2 button:hover {background: #f2f2f2;}
+.item-inner .paging-tp2 button + button{}
+.item-inner {
+    scrollbar-3dlight-color:#fff;
+    scrollbar-darkshadow-color:#fff;
+    scrollbar-arrow-color:#fff;
+    scrollbar-track-color:#fff;
+}
+/* grid 예외 */
+.item-inner ::-webkit-scrollbar-track{ background:#fff; }
+.item-inner ::-webkit-scrollbar-track-piece{ background:#fff; }
+.item-inner ::-webkit-scrollbar-corner{ background:#fff; }
+
+
+/* gnb */
+main > section aside.col{background:#f2f2f2}
+main > section aside li a{border-bottom:1px solid #e4e4e4;}
+main > section aside li a.active{color:#038390;background:#cae9eb}
+
+.under-title{border-bottom:1px solid #9b9c9d }
+
+
+/* pop form */
+input[type="checkbox"] + .check-mark:before{border:1px solid #ced3da;background:#fff}

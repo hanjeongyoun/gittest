@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>작업처리</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/pop.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2><a href="#" class="logo">IMC M</a></h2>
+            <div class="user-info">
+				<time>2018-06-12 18:24:51</time>
+				<span id="pop-mcn-nm" mcn-id="M0002">머신2</span>
+				<span id="pop-worker-nm" worker-key="7">Emilia</span>
+				<span id="pop-client-ip">0:0:0:0:0:0:0:1</span>
+            </div>
+        </header>
+        <section>
+            <aside class="col">
+                <ul>
+                    <li><a href="#" class="active">작업처리</a></li>
+                    <li><a href="#">가동내역</a></li>
+                    <li><a href="#">문서열람</a></li>
+                    <li><a href="#">사출기설정</a></li>
+                    <li><a href="#">작업자설정</a></li>
+                    <li><a href="#">경보설정</a></li>
+                </ul>
+            </aside>
+            <div class="col">
+                <div class="row">
+                    <div class="item-wrap col">
+                        <div class="grid border-style">
+                           	<div class="sfp-grid-panel">
+		                        <div class="sfp-grid-header-panel">
+		                            <table class="sfp-grid">
+		                                <colgroup>
+											<col style="width:10%">
+											<col style="width:10%">
+											<col style="width:8%">
+											<col style="width:10%">
+											<col style="width:5%">
+											<col style="width:5%">
+											<col style="width:5%">
+											<col style="width:5%">
+											<col style="width:7%">
+										</colgroup>
+		                                <thead>
+											<tr>
+												<th>생산번호</th>
+												<th>제품</th>
+												<th>계획 시작</th>
+												<th>계획 종료</th>
+												<th>계획시간</th>
+												<th>계획수량</th>
+												<th rowspan="2">양품</th>
+												<th rowspan="2">불량</th>
+												<th rowspan="2">작업상태</th>
+											</tr>
+											<tr>
+												<th>작업 No</th>
+												<th>금형</th>
+												<th>작업 시작</th>
+												<th>작업 종료</th>
+												<th>사용시간</th>
+												<th>실적수량</th>
+											</tr>
+										</thead>
+		                            </table>
+		                        </div>
+		                        <div class="sfp-grid-body-panel">
+		                            <table class="sfp-grid">
+		                                <colgroup>
+											<col style="width:10%">
+											<col style="width:10%">
+											<col style="width:8%">
+											<col style="width:10%">
+											<col style="width:5%">
+											<col style="width:5%">
+											<col style="width:5%">
+											<col style="width:5%">
+											<col style="width:7%">
+										</colgroup>
+		                                <thead style="display:none">
+		                                    <tr>
+												<th>생산번호</th>
+												<th>제품</th>
+												<th>계획 시작</th>
+												<th>계획 종료</th>
+												<th>계획시간</th>
+												<th>계획수량</th>
+												<th rowspan="2">양품</th>
+												<th rowspan="2">불량</th>
+												<th rowspan="2">작업상태</th>
+											</tr>
+											<tr>
+												<th>작업 No</th>
+												<th>금형</th>
+												<th>작업 시작</th>
+												<th>작업 종료</th>
+												<th>사용시간</th>
+												<th>실적수량</th>
+											</tr>
+		                                </thead>
+		                                <tbody>
+		                                    <tr>	
+		                                        <td>NewPO2<span class="divide-td">1111113133111313</span></td>	
+		                                        <td>I40 Bumper<span class="divide-td">금형2</span></td>	
+		                                        <td><span class="divide-td"></span></td>	
+		                                        <td><span class="divide-td"></span></td>	
+		                                        <td>1,000 분<span class="divide-td">0 분</span></td>	
+		                                        <td>18,600<span class="divide-td">0</span></td>	
+		                                        <td>0</td>	
+		                                        <td>0</td>	
+		                                        <td><button class="btn blue wide">시작</button></td>	
+		                                    </tr>
+		                                </tbody>
+		                                <tfoot style="display: none;"></tfoot>
+		                            </table>
+		                        </div>
+		                    </div>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SWS 화면</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<style>
+		.sws-box-wrap .box-group{margin-bottom:40px;padding:5px 10px 10px;box-sizing:border-box;border:1px solid #ddd;background:#f4f4f4}
+		.sws-box-wrap .box-group:last-child{margin-bottom:0}
+		.sws-box-wrap .box-group .title{display:block;position:absolute;left:0;top:0;width:15px;font-size:12px;line-height:40px}
+		.box-group .line-wrap{position:relative;padding-left:15px;margin-bottom:10px;font-size:0;}
+		.box-group .line-wrap span{display:inline-block;width:3.84%;height:40px;padding:3px;font-size:12px;font-weight:500;line-height:15px;border:1px solid #888;box-sizing:border-box;vertical-align:top;word-break:break-all;overflow:hidden}
+		.box-group .line-wrap span.empty{border:0;font-size:0}
+		.box-group .line-wrap span.stock{color:#fff;background-color:#12b735}
+		.box-group li:nth-of-type(2){margin-bottom:25px}
+		.box-group .row-title{padding-left:15px;font-size:0}
+		.box-group .row-title span{display:inline-block;width:3.84%;font-size:12px;font-weight:500;text-align:center;vertical-align:top}
+		.box-group .box-floor{padding-bottom:3px;font-size:14px;font-weight:700}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+				<li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+					<div class="bookmark-list">
+						<ul>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+						</ul>
+						<!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+					</div>
+				</li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<header>
+			<h2>창고관리</h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">부서</option>
+							<option value="7">부서2</option>
+						</select>
+						<input type="text" placeholder="사원명, 사번" readonly="readonly"/>
+						<button class="btn-srch ico">조회</button>
+						<button class="btn-reset image">초기화</button>
+					</div>
+					<div class="align-right">
+						<button class="btn-download ico">엑셀다운로드</button>
+						<button class="btn-del ico">삭제</button>
+						<button class="btn-add ico">등록</button>
+					</div>
+				</div>
+				<div class="sws-box-wrap">
+					<div class="box-group">
+						<h2 class="box-floor">1층</h2>
+						<ul>
+							<li class="line-wrap">
+								<strong class="title">4</strong>
+								<span>ondsafsdafsdafsdafsd</span>
+								<span>2</span>
+								<span class="stock">text</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span class="stock"></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">3</strong>
+								<span class="empty"></span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span class="stock"></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">2</strong>
+								<span class="empty">on</span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">1</strong>
+								<span>on</span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+						</ul>
+						<div class="row-title">
+							<span>Row1</span>
+							<span>Row2</span>
+							<span>Row3</span>
+							<span>Row4</span>
+							<span>Row5</span>
+							<span>Row6</span>
+							<span>Row7</span>
+							<span>Row8</span>
+							<span>Row9</span>
+							<span>Row10</span>
+							<span>Row11</span>
+							<span>Row12</span>
+							<span>Row13</span>
+							<span>Row14</span>
+							<span>Row15</span>
+							<span>Row16</span>
+							<span>Row17</span>
+							<span>Row18</span>
+							<span>Row19</span>
+							<span>Row20</span>
+							<span>Row21</span>
+							<span>Row22</span>
+							<span>Row23</span>
+							<span>Row24</span>
+							<span>Row25</span>
+							<span>Row26</span>
+						</div>		
+					</div>
+					<div class="box-group">
+						<h2 class="box-floor">2층</h2>
+						<ul>
+							<li class="line-wrap">
+								<strong class="title">4</strong>
+								<span>on</span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">3</strong>
+								<span class="empty"></span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">2</strong>
+								<span class="empty"></span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">1</strong>
+								<span>on</span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+						</ul>
+						<div class="row-title">
+							<span>Row1</span>
+							<span>Row2</span>
+							<span>Row3</span>
+							<span>Row4</span>
+							<span>Row5</span>
+							<span>Row6</span>
+							<span>Row7</span>
+							<span>Row8</span>
+							<span>Row9</span>
+							<span>Row10</span>
+							<span>Row11</span>
+							<span>Row12</span>
+							<span>Row13</span>
+							<span>Row14</span>
+							<span>Row15</span>
+							<span>Row16</span>
+							<span>Row17</span>
+							<span>Row18</span>
+							<span>Row19</span>
+							<span>Row20</span>
+							<span>Row21</span>
+							<span>Row22</span>
+							<span>Row23</span>
+							<span>Row24</span>
+							<span>Row25</span>
+							<span>Row26</span>
+						</div>			
+					</div>
+					<div class="box-group">
+						<h2 class="box-floor">3층</h2>
+						<ul>
+							<li class="line-wrap">
+								<strong class="title">4</strong>
+								<span>on</span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">3</strong>
+								<span class="empty"></span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">2</strong>
+								<span class="empty"></span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+							<li class="line-wrap">
+								<strong class="title">1</strong>
+								<span>on</span>
+								<span>2</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</li>
+						</ul>
+						<div class="row-title">
+							<span>Row1</span>
+							<span>Row2</span>
+							<span>Row3</span>
+							<span>Row4</span>
+							<span>Row5</span>
+							<span>Row6</span>
+							<span>Row7</span>
+							<span>Row8</span>
+							<span>Row9</span>
+							<span>Row10</span>
+							<span>Row11</span>
+							<span>Row12</span>
+							<span>Row13</span>
+							<span>Row14</span>
+							<span>Row15</span>
+							<span>Row16</span>
+							<span>Row17</span>
+							<span>Row18</span>
+							<span>Row19</span>
+							<span>Row20</span>
+							<span>Row21</span>
+							<span>Row22</span>
+							<span>Row23</span>
+							<span>Row24</span>
+							<span>Row25</span>
+							<span>Row26</span>
+						</div>		 
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+</body>
+</html>

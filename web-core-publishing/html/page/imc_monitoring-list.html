@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SFP 2.0 Page 기본 레이아웃</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/page.css">
+    
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <header>
+            <h2>모니터링</h2>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+                <div class="function-area">
+                    <div class="align-right big status-wrap">
+                        <span class="SETUP"><span class="status"></span> 셋업</span>
+                        <span class="MANUAL"><span class="status"></span> 수동</span>
+                        <span class="HALF-AUTO"><span class="status"></span> 반자동</span>
+                        <span class="AUTO"><span class="status"></span> 자동</span>
+                        <span class="ALARM"><span class="status"></span> 알람</span>
+                    </div>
+                </div>
+                <div class="fix-card four-col lms-monitoring">
+                    <ul>
+                        <li>
+                            <h3 class="fix-title">the ONE*900</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-SETUP">셋업</span>
+                                    <span class="flag-MANUAL">수동</span>
+                                    <span class="flag-HALF-AUTO">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-ALARM">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 700 Plus</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 550E</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 350E</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 220E</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 200T</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 110E</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 110E</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="fix-title">WIZ 110E</h3>
+                            <div class="card-cont">
+                                <div class="img-wrap">
+                                    <img src="./../../resources/images/machine/ls/M0001.png" alt=""/>
+                                </div>
+                                <div class="flag-wrap">
+                                    <span class="flag-">셋업</span>
+                                    <span class="flag-">수동</span>
+                                    <span class="flag-">반자동</span>
+                                    <span class="flag-">자동</span>
+                                    <span class="flag-">알람</span>
+                                </div>
+                                <ul class="detail-info three-col">
+                                    <li>
+                                        <span class="title">형체력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">900.0</strong>
+                                            <em class="unit">ton</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">스크류경 :</span>
+                                        <span class="cont">
+                                            <strong class="value">105.0</strong>
+                                            <em class="unit">mm</em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">사출용적 :</span>
+                                        <span class="cont">
+                                            <strong class="value">5022.0</strong>
+                                            <em class="unit">cm<sup>3</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출압력 :</span>
+                                        <span class="cont">
+                                            <strong class="value">2019.0</strong>
+                                            <em class="unit">kg/cm<sup>2</sup></em>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="title">최대사출속도 :</span>
+                                        <span class="cont">
+                                            <strong class="value">1096.0</strong>
+                                            <em class="unit">cm<sup>3</sup><span>/s</span></em>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

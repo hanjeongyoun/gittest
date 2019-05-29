@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>실적입력</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>실적입력</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap job-score-left">
+            <section>
+            	<div class="register-table">
+            		<ul>
+	                    <li>
+	                        <div class="title">생산수량</div>
+	                        <div class="cont">
+	                            <div class="line-wrap">
+	                                <span><input type="text" class="bold"></span>
+	                            </div>
+	                        </div>
+	                    </li>
+	                    <li>
+	                        <div class="title">양품수량</div>
+	                        <div class="cont">
+	                            <div class="line-wrap">
+	                                <span><input type="text" class="bold"></span>
+	                            </div>
+	                        </div>
+	                    </li>
+	                    <li>
+	                        <div class="title">불량수량</div>
+	                        <div class="cont">
+	                            <div class="line-wrap">
+	                                <span><input type="text" class="bold"></span>
+	                            </div>
+	                        </div>
+	                    </li>
+	                </ul>
+            	</div>
+            	<ul class="number-key">
+            		<li><button>1</button></li>
+            		<li><button>2</button></li>
+            		<li><button>3</button></li>
+            		<li><button>4</button></li>
+            		<li><button>5</button></li>
+            		<li><button>6</button></li>
+            		<li><button>7</button></li>
+            		<li><button>8</button></li>
+            		<li><button>9</button></li>
+            		<li><button>0</button></li>
+            		<li><button class="num-delete">삭제</button></li>
+            		<li><button class="num-reset">초기화</button></li>
+            	</ul>
+            </section>
+        </div>
+        <div class="contents-wrap no-line">
+            <section>
+                <div id="grid" class="border-style">
+                    <div class="sfp-grid-panel">
+                        <div class="sfp-grid-header-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+									<col style="width:55%">
+									<col style="width:15%">
+									<col style="width:15%">
+									<col style="width:15%">
+								</colgroup>
+                                <thead>
+									<tr>
+										<th>불량유형</th>
+										<th>수량</th>
+										<th>+</th>
+										<th>-</th>
+									</tr>
+								</thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel" style="height:450px">
+                            <table class="sfp-grid">
+                                <colgroup>
+									<col style="width:55%">
+									<col style="width:15%">
+									<col style="width:15%">
+									<col style="width:15%">
+								</colgroup>
+                                <thead style="display: none;">
+                                    <tr>
+										<th>불량유형</th>
+										<th>수량</th>
+										<th>+</th>
+										<th>-</th>
+									</tr>
+                                </thead>
+                                <tbody>
+                                    <tr>	
+                                    	<td style="text-align:left">22</td>	
+                                    	<td>
+                                    		<strong>11</strong>
+                                    	</td>	
+                                    	<td>
+                                    		<button type="button" class="btn blue" style="font-size:20px;font-weight:700">+</button>
+                                    	</td>	
+                                    	<td>
+                                    		<button type="button" class="btn blue" style="font-size:20px;font-weight:700">-</button>
+                                    	</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="align-center">
+                <button class="btn-save">저장</button>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

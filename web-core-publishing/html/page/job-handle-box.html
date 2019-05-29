@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>작업관제</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/page.css">
+    <link rel="stylesheet" href="../../resources/css/left_gnb.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">SFP 2.0</a></h1>
+        <div class="link-select">
+            <button>BASIC DATA</button>
+            <ul>
+                <li><a href="#">SETUP</a></li>
+                <li><a href="#">MONITORING</a></li>
+                <li><a href="#">REPORT</a></li>
+                <li><a href="#">HISTORY</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav >
+        <ul>
+            <li>
+                <a href="#">Material</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 1</a></li>
+                    <li><a href="">자재 관리 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Machine</a>
+                <ul>
+                    <li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 유형 관리 2-1</a></li>
+                            <li><a href="">자재 유형 관리 2-2</a></li>
+                            <li><a href="">자재 유형 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="has-depth">자재 관리 2</a>
+                        <ul>
+                            <li><a href="">자재 관리 2-1</a></li>
+                            <li><a href="" class="has-depth">자재 관리 2-2</a>
+                                <ul>
+                                    <li><a href="">자재 관리 3-1</a></li>
+                                    <li><a href="">자재 관리 3-2</a></li>
+                                    <li><a href="">자재 관리 3-3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">자재 관리 2-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Men</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 3</a></li>
+                    <li><a href="">자재 관리 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Method</a>
+                <ul>
+                    <li><a href="">자재 유형 관리 4</a></li>
+                    <li><a href="">자재 관리 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>작업관제</h2>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+                <!-- <div class="card-area same-size type2">
+                    <div class="row">
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM01<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM02<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM03<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM04<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM05<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM06<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM07<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM08<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap col">
+                            <div class="card-inner">
+                                <h3>IMM09<span class="status green">대기</span></h3>
+                                <div class="card-cont">
+                                    <div class="sec-left center-item">
+                                        <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                    </div>
+                                    <ul class="sec-right">
+                                        <li>J00553</li>
+                                        <li>PD-010</li>
+                                        <li>MD-010</li>
+                                        <li>2017-05-22</li>
+                                        <li> 0 / 3,200</li>
+                                        <li>준비</li>
+                                        <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="fix-card job-handle three-col">
+                    <ul>
+                        <li>
+                            <h3>IMM01 <span class="status green">대기</span></h3>
+                            <div class="card-cont">
+                                <div class="sec-left center-item">
+                                    <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                </div>
+                                <ul class="sec-right">
+                                    <li>J00553</li>
+                                    <li>PD-010</li>
+                                    <li>MD-010</li>
+                                    <li>2017-05-22</li>
+                                    <li> 0 / 3,200</li>
+                                    <li>준비</li>
+                                    <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>IMM01 <span class="status green">대기</span></h3>
+                            <div class="card-cont">
+                                <div class="sec-left center-item">
+                                    <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                </div>
+                                <ul class="sec-right">
+                                    <li>J00553</li>
+                                    <li>PD-010</li>
+                                    <li>MD-010</li>
+                                    <li>2017-05-22</li>
+                                    <li> 0 / 3,200</li>
+                                    <li>준비</li>
+                                    <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>IMM01 <span class="status green">대기</span></h3>
+                            <div class="card-cont">
+                                <div class="sec-left center-item">
+                                    <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                </div>
+                                <ul class="sec-right">
+                                    <li>J00553</li>
+                                    <li>PD-010</li>
+                                    <li>MD-010</li>
+                                    <li>2017-05-22</li>
+                                    <li> 0 / 3,200</li>
+                                    <li>준비</li>
+                                    <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>IMM01 <span class="status green">대기</span></h3>
+                            <div class="card-cont">
+                                <div class="sec-left center-item">
+                                    <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                </div>
+                                <ul class="sec-right">
+                                    <li>J00553</li>
+                                    <li>PD-010</li>
+                                    <li>MD-010</li>
+                                    <li>2017-05-22</li>
+                                    <li> 0 / 3,200</li>
+                                    <li>준비</li>
+                                    <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>IMM01 <span class="status green">대기</span></h3>
+                            <div class="card-cont">
+                                <div class="sec-left center-item">
+                                    <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                </div>
+                                <ul class="sec-right">
+                                    <li>J00553</li>
+                                    <li>PD-010</li>
+                                    <li>MD-010</li>
+                                    <li>2017-05-22</li>
+                                    <li> 0 / 3,200</li>
+                                    <li>준비</li>
+                                    <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>IMM01 <span class="status green">대기</span></h3>
+                            <div class="card-cont">
+                                <div class="sec-left center-item">
+                                    <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                </div>
+                                <ul class="sec-right">
+                                    <li>J00553</li>
+                                    <li>PD-010</li>
+                                    <li>MD-010</li>
+                                    <li>2017-05-22</li>
+                                    <li> 0 / 3,200</li>
+                                    <li>준비</li>
+                                    <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>IMM01 <span class="status green">대기</span></h3>
+                            <div class="card-cont">
+                                <div class="sec-left center-item">
+                                    <img src="../../resources/images/machine/big/IMM_big_ov_green.png">
+                                </div>
+                                <ul class="sec-right">
+                                    <li>J00553</li>
+                                    <li>PD-010</li>
+                                    <li>MD-010</li>
+                                    <li>2017-05-22</li>
+                                    <li> 0 / 3,200</li>
+                                    <li>준비</li>
+                                    <li><button class="btn small">상세</button><button class="btn small">작업시작</button></li>    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>

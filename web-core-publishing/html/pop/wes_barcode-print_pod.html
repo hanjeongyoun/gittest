@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Pop 컨테이너박스 포드 바코드 재출력</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/wes/pop.css">
+	<script src="../../resources/js/bower/jquery/jquery.min.js"></script>
+	<script src="../../resources/js/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../resources/js/imc/imc-datepicker.js"></script>
+	<script src="../../resources/js/imc/imc-utils.js"></script>
+	<script>
+		$( function() {
+			
+			$(".container-item-wrap").each(function(){
+				var col = $(this).attr('data-col');
+				var row = $(this).attr('data-row');
+
+				var _width = 100/col;
+				var _height = 100/row;
+				var _html = [];
+				for (var i = 0; i < (col*row); i++){
+					_html.push('<span class="cell" style="width:'+_width+'%;height:'+_height+'%;"></span>');
+				}
+				$(this).html(_html);
+			});
+
+			/* select container box */
+
+			var selectCol = 3;
+			var selectRow = 3;
+
+			var _guideWidth = 100/selectCol;
+			var _guideHeight = 100/selectRow;
+
+			var _guideHtml = [];
+			for (var i = 1; i <= (selectCol*selectRow); i++){
+				if(i == 4){
+					_guideHtml.push('<span class="cell select" style="width:'+_guideWidth+'%;height:'+_guideHeight+'%;"><em>'+i+'</em></span>');	
+				}else{
+					_guideHtml.push('<span class="cell" style="width:'+_guideWidth+'%;height:'+_guideHeight+'%;"><em>'+i+'</em></span>');
+				}
+			}
+			
+			$("#blocks .container-item-wrap").html(_guideHtml);
+		});
+	</script>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>컨테이너 포드 바코드 재출력</h2>
+		</header>
+		<section>
+			<aside class="col">
+				<ul>
+					<li><a href="#">등록</a></li>
+					<li><a href="#" class="active">재출력</a></li>
+				</ul>
+			</aside>
+			<div class="col">
+				<div class="item-wrap row no-flex">
+					<div class="function-area search-box">
+						<div class="align-left">
+							<span>컨테이너 ID 조회</span>
+							<input type="text" />
+							<button class="btn-pop blue">조회</button>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item-wrap col">
+						<div class="item-inner paging-in">
+							<h3>컨테이너 박스 조회 결과</h3>
+							<div class="item-cont">
+								<div id="grid">
+									<div class="sfp-grid-panel">
+										<div class="sfp-grid-header-panel" >
+											<table class="sfp-grid">
+												<colgroup>
+													<col style="width:60px">
+													<col>
+													<col style="width:220px">
+												</colgroup>
+												<thead>
+													<tr>
+														<th>선택</th>
+														<th>컨테이너 박스 ID</th>
+														<th>면 ID</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+										<div class="sfp-grid-body-panel" style="height:750px">
+											<table class="sfp-grid">
+												<colgroup>
+													<col style="width:60px">
+													<col>
+													<col style="width:220px">
+												</colgroup>
+												<thead style="display: none;">
+													<tr>
+														<th>선택</th>
+														<th>컨테이너 박스 ID</th>
+														<th>면 ID</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+														<td>CA_0001_1123</td>
+														<td>CA_0001</td>
+													</tr>
+													<tr>
+														<td><label><input type="checkbox"><span class="check-mark"></span></label></td>
+														<td>CA_0001_1123</td>
+														<td>CA_0001</td>
+													</tr>
+												</tbody>
+												<tfoot style="display: none;"></tfoot>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="paging">
+								<button disabled>위</button>
+								<button class="bottom" disabled>아래</button>
+							</div>
+						</div>
+					</div>
+					<div class="item-wrap col">
+						<div class="item-inner">
+							<h3>선택한 컨테이너</h3>
+							<div class="item-cont">
+								<ul class="select-item-info">
+									<li>
+										<strong class="title">컨테이너 ID</strong>
+										<input type="text" value="sdfe1523" />
+									</li>
+									<li class="check-all">
+										<label><input type="checkbox"><span class="check-mark">전체 영역 선택</span></label>
+									</li>
+								</ul>
+								<div class="barcode-guide check-cell select-container mgt20" id="blocks" data-container-type="pod">
+									<div class="container-item-wrap">
+										
+									</div>
+								</div>
+								<button class="btn-pop blue full-size mgt20">바코드 재출력</button>
+							</div>
+						</div>
+					</div>
+				</div>
+						
+			</div>
+			
+		</section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SFP2.0 html guide</title>
+    <link rel="stylesheet" href="./resources/css/common.css">
+    <style>
+        body{ overflow-y:auto; }
+        .wrap{padding-bottom:50px;background:#efefef}
+        h1{ height:33px;color:#fff;padding-left:20px;line-height:33px;font-size:20px;font-family:'notokr';font-weight:500;
+             background-color:#019fca;
+            background-image:-webkit-linear-gradient( left, #07aa9b, #019fca );
+            background-image:linear-gradient( to right, #07aa9b, #019fca );
+            background-repeat:no-repeat;
+        }
+        h2{ height:23px;padding:3px 0 3px 20px;background-color:#4b4e51;color:#fff;font-size:14px;font-family:'notokr';font-weight:500;border-top:1px solid #e7e7e7; }
+        h2 strong{ display:inline-block;width:180px;font-weight:normal;font-size:16px; }
+        .flist{ position:relative;padding-left:180px;border-top:1px solid #e7e7e7; font-family:'notokr';font-weight:500;}
+        .flist h3{ position:absolute;left:0;top:0;bottom:0;width:180px;background-color:#07aa9b;color:#fff;padding:0 0 0 20px;font-size:16px;box-sizing:border-box; }
+        .flist h3 strong{ position:absolute;left:20px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);font-weight:normal; }
+        .flist h3 strong em{ display:block;font-size:13px;text-transform:uppercase; }
+        .flist dl{ position:relative;background-color:#fff;padding:0 0 0 140px;border-top:1px solid #e7e7e7; font-size:14px;}
+        .flist dl:first-of-type{ border-top:none; }
+        .flist dl dt{ position:absolute;left:0;top:0;bottom:0;width:140px;padding:0 0 0 20px;border-right:1px solid #e7e7e7;box-sizing:border-box;background-color:#f2f2f2; }
+        .flist dl dt.guide{ background-color:#777;color:#fff; }
+        .flist dl dt.imc3{background-color:#019fca;color:#fff}
+        .flist.new dl dt{background-color:#f74b90}
+        .flist dl dt strong{ position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);font-weight:normal;}
+        .flist dd{ border-top:1px solid #e7e7e7; }
+        .flist dl dd:first-of-type{ border-top:none; }
+        .flist dd a{ position:relative;display:block;padding:3px 20px; }
+        .flist dd a:hover{ background-color:#e3f3f1;color:#078f98; }
+        .flist dd a strong{ display:inline-block;width:250px;margin-right:10px;font-weight:normal; }
+        .flist dd a i{ display:inline-block;width:230px;margin-right:10px;font-weight:normal; }
+        .flist dd a i:before{ content:' => '; }
+        .flist dd.end a:after{ content:'-';position:absolute;left:740px;background-color:#04a5b1;color:#fff;padding:1px 10px 0; }
+        .flist dd.overlap a{ opacity:0.5;text-decoration:line-through; }
+        .flist dl dd.ver2{background-color:#fed9b1}
+        .flist.black-theme h3{background-color:#f58d1e}
+        .flist.black-theme dl dt.guide{background-color:#30373f}
+        .flist.blue-theme h3{background-color:#0075c2}
+        .flist.blue-theme dl dt.guide{background-color:#fff;color:#444;font-weight:500}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>HTML FILE LIST</h1>
+        <h2>COMMON GUIDE</h2>
+        <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">공통 스타일 가이드</dt>
+                <dd><a href="./html/common_module.html"><strong>공통 스타일가이드</strong><em>/common_module.html</em></a></dd>
+
+            </dl>
+        </div>
+        <h2>New</h2>
+        <div class="flist new">
+            <h3>New add</h3>
+            <dl>
+                <dt class="guide">신규 추가 및 수정</dt>
+                <dd><a href="./html/page/05_layout_3section.html"><strong>카드 레이아웃 3개 카드</strong><em>/page/05_layout_3section.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>PAGE GUIDE /page</h2>
+        <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">GNB layout</dt>
+                <dd><a href="./html/page/00_layout.html"><strong>왼쪽 gnb 레이아웃</strong><em>/page/00_layout.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_right_gnb.html"><strong>오른쪽 gnb 레이아웃</strong><em>/page/00_layout_right_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_top_gnb.html"><strong>상단 gnb 레이아웃</strong><em>/page/00_layout_top_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_multi_gnb.html"><strong>상단 + 왼쪽 gnb 레이아웃</strong><em>/page/00_layout_multi_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_hidden-gnb.html"><strong>숨김메뉴</strong><em>/page/00_layout_hidden-gnb.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">page 기본 grid</dt>
+                <dd><a href="./html/page/00_layout.html"><strong>기본 레이아웃</strong><em>/page/00_layout.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_blue-grid.html"><strong>기본 레이아웃</strong><em>/page/00_layout_blue-grid.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_paging.html"><strong>기본 레이아웃 - paging table 하단에</strong><em>/page/00_layout_paging.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_tab.html"><strong>기본 레이아웃 - tab</strong><em>/page/00_layout_tab.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_col2.html"><strong>2단 레이아웃</strong><em>/page/00_layout_col2.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_col3.html"><strong>3단 레이아웃</strong><em>/page/00_layout_col3.html</em></a></dd>
+                <dd><a href="./html/page/01_layout.html"><strong>카드 레이아웃</strong><em>/page/01_layout.html</em></a></dd>
+                <dd><a href="./html/page/01_layout_2.html"><strong>카드(width같은) 레이아웃</strong><em>/page/01_layout_2.html</em></a></dd>
+                <dd><a href="./html/page/04_layout.html"><strong>고정사이즈 카드 레이아웃</strong><em>/page/04_layout.html</em></a></dd>
+                <dd><a href="./html/page/04_layout02.html"><strong>고정사이즈 카드02</strong><em>/page/04_layout02.html</em></a></dd>
+                <dd><a href="./html/page/05_layout_3section.html"><strong>카드 레이아웃 3개 카드</strong><em>/page/05_layout_3section.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">Login</dt>
+                <dd><a href="./html/page/00_login.html"><strong>로그인 페이지</strong><em>/page/00_login.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">Main</dt>
+                <dd><a href="./html/page/00_main.html"><strong>메인 페이지</strong><em>/page/00_main.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">ERROR</dt>
+                <dd><a href="./html/page/00_error.html"><strong>error 페이지 - 403</strong><em>/page/00_error.html</em></a></dd>
+                <dd><a href="./html/page/00_error_2.html"><strong>error 페이지 type2 - 403</strong><em>/page/00_error_2.html</em></a></dd>
+                <dd><a href="./html/page/00_error_3.html"><strong>error 페이지 type2 - 404</strong><em>/page/00_error_3.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>DIALOG GUIDE /dialog</h2>
+        <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">dialog 기본 grid</dt>
+                <dd><a href="./html/dialog/00_layout.html"><strong>기본 레이아웃</strong><em>/dialog/00_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/00_layout_nofooter.html"><strong>기본 레이아웃(푸터없음)</strong><em>/dialog/00_layout_nofooter.html</em></a></dd>
+                <dd><a href="./html/dialog/00_layout_color-picker.html"><strong>기본 레이아웃-color picker</strong><em>/dialog/00_layout_color-picker.html</em></a></dd>
+                <dd><a href="./html/dialog/01_layout.html"><strong>페이지>다이얼로그</strong><em>/dialog/01_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/02_layout.html"><strong>CRUD 레이아웃</strong><em>/dialog/02_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/02_layout_2.html"><strong>CRUD 레이아웃, 추가등록 버튼하단</strong><em>/dialog/02_layout_2.html</em></a></dd>
+                <dd><a href="./html/dialog/03_layout.html"><strong>Search 레이아웃</strong><em>/dialog/03_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/04_layout.html"><strong>고정사이즈 카드 레이아웃</strong><em>/dialog/04_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/00_layout_workbatch.html"><strong>CRUD테이블 특이형태</strong><em>/dialog/00_layout_workbatch.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">dialog 화면</dt>
+                <dd><a href="./html/dialog/file-upload.html"><strong>파일 업로드</strong><em>/dialog/file-upload.html</em></a></dd>
+                <dd><a href="./html/dialog/ctq-trend-chart.html"><strong>CTQ 추이</strong><em>/dialog/ctq-trend-chart.html</em></a></dd>
+                <dd class="ver2"><a href="./html/dialog/ctq-trend-chart02.html"><strong>CTQ 추이02</strong><em>/dialog/ctq-trend-chart02.html</em></a></dd>
+                <dd><a href="./html/dialog/job-score-record-add.html"><strong>실적입력</strong><em>/dialog/job-score-record-add.html</em></a></dd>
+                <dd><a href="./html/dialog/machine-device-mapping.html"><strong>사출기 장비연결</strong><em>/dialog/machine-device-mapping.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>POP GUIDE /pop</h2>
+        <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">POP 기본 grid</dt>
+                <dd><a href="./html/pop/00_layout.html"><strong>POP 레이아웃 가이드</strong><em>/pop/00_layout.html</em></a></dd>
+                <dd><a href="./html/pop/01_layout.html"><strong>기본 레이아웃(1단,1줄,컨텐츠 영역1개)</strong><em>/pop/01_layout.html</em></a></dd>
+                <dd><a href="./html/pop/02_layout.html"><strong>기본 레이아웃(2단,1줄,컨텐츠 영역2개)</strong><em>/pop/02_layout.html</em></a></dd>
+                <dd><a href="./html/pop/03_layout.html"><strong>기본 레이아웃(2단,2줄,컨텐츠 영역3개)</strong><em>/pop/03_layout.html</em></a></dd>
+                <dd><a href="./html/pop/04_layout.html"><strong>기본 레이아웃(2단,2줄,컨텐츠 영역4개)</strong><em>/pop/04_layout.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>MOBILE GUIDE /mobile</h2>
+        <div class="flist">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">mobile layout</dt>
+                <dd><a href="./html/mobile/00_layout.html"><strong>mobile 기본 레이아웃</strong><em>/mobile/00_layout.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>BLACK THEME PAGE GUIDE /page</h2>
+        <div class="flist black-theme">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">공통스타일가이드</dt>
+                <dd><a href="./html/common_module_black.html"><strong>기본 레이아웃</strong><em>/common_module_black.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">GNB layout</dt>
+                <dd><a href="./html/page/black/B00_layout.html"><strong>왼쪽 gnb 레이아웃</strong><em>/page/black/B00_layout.html</em></a></dd>
+                <dd><a href="./html/page/black/B00_layout_hidden-gnb.html"><strong>왼쪽 숨긴 gnb 레이아웃</strong><em>/page/black/B00_layout_hidden-gnb.html</em></a></dd>
+                <dd><a href="./html/page/black/B00_layout_right_gnb.html"><strong>오른쪽 gnb 레이아웃</strong><em>/page/black/B00_layout_right_gnb.html</em></a></dd>
+                <!-- <dd><a href="./html/page/00_layout_top_gnb.html"><strong>상단 gnb 레이아웃</strong><em>/page/00_layout_top_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_multi_gnb.html"><strong>상단 + 왼쪽 gnb 레이아웃</strong><em>/page/00_layout_multi_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_hidden-gnb.html"><strong>숨김메뉴</strong><em>/page/00_layout_hidden-gnb.html</em></a></dd> -->
+            </dl>
+            <dl>
+                <dt class="guide">page 기본 grid</dt>
+                <dd><a href="./html/page/black/B00_layout.html"><strong>기본 레이아웃</strong><em>/page/black/B00_layout.html</em></a></dd>
+                <dd><a href="./html/page/black/B00_layout_top_gnb.html"><strong>상단 gnb 레이아웃</strong><em>/page/black/B00_layout_top_gnb.html</em></a></dd>
+                <dd><a href="./html/page/black/B01_layout.html"><strong>카드 레이아웃(유동)</strong><em>/page/black/B01_layout.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">dialog 기본 grid</dt>
+                <dd><a href="./html/dialog/black/B00_layout.html"><strong>기본 dialog 레이아웃</strong><em>/dialog/black/B00_layout.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>BLUE THEME PAGE GUIDE</h2>
+        <div class="flist blue-theme">
+            <h3>style guide</h3>
+            <dl>
+                <dt class="guide">공통스타일가이드</dt>
+                <dd><a href="./html/common_module_Blue.html"><strong>기본 레이아웃</strong><em>/common_module_Blue.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">GNB layout</dt>
+                <dd><a href="./html/page/blue/B00_layout.html"><strong>왼쪽 gnb 레이아웃</strong><em>/page/blue/B00_layout.html</em></a></dd>
+                <dd><a href="./html/page/blue/B00_layout_hidden-gnb.html"><strong>왼쪽 숨긴 gnb 레이아웃</strong><em>/page/blue/B00_layout_hidden-gnb.html</em></a></dd>
+                <dd><a href="./html/page/blue/B00_layout_right_gnb.html"><strong>오른쪽 gnb 레이아웃</strong><em>/page/blue/B00_layout_right_gnb.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">page</dt>
+                <dd><a href="./html/page/blue/B00_layout.html"><strong>기본 레이아웃</strong><em>/page/blue/00_layout.html</em></a></dd>
+                <dd><a href="./html/page/blue/B01_layout.html"><strong>카드 레이아웃(유동)</strong><em>/page/blue/01_layout.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">dialog 기본 grid</dt>
+                <dd><a href="./html/dialog/blue/B00_layout.html"><strong>기본 dialog 레이아웃</strong><em>/dialog/blue/B00_layout.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">mobile</dt>
+                <dd><a href="./html/mobile/blue/00_layout.html"><strong>기본 레이아웃</strong><em>/mobile/blue/00_layout.html</em></a></dd>
+            </dl>
+            <!-- <dl>
+                <dt class="guide">GNB layout</dt>
+                <dd><a href="./html/page/black/B00_layout.html"><strong>왼쪽 gnb 레이아웃</strong><em>/page/black/B00_layout.html</em></a></dd>
+                <dd><a href="./html/page/black/B00_layout_hidden-gnb.html"><strong>왼쪽 숨긴 gnb 레이아웃</strong><em>/page/black/B00_layout_hidden-gnb.html</em></a></dd>
+                <dd><a href="./html/page/black/B00_layout_right_gnb.html"><strong>오른쪽 gnb 레이아웃</strong><em>/page/black/B00_layout_right_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_top_gnb.html"><strong>상단 gnb 레이아웃</strong><em>/page/00_layout_top_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_multi_gnb.html"><strong>상단 + 왼쪽 gnb 레이아웃</strong><em>/page/00_layout_multi_gnb.html</em></a></dd>
+                <dd><a href="./html/page/00_layout_hidden-gnb.html"><strong>숨김메뉴</strong><em>/page/00_layout_hidden-gnb.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">page 기본 grid</dt>
+                <dd><a href="./html/page/black/B00_layout.html"><strong>기본 레이아웃</strong><em>/page/black/B00_layout.html</em></a></dd>
+                <dd><a href="./html/page/black/B00_layout_top_gnb.html"><strong>상단 gnb 레이아웃</strong><em>/page/black/B00_layout_top_gnb.html</em></a></dd>
+                <dd><a href="./html/page/black/B01_layout.html"><strong>카드 레이아웃(유동)</strong><em>/page/black/B01_layout.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="guide">dialog 기본 grid</dt>
+                <dd><a href="./html/dialog/black/B00_layout.html"><strong>기본 dialog 레이아웃</strong><em>/dialog/B00_layout.html</em></a></dd>
+            </dl> -->
+        </div>
+        <h2>IMC3.1.1 with SFP2.0 GUIDE</h2>
+        <div class="flist">
+            <h3>설정</h3>
+            <dl>
+                <dt class="imc3">설정 </dt>
+                <dd><a href="./html/page/device-list.html"><strong>기준정보 - 장비</strong><em>/page/device-list.html</em></a></dd>
+                <dd><a href="./html/dialog/alarm-list.html"><strong>알람</strong><em>/dialog/alarm-list.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="imc3">업무</dt>
+                <dd><a href="./html/page/production-order-list.html"><strong>생산관리-생산지시</strong><em>/page/production-order-list.html</em></a></dd>
+                <dd><a href="./html/dialog/job-order-detail.html"><strong>생산관리-작업지시 상세</strong><em>/dialog/job-order-detail.html</em></a></dd>
+                <dd><a href="./html/dialog/job-order-add.html"><strong>생산관리-작업지시 등록</strong><em>/dialog/job-order-add.html</em></a></dd>
+                <dd><a href="./html/dialog/job-order-add-2d.html"><strong>생산관리-작업지시 2d등록</strong><em>/dialog/job-order-add-2d.html</em></a></dd>
+                <dd><a href="./html/dialog/job-order-add-point.html"><strong>생산관리-작업지시 등록 일정</strong><em>/dialog/job-order-add-point.html</em></a></dd>
+                <dd><a href="./html/page/job-handle-box.html"><strong>생산관리-작업관제</strong><em>/page/job-handle-box.html</em></a></dd>
+                <dd class="ver2"><a href="./html/page/job-handle-box02.html"><strong>생산관리-작업관제02</strong><em>/page/job-handle-box02.html</em></a></dd>
+                <dd><a href="./html/page/job-current.html"><strong>생산관리-작업진행현황</strong><em>/page/job-current.html</em></a></dd>
+                <dd class="ver2"><a href="./html/page/job-current02.html"><strong>생산관리-작업진행현황02</strong><em>/page/job-current02.html</em></a></dd>
+                <dd><a href="./html/dialog/oee-summary-detail.html"><strong>생산관리-작업진행현황 상세</strong><em>/dialog/oee-summary-detail.html</em></a></dd>
+                <dd><a href="./html/dialog/oee-range-machine-setup.html"><strong>생산관리-작업진행현황 상세-범위설정</strong><em>/dialog/oee-range-machine-setup.html</em></a></dd>
+                <dd><a href="./html/page/mbo-progress-rate-by-job-list.html"><strong>MBO-작업지시진척률</strong><em>/page/mbo-progress-rate-by-job-list.html</em></a></dd>
+                <dd><a href="./html/page/oee-summary-list.html"><strong>OEE</strong><em>/page/oee-summary-list.html</em></a></dd>
+                <dd><a href="./html/dialog/job-score-bad-list.html"><strong>불량내역</strong><em>/dialog/job-score-bad-list.html</em></a></dd>
+                <dd><a href="./html/page/mnc-by-machine-list.html"><strong>사출기</strong><em>/page/mnc-by-machine-list.html</em></a></dd>
+                <dd><a href="./html/dialog/mnc-by-machine-detail.html"><strong>사출기 상세</strong><em>/dialog/mnc-by-machine-detail.html</em></a></dd>
+                <dd><a href="./html/dialog/mnc-device-detail.html"><strong>사출기 장비 상세</strong><em>/dialog/mnc-device-detail.html</em></a></dd>
+                <dd class="ver2"><a href="./html/dialog/mnc-device-detail02.html"><strong>사출기 장비 상세02</strong><em>/dialog/mnc-device-detail02.html</em></a></dd>
+                <dd><a href="./html/page/mbo-summary-po-daily-list.html"><strong>mbo-생산지시현황</strong><em>/page/mbo-summary-po-daily-list.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="imc3">보고서</dt>
+                <dd><a href="./html/page/mbo-production-rate-by-po.html"><strong>MBO-생산지시 진척률</strong><em>/page/mbo-production-rate-by-po.html</em></a></dd>
+                <dd><a href="./html/page/mbo-production-result-list-by-po.html"><strong>MBO-생산지시 불량통계</strong><em>/page/mbo-production-result-list-by-po.html</em></a></dd>
+                <dd><a href="./html/dialog/po-score-bad-chart.html"><strong>MBO-생산지시 불량통계 상세</strong><em>/dialog/po-score-bad-chart.html</em></a></dd>
+                <dd><a href="./html/page/mbo-production-result-list-by-job.html"><strong>MBO-작업지시 불량통계</strong><em>/page/mbo-production-result-list-by-job.html</em></a></dd>
+                <dd><a href="./html/page/oee-summary-report.html"><strong>OEE-요약보고서</strong><em>/page/oee-summary-report.html</em></a></dd>
+                <dd><a href="./html/page/oee-trend-report.html"><strong>OEE-추이보고서</strong><em>/page/oee-trend-report.html</em></a></dd>
+                <dd><a href="./html/page/oee-loss-report.html"><strong>OEE-손실통계보고서</strong><em>/page/oee-loss-report.html</em></a></dd>
+                <dd><a href="./html/page/oee-total-report.html"><strong>OEE-종합보고서</strong><em>/page/oee-total-report.html</em></a></dd>
+            </dl>
+            <dl>
+            	<dt class="imc3">POP</dt>
+            	<dd><a href="./html/pop/job-order-list.html"><strong>작업처리</strong><em>/pop/job-order-list.html</em></a></dd>
+            	<dd><a href="./html/pop/job-order-handle.html"><strong>작업처리 시작</strong><em>/pop/job-order-handle.html</em></a></dd>
+            	<dd><a href="./html/dialog/machine-drive-record-edit.html"><strong>작업처리 시작 가동내역 편집</strong><em>/dialog/machine-drive-record-edit.html</em></a></dd>
+            	<dd><a href="./html/dialog/search-machine-drive-status-cause.html"><strong>가동 상태 사유 검색</strong><em>/dialog/search-machine-drive-status-cause.html</em></a></dd>
+            	<dd><a href="./html/dialog/job-score-add.html"><strong>실적 등록</strong><em>/dialog/job-score-add.html</em></a></dd>
+            	<dd><a href="./html/dialog/machine-drive-record.html"><strong>가동 내역</strong><em>/dialog/machine-drive-record.html</em></a></dd>
+            	<dd><a href="./html/dialog/doc-read.html"><strong>문서 열람</strong><em>/dialog/doc-read.html</em></a></dd>
+            	<dd><a href="./html/dialog/search-machine.html"><strong>문서 열람 - 사출기 검색</strong><em>/dialog/search-machine.html</em></a></dd>
+            	<dd><a href="./html/dialog/search-product.html"><strong>문서 열람 - 제품 검색</strong><em>/dialog/search-product.html</em></a></dd>
+            	<dd><a href="./html/dialog/machine-setting.html"><strong>사출기 설정</strong><em>/dialog/machine-setting.html</em></a></dd>
+            	<dd><a href="./html/dialog/worker-setting.html"><strong>작업자 설정</strong><em>/dialog/worker-setting.html</em></a></dd>
+            	<dd><a href="./html/dialog/alert-form.html"><strong>경보 설정</strong><em>/dialog/alert-form.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>SWS with SFP2.0 GUIDE</h2>
+        <div class="flist">
+            <h3>Guide</h3>
+            <dl>
+                <dt class="imc3">창고정보</dt>
+                <dd><a href="./html/page/sws01.html"><strong>창고정보</strong><em>/page/sws01.html</em></a></dd>
+                <dd><a href="./html/page/sws01_2.html"><strong>창고정보</strong><em>/page/sws01_2.html</em></a></dd>
+                <dd><a href="./html/page/sws_shuttle.html"><strong>셔틀정보</strong><em>/page/sws_shuttle.html</em></a></dd>
+                <dd><a href="./html/page/sws_dashboard.html"><strong>대시보드</strong><em>/page/sws_dashboard.html</em></a></dd>
+                <dd><a href="./html/page/sws_inventory.html"><strong>재고 회전율</strong><em>/page/sws_inventory.html</em></a></dd>
+                <dd><a href="./html/page/sws_resources.html"><strong>자원 효율</strong><em>/page/sws_resources.html</em></a></dd>
+                <dd><a href="./html/page/sws_speed.html"><strong>입출고 속도</strong><em>/page/sws_speed.html</em></a></dd>
+                <dd><a href="./html/page/sws_stock-accuracy.html"><strong>재고 정확도</strong><em>/page/sws_stock-accuracy.html</em></a></dd>
+                <dd><a href="./html/page/sws_store-progress.html"><strong>입출고 진척</strong><em>/page/sws_store-progress.html</em></a></dd>
+                <dd><a href="./html/page/sws_supply-demand.html"><strong>공급,수요 밸런스</strong><em>/page/sws_supply-demand.html</em></a></dd>
+                <dd><a href="./html/dialog/sws_rate_operation.html"><strong>이송장비별 가동률</strong><em>/dialog/sws_rate_operation.html</em></a></dd>
+                <dd><a href="./html/page/sws_login.html"><strong>SWS 로그인 페이지</strong><em>/page/sws_login.html</em></a></dd>
+                <dd><a href="./html/dialog/sws_box-info.html"><strong>박스정보</strong><em>/dialog/sws_box-info.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>WMS with SFP2.0 GUIDE</h2>
+        <div class="flist">
+            <h3>Guide</h3>
+            <dl>
+                <dt class="imc3">page 화면</dt>
+                <dd><a href="./html/page/wms_rack-search.html"><strong>wms rack 조회</strong><em>/page/wms_rack-search.html</em></a></dd>
+                <dd><a href="./html/page/wms_carry-direction.html"><strong>반입지시 생성</strong><em>/page/wms_carry-direction.html</em></a></dd>
+                <dd><a href="./html/page/wms_in-history.html"><strong>입고 내역</strong><em>/page/wms_in-history.html</em></a></dd>
+                <dd><a href="./html/page/wms_out-time.html"><strong>출고 소요 시간</strong><em>/page/wms_out-time.html</em></a></dd>
+                <dd><a href="./html/page/wms_inventory.html"><strong>재공 회전율</strong><em>/page/wms_inventory.html</em></a></dd>
+            </dl>
+            <dl>
+                <dt class="imc3">dialog 화면</dt>
+                <dd><a href="./html/dialog/sample01.html"><strong>wms화면1</strong><em>/dialog/sample01.html</em></a></dd>
+                <dd><a href="./html/dialog/sample02.html"><strong>wms화면2</strong><em>/dialog/sample02.html</em></a></dd>
+                <dd><a href="./html/dialog/sample03.html"><strong>wms화면3</strong><em>/dialog/sample03.html</em></a></dd>
+                <dd><a href="./html/dialog/wms-batch-touch.html"><strong>wms 배치 피킹</strong><em>/dialog/wms-batch-touch.html</em></a></dd>
+                <dd><a href="./html/dialog/wms-batch-touch02.html"><strong>wms 배치 피킹2</strong><em>/dialog/wms-batch-touch02.html</em></a></dd>
+                <dd><a href="./html/dialog/wms-select-reason.html"><strong>wms 사유선택</strong><em>/dialog/wms-select-reason.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>CSC 유도썬스 예약 페이지</h2>
+        <div class="flist">
+            <h3>Guide</h3>
+            <dl>
+                <dt class="imc3">관리자화면</dt>
+                <dd><a href="./html/page/csc_00_login.html"><strong>로그인화면</strong><em>/page/csc_00_login.html</em></a></dd>
+                <dd><a href="./html/page/csc_default.html"><strong>메인달력화면</strong><em>/page/csc_default.html</em></a></dd>
+                <dd><a href="./html/dialog/csc_00_layout.html"><strong>예약 목록</strong><em>/dialog/csc_00_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/csc_00_layout_no-list.html"><strong>예약 목록-예약이 없는경우</strong><em>/dialog/csc_00_layout_no-list.html</em></a></dd>
+                <dd><a href="./html/dialog/csc_01_layout.html"><strong>예약 승인 및 수정</strong><em>/dialog/csc_01_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/csc_02_layout.html"><strong>예약불가일 처리</strong><em>/dialog/csc_02_layout.html</em></a></dd>
+                <dd><a href="./html/dialog/csc_02_layout_fullbooking.html"><strong>예약불가일 처리 - fullbooking</strong><em>/dialog/csc_02_layout_fullbooking.html</em></a></dd>
+                
+            </dl>
+            <dl>
+                <dt class="imc3">user 화면 - mobile</dt>
+                <dd><a href="./html/page/csc_00_login.html"><strong>로그인화면</strong><em>/page/csc_00_login.html</em></a></dd>
+                <dd><a href="./html/mobile/csc_mobile_default.html"><strong>메인달력화면</strong><em>/mobile/csc_mobile_default.html</em></a></dd>
+                <dd><a href="./html/mobile/csc_00_layout.html"><strong>예약 목록</strong><em>/mobile/csc_00_layout.html</em></a></dd>
+                <dd><a href="./html/mobile/csc_00_layout_no-list.html"><strong>예약 목록-예약건수0</strong><em>/mobile/csc_00_layout_no-list.html</em></a></dd>
+                <dd><a href="./html/mobile/csc_01_layout.html"><strong>예약 신청 및 수정</strong><em>/mobile/csc_01_layout.html</em></a></dd>
+                <dd><a href="./html/mobile/csc_01_layout_view.html"><strong>예약 상세</strong><em>/mobile/csc_01_layout_view.html</em></a></dd>
+                <dd><a href="./html/mobile/csc_02_layout.html"><strong>예약불가일</strong><em>/mobile/csc_02_layout.html</em></a></dd>
+                <dd><a href="./html/mobile/csc_02_layout_fullbooking.html"><strong>예약불가일 - fullbooking</strong><em>/mobile/csc_02_layout_fullbooking.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>MAP with SFP2.0 GUIDE</h2>
+        <div class="flist">
+            <h3>Guide</h3>
+            <dl>
+                <dt class="imc3">dialog 화면</dt>
+                <dd><a href="./html/dialog/flow-layout.html"><strong>공정 흐름도 레이아웃</strong><em>/dialog/flow-layout.html</em></a></dd>
+            </dl>
+        </div>
+        <h2>Others</h2>
+        <div class="flist">
+            <h3>Guide</h3>
+            <dl>
+                <dt class="imc3">각종 추가화면</dt>
+                <dd><a href="./html/pop/keypad.html"><strong>POP keypad</strong><em>/pop/keypad.html</em></a></dd>
+                <dd><a href="./html/page/wms_kiva-monitor_v2.html"><strong>키바 모니터링</strong><em>/page/wms_kiva-monitor_v2.html</em></a></dd>
+                <dd><a href="./html/page/sws_shuttle_v2.html"><strong>장비상태</strong><em>/page/sws_shuttle_v2.html</em></a></dd>
+                <dd><a href="./html/page/sws_shuttle_v3.html"><strong>장비상태</strong><em>/page/sws_shuttle_v3.html</em></a></dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>

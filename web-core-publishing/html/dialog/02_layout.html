@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SFP 2.0 Dialog 기본 레이아웃</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>워크센터 등록</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap">
+            <section>
+                <p class="required">필수입력</p>
+                <div class="function-area">
+                    <div class="align-left">
+                        <select>
+                            <option value="0">2018</option>
+                            <option value="1">2017</option>
+                            <option value="2">2016</option>
+                        </select>
+                        <button class="btn-ico-black-srch">검색</button>
+                    </div>
+                </div>
+                <div id="grid">
+                    <div class="sfp-grid-panel table-style-type2">
+                        <div class="sfp-grid-header-panel" >
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:120px">
+                                    <col style="width:200px">
+                                    <col style="width:auto">
+                                    <col style="width:130px">
+                                    <col style="width:62px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>수정</th>
+                                        <th class="required">일자 </th>
+                                        <th class="required">휴일 </th>
+                                        <th class="required">삭제여부</th>
+                                        <th>선택</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel">
+                            <table class="sfp-grid">
+                                <colgroup>
+                                    <col style="width:120px">
+                                    <col style="width:200px">
+                                    <col style="width:auto">
+                                    <col style="width:130px">
+                                    <col style="width:62px">
+                                </colgroup>
+                                <thead style="display: none;">
+                                    <tr>
+                                        <th>수정</th>
+                                        <th>일자 <span class="require">*</span></th>
+                                        <th>휴일 <span class="require">*</span></th>
+                                        <th>삭제여부<span class="require">*</span></th>
+                                        <th>선택</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" />
+                                        </td>					
+                                        <td><input type="text" placeholder="날짜 입력" value=""></td>					
+                                        <td><input type="text" placeholder="설연휴"></td>					
+                                        <td>
+                                            <select>
+                                                <option value="0">유형선택</option>								
+                                                <option value="1">유형1</option>								
+                                                <option value="2">유형2</option>
+                                            </select>
+                                        </td>					
+                                        <td><button type="button" class="btn-image-small-del">삭제</button></td>				
+                                    </tr>
+                                </tbody>
+                                <tfoot style="display: none;"></tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-btn-wrap">
+                    <button class="grid-line-add">추가 등록</button>
+                </div>
+            </section>
+            <footer>
+                <div class="align-left"><button class="btn-close">닫기</button></div>
+                <div class="align-center"><button class="btn">가운데</button></div>
+                <div class="align-right"><button class="btn-cancel">취소</button></div>
+            </footer>
+        </div>
+        
+    </main>
+</body>
+</html>

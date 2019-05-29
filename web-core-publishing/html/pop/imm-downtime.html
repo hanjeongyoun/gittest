@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>사출 비가동</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/mes_pop.css">
+</head>
+<body>
+	<style>
+		
+	</style>
+	<main>
+		<header>
+            <h1 class="txt-logo">MES</h1>
+			<h2>IMM-001호기</h2>
+			<span class="machine-state ALARM">가동중</span>
+		</header>
+		<section>
+			<div class="col">
+				<div class="row no-flex">
+					<div class="col pdt15">
+						<div class="menu-btn">
+							<a href="#">홈</a>
+							<a href="#">작업장 목록</a>
+							<a href="#">실적등록</a>
+							<a href="#">실적조회</a>
+							<a href="#">부품식별표</a>
+							<a href="#">금형교체</a>
+							<a href="#">작업교체</a>
+							<a href="#">작업자</a>
+							<a href="#">작업표준</a>
+							<a href="#">F/Proof</a>
+							<a href="#" class="active">비가동</a>
+						</div>
+					</div>
+				</div>
+				<div class="row same-size">
+					<div class="col no-flex" style="width:30%">
+						<div class="item-wrap row">
+							<div class="item-inner no-title">
+								<div class="item-cont">
+									<div class="register-table simple-list title-left">
+										<ul>
+											<li class="vertical">
+												<div class="title">비가동 시작일시</div>
+											</li>
+											<li class="vertical">
+												<div class="cont">
+													<div class="line-wrap">
+														<span><input type="text" class="calendar"></span>
+														<span><input type="text" class="time"></span>
+													</div>
+												</div>
+											</li>
+											<li class="vertical">
+												<div class="title">비가동 종료일시</div>
+											</li>
+											<li class="vertical">
+												<div class="cont">
+													<div class="line-wrap">
+														<span><input type="text" class="calendar"></span>
+														<span><input type="text" class="time"></span>
+													</div>
+													<div class="line-wrap">
+														<label><input type="radio" name="select-type"><span class="radio-mark">계획</span></label>
+														<label><input type="radio" name="select-type"><span class="radio-mark">비계획</span></label>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<h3 class="grid-title mgt10">비가동 사유</h3>
+									<div class="sfp-grid border-style">
+										<table style="width:100%">
+											<colgroup>
+												<col style="width:70px">
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+													<th>선택</th>
+													<th>비가동 사유</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><label><input type="radio"><span class="radio-mark"></span></label></td>
+													<td>1</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row no-flex">
+							<div class="function-area">
+								<div class="align-right">
+									<button class="btn-pop orange wide">등록</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col pdb65">
+						<div class="row item-wrap">
+							<div class="item-inner no-title">
+								<div class="item-cont">
+									<div class="sfp-grid">
+										<table style="width:100%">
+											<thead>
+												<tr>
+													<th>No</th>
+													<th>계획</th>
+													<th>시작일시</th>
+													<th>종료일시</th>
+													<th>비가동시간</th>
+													<th>비가동사유</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>1</td>
+													<td>1</td>
+													<td>1</td>
+													<td>1</td>
+													<td>1</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+                        </div>
+                        
+					</div>
+				</div>
+			</div>
+			<footer>
+                <span class="logo">studio3s</span>
+            </footer>
+			
+		</section>
+	</main>
+</body>
+</html>

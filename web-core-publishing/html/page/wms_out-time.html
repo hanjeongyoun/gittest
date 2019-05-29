@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>출고 소요 시간</title>
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/grid.css">
+	<link rel="stylesheet" href="../../resources/css/button.css">
+	<link rel="stylesheet" href="../../resources/css/form.css">
+	<link rel="stylesheet" href="../../resources/css/page.css">
+	<link rel="stylesheet" href="../../resources/css/left_gnb.css">
+	<style>
+		
+		.wms-report-wrap .report-inner{height:100%;padding:18px 29px 39px 29px;box-sizing:border-box}
+		.wms-report-wrap .report-inner > .multi-cont{height:100%}
+		.wms-report-wrap .report-inner > .multi-cont > div{height:100%}
+
+
+        .wms-report-wrap.wms-out-time .report-inner{padding-right:14px}
+		.wms-report-wrap.wms-out-time{height:calc(100% - 70px);background-color:#efefef}
+		.wms-out-time .chart-area{position:relative;height:100%;background:#fff}
+		.wms-out-time .chart-area div[class*="-chart"]{position:absolute;}
+		.wms-out-time .chart-area .scatter-chart{top:0;left:0;right:0;bottom:0;}
+		.wms-out-time .chart-area .horizon-chart{right:10px;top:120px;width:154px;bottom:136px}
+		.wms-out-time .chart-area .vertical-chart{bottom:10px;left:140px;right:164px;height:126px;}
+        .wms-out-time .time-item-wrap{margin:0 -8px 18px;padding-right:15px;overflow:hidden;}
+        .wms-out-time .time-item-wrap li{float:left;width:33.33%;padding:0 8px;box-sizing:border-box}
+        .wms-out-time .time-item-wrap li .inner{padding:10px 0 15px;text-align:center;border:1px solid #bfbfbf;background:#fff;}
+        .wms-out-time .time-item-wrap li h3{font-size:21px}
+        .wms-out-time .time-item-wrap li .value{font-size:48px}
+        .wms-out-time .time-item-wrap li .value > strong{display:inline-block;margin-right:10px;font-size:72px}
+        .wms-out-time *::-webkit-scrollbar-corner{background:#efefef}
+        .wms-out-time *::-webkit-scrollbar-button{background:#efefef}
+        .wms-out-time *::-webkit-scrollbar-track{background:#efefef}
+        .wms-out-time *::-webkit-scrollbar-track-piece{background:#efefef}
+        .wms-out-time .out-time-grid{
+            background:#efefef;
+            scrollbar-3dlight-color:#efefef;
+            scrollbar-darkshadow-color:#efefef;
+            scrollbar-arrow-color:#efefef;
+            scrollbar-track-color:#efefef;
+        }
+        .out-time-grid .sfp-grid-body-panel{background:#fff}
+        .out-time-grid .style-type2 .sfp-grid thead th:last-child,.out-time-grid .sfp-grid.style-type2 thead th:last-child{border-right:0}
+        .out-time-grid .style-type2 .sfp-grid tbody td:last-child,.out-time-grid .sfp-grid.style-type2 tbody td:last-child{border-right:0}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="#">SFP 2.0</a></h1>
+		<div class="link-select">
+			<button>BASIC DATA</button>
+			<ul>
+				<li><a href="#">SETUP</a></li>
+				<li><a href="#">MONITORING</a></li>
+				<li><a href="#">REPORT</a></li>
+				<li><a href="#">HISTORY</a></li>
+			</ul>
+		</div>
+		<div class="util-menu">
+			<ul>
+				<li><time>2018-05-09 20:12:10</time></li>
+				<li><a href="#" class="alarm on"><span>알람</span><em>999+</em></a></li>
+				<li><a href="#" class="notice on"><span>알림</span><em>2</em></a></li>
+				<li><a href="#" class="user"><span>사용자 정보</span></a></li>
+				<li><a href="#" class="mark on"><span>즐겨찾기</span></a>
+				<li><a href="#" class="bookmark on"><span>즐겨찾기 목록</span></a>
+					<div class="bookmark-list">
+						<ul>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+							<li><a href="http://www.naver.com">권한</a><button>삭제</button></li>
+						</ul>
+						<!-- <p>즐겨찾기 목록이 없습니다.</p> -->
+					</div>
+				</li>
+				<li><a href="#" class="logout"><span>로그아웃</span></a></li>
+				<li>
+					<a href="#" class="app-menu"><span>메뉴</span></a>
+					<div class="app-menu-list">
+						<ul>
+							<li><a href="#" class="mdm">MDM</a></li>
+							<li><a href="#" class="mes">MES</a></li>
+							<li><a href="#" class="wms">WMS</a></li>
+							<li><a href="#" class="vmi">VMI</a></li>
+							<li><a href="#" class="lms">LMS</a></li>
+							<li><a href="#" class="oee">OEE</a></li>
+							<li><a href="#" class="bom">BOM</a></li>
+						</ul>
+						<ul>
+							<li><a href="#" class="system">시스템</a></li>
+							<li><a href="#" class="option">설정</a></li>
+						</ul>
+					</div>
+					<div class="dimmed"></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li>
+				<a href="#" disabled>Material</a>
+				<ul>
+					<li><a href="">자재 유형 관리 1</a></li>
+					<li><a href="">자재 관리 1</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Machine</a>
+				<ul>
+					<li><a href="" class="has-depth">자재 유형 관리 2 유형 관리 2 유형 관리 2 유형 관리 2</a>
+						<ul>
+							<li><a href="">자재 유형 관리 2-1</a></li>
+							<li><a href="">자재 유형 관리 2-2</a></li>
+							<li><a href="">자재 유형 관리 2-3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="has-depth">자재 관리 2</a>
+						<ul>
+							<li><a href="">자재 관리 2-1</a></li>
+							<li><a href="" class="has-depth">자재 관리 2-2</a>
+								<ul>
+									<li><a href="">자재 관리 3-1</a></li>
+									<li><a href="">자재 관리 3-2</a></li>
+									<li><a href="">자재 관리 3-3</a></li>
+								</ul>
+							</li>
+							<li><a href="">자재 관리 2-3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Men</a>
+				<ul>
+					<li><a href="">자재 유형 관리 3</a></li>
+					<li><a href="">자재 관리 3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Method</a>
+				<ul>
+					<li><a href="">자재 유형 관리 4</a></li>
+					<li><a href="">자재 관리 4</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<header>
+			<h2>출고 소요 시간<span>출고 소요 시간 레포트</span></h2>
+		</header>
+		<div class="contents-wrap no-footer">
+			<section>
+				<div class="function-area">
+					<div class="align-left">
+						<select>
+							<option value="6" selected="">창고</option>
+						</select>
+						<input type="text" class="calendar hasDatepicker" placeholder="일자를 선택하세요.">
+						<input type="text" class="calendar hasDatepicker" placeholder="일자를 선택하세요.">
+						<button class="btn-srch ico">조회</button>
+						<button class="btn-reset image">초기화</button>
+					</div>
+				</div>
+				<div class="wms-report-wrap wms-out-time">
+					<div class="report-inner">
+						<div class="multi-cont">
+							<div style="width:52%">
+								<div class="chart-area">
+									<div class="scatter-chart" style="background:green"></div>
+									<!-- <div class="horizon-chart" style="background:yellow"></div>
+									<div class="vertical-chart" style="background:skyblue"></div> -->
+								</div>
+							</div>
+							<div style="width:48%">
+								<ul class="time-item-wrap">
+									<li>
+                                        <div class="inner">
+                                            <h3>평균 출고 소요 시간</h3>
+                                            <span class="value"><strong>7.8</strong>h</span>
+                                        </div>
+									</li>
+									<li>
+                                        <div class="inner">
+                                            <h3>최단 출고 소요 시간</h3>
+                                            <span class="value"><strong>1.8</strong>h</span>
+                                        </div>
+									</li>
+									<li>
+                                        <div class="inner">
+                                            <h3>최장 출고 소요 시간</h3>
+                                            <span class="value"><strong>16.8</strong>h</span>
+                                        </div>
+									</li>
+								</ul>
+								<div class="sfp-grid-panel out-time-grid">
+									<div class="sfp-grid-header-panel">
+										<table class="sfp-grid style-type2">
+											<colgroup>
+												<col>
+												<col>
+												<col>
+												<col>
+												<col>
+												<col>
+											</colgroup>
+											<thead>
+												<tr>
+                                                    <th>출고지시 SN</th>
+                                                    <th>품목</th>
+                                                    <th>총 수량</th>
+                                                    <th>접수일시</th>
+                                                    <th>완료일시</th>
+                                                    <th>소요시간</th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+									<div class="sfp-grid-body-panel" style="height:637px">
+										<table class="sfp-grid style-type2">
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+											<thead style="display: none;">
+                                                <tr>
+                                                    <th>출고지시 SN</th>
+                                                    <th>품목</th>
+                                                    <th>총 수량</th>
+                                                    <th>접수일시</th>
+                                                    <th>완료일시</th>
+                                                    <th>소요시간</th>
+                                                </tr>
+											</thead>
+											<tbody>
+												<tr>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>4</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+												</tr>
+											</tbody>
+											<tfoot style="display: none;"></tfoot>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+	</main>
+</body>
+</html>

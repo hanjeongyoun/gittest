@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>가동 상태 사유 검색</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/dialog.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>가동 상태 사유 검색</h2>
+            <a href="#" class="close-btn">닫기</a>
+        </header>
+        <div class="contents-wrap no-footer">
+            <section>
+                <div class="function-area">
+                    <div class="align-right">
+                        <select>
+                            <option value="0">가동상태</option>
+                            <option value="1">가동</option>
+                            <option value="2">지연</option>
+                        </select>
+                        <button class="btn-srch black ico">검색</button>
+                    </div>
+                </div>
+                <div id="grid" class="border-style">
+                    <div class="sfp-grid-panel">
+                        <div class="sfp-grid-header-panel" >
+                            <table class="sfp-grid">
+                                <colgroup>
+									<col style="width:30%">
+									<col>
+									<col style="width:100px">
+								</colgroup>
+                                <thead>
+                                    <tr>
+										<th>가동상태</th>
+										<th>사유</th>
+										<th>선택</th>
+									</tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="sfp-grid-body-panel" style="height:320px">
+                            <table class="sfp-grid">
+                                <colgroup>
+									<col style="width:30%">
+									<col>
+									<col style="width:100px">
+								</colgroup>
+                                <thead style="display: none;">
+                                    <tr>
+										<th>가동상태</th>
+										<th>사유</th>
+										<th>선택</th>
+									</tr>
+                                </thead>
+                                <tbody>
+                                    <tr>	
+                                    	<td></td>	
+                                    	<td style="text-align:left">금형 교환</td>	
+                                    	<td><button type="button" class="btn">선택</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>작업처리 상세</title>
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/grid.css">
+    <link rel="stylesheet" href="../../resources/css/button.css">
+    <link rel="stylesheet" href="../../resources/css/form.css">
+    <link rel="stylesheet" href="../../resources/css/pop.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2><a href="#" class="logo">IMC M</a></h2>
+            <div class="user-info">
+				<time>2018-06-12 18:24:51</time>
+				<span id="pop-mcn-nm" mcn-id="M0002">머신2</span>
+				<span id="pop-worker-nm" worker-key="7">Emilia</span>
+				<span id="pop-client-ip">0:0:0:0:0:0:0:1</span>
+            </div>
+        </header>
+        <section>
+            <aside class="col">
+                <ul>
+                    <li><a href="#" class="active">작업처리</a></li>
+                    <li><a href="#">가동내역</a></li>
+                    <li><a href="#">문서열람</a></li>
+                    <li><a href="#">사출기설정</a></li>
+                    <li><a href="#">작업자설정</a></li>
+                    <li><a href="#">경보설정</a></li>
+                </ul>
+            </aside>
+            <div class="col">
+            	<div class="row top-function">
+            		<div class="item-wrap col">
+            			<div class="function-area">
+            				<div class="align-right">
+            					<label>작업번호: <input type="text" style="width:120px"></label>
+            					<label>사출기: <input type="text" style="width:120px"></label>
+            					<label>근무조: <input type="text" style="width:120px"></label>
+            					<label>일시: <input type="text" style="width:120px"></label>
+            					<button class="btn" style="margin-left:10px">작업종료</button>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+                <div class="row">
+                    <div class="item-wrap col">
+                        <div class="item-inner no-title">
+                            <div class="item-cont">
+                            	<h3 class="under-title">작업지시</h3>
+                                <table class="static-table small">
+				                    <colgroup>
+				                        <col style="width:33.33%">
+				                        <col style="width:33.33%">
+				                        <col style="width:33.33%">
+				                    </colgroup>
+				                    <tbody>
+					                    <tr>
+					                        <th>제품</th>
+					                        <th>Model</th>
+					                        <th>원재료</th>
+					                    </tr>
+					                    <tr>
+					                        <td>I40 Bumper</td>
+					                        <td>40Bumper</td>
+					                        <td></td>
+					                    </tr>
+					                </tbody>
+                				</table>
+                				<h3 class="under-title">수량</h3>
+                                <table class="static-table small">
+				                    <colgroup>
+				                        <col style="width:25%">
+				                        <col style="width:25%">
+				                        <col style="width:25%">
+				                        <col style="width:25%">
+				                    </colgroup>
+				                    <tbody>
+					                    <tr>
+					                        <th>계획수량</th>
+					                        <th>양품수량</th>
+					                        <th>생산수량</th>
+					                        <th>불량수량</th>
+					                    </tr>
+					                    <tr>
+					                        <td>18,600</td>
+					                        <td>0</td>
+					                        <td>0</td>
+					                        <td>0</td>
+					                    </tr>
+					                </tbody>
+                				</table>
+                				<h3 class="under-title">가동</h3>
+                                <table class="static-table small">
+				                    <colgroup>
+				                        <col style="width:25%">
+				                        <col style="width:25%">
+				                        <col style="width:25%">
+				                        <col style="width:25%">
+				                    </colgroup>
+				                    <tbody>
+					                    <tr>
+					                        <th>작업시작</th>
+					                        <th>작업완료</th>
+					                        <th>가동시간</th>
+					                        <th>비가동시간</th>
+					                    </tr>
+					                    <tr>
+					                        <td>2018-06-11 17:30</td>
+					                        <td></td>
+					                        <td></td>
+					                        <td></td>
+					                    </tr>
+					                </tbody>
+                				</table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-wrap col">
+                        <div class="item-inner no-title">
+                            <div class="item-cont">
+                                <div id="grid" class="border-style">
+		                           	<div class="sfp-grid-panel">
+				                        <div class="sfp-grid-header-panel">
+				                            <table class="sfp-grid">
+				                                <colgroup>
+													<col style="width:30%">
+													<col style="width:15%">
+													<col style="width:10%">
+													<col style="width:10%">
+													<col style="width:15%">
+												</colgroup>
+				                                <thead>
+													<tr>
+														<th>입력일시</th>
+														<th>생산</th>
+														<th>양품</th>
+														<th>불량</th>
+														<th>작업</th>
+													</tr>
+												</thead>
+				                            </table>
+				                        </div>
+				                        <div class="sfp-grid-body-panel" style="height:380px">
+				                            <table class="sfp-grid">
+				                                <colgroup>
+													<col style="width:30%">
+													<col style="width:15%">
+													<col style="width:10%">
+													<col style="width:10%">
+													<col style="width:15%">
+												</colgroup>
+				                                <thead style="display:none">
+				                                    <tr>
+														<th>입력일시</th>
+														<th>생산</th>
+														<th>양품</th>
+														<th>불량</th>
+														<th>작업</th>
+													</tr>
+				                                </thead>
+				                                <tbody>
+				                                    
+				                                </tbody>
+				                            </table>
+				                        </div>
+				                    </div>
+		                    	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item-wrap col">
+                        <div class="item-inner no-title">
+                            <div class="item-cont">
+                                <div id="grid02" class="border-style">
+		                           	<div class="sfp-grid-panel">
+				                        <div class="sfp-grid-header-panel">
+				                            <table class="sfp-grid">
+				                                <colgroup>
+													<col style="width:26%">
+													<col style="width:15%">
+													<col style="width:15%">
+													<col style="width:*">
+													<col style="width:15%">
+												</colgroup>
+				                                <thead>
+													<tr>
+														<th>가동일시</th>
+														<th>가동상태</th>
+														<th>유지</th>
+														<th>사유</th>
+														<th>작업</th>
+													</tr>
+												</thead>
+				                            </table>
+				                        </div>
+				                        <div class="sfp-grid-body-panel" style="height:380px">
+				                            <table class="sfp-grid">
+				                                <colgroup>
+													<col style="width:26%">
+													<col style="width:15%">
+													<col style="width:15%">
+													<col style="width:*">
+													<col style="width:15%">
+												</colgroup>
+				                                <thead style="display:none">
+				                                    <tr>
+														<th>가동일시</th>
+														<th>가동상태</th>
+														<th>유지</th>
+														<th>사유</th>
+														<th>작업</th>
+													</tr>
+				                                </thead>
+				                                <tbody>
+				                                    <tr>	
+				                                    	<td>2017-06-02 08:00:00</td>	
+				                                    	<td>꺼짐</td>	
+				                                    	<td>1</td>	
+				                                    	<td style="text-align:left"></td>	
+				                                    	<td><button type="button" class="btn small">편집</button></td>
+				                                    </tr>
+				                                </tbody>
+				                            </table>
+				                        </div>
+				                    </div>
+		                    	</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-wrap col">
+                        <div class="item-inner no-title">
+                            <div class="item-cont">
+                                <div id="grid03" class="border-style">
+		                           	<div class="sfp-grid-panel">
+				                        <div class="sfp-grid-header-panel">
+				                            <table class="sfp-grid">
+				                                <colgroup>
+													<col style="width:34%">
+													<col style="width:22%">
+													<col style="width:22%">
+													<col style="width:22%">
+												</colgroup>
+				                                <thead>
+													<tr>
+														<th>발생시점</th>
+														<th>사이클 (s)</th>
+														<th>표준사이클 (s)</th>
+														<th>준수율 (%)</th>
+													</tr>
+												</thead>
+				                            </table>
+				                        </div>
+				                        <div class="sfp-grid-body-panel" style="height:380px">
+				                            <table class="sfp-grid">
+				                                <colgroup>
+													<col style="width:34%">
+													<col style="width:22%">
+													<col style="width:22%">
+													<col style="width:22%">
+												</colgroup>
+				                                <thead style="display:none">
+				                                    <tr>
+														<th>발생시점</th>
+														<th>사이클 (s)</th>
+														<th>표준사이클 (s)</th>
+														<th>준수율 (%)</th>
+													</tr>
+				                                </thead>
+				                                <tbody>
+				                                    
+				                                </tbody>
+				                            </table>
+				                        </div>
+				                    </div>
+		                    	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottom-function">
+                	<div class="item-wrap col">
+               			<div class="function-area">
+               				<div class="align-left">
+               					<button class="btn">제품도면</button>
+               					<button class="btn">사출조건표</button>
+               					<button class="btn">작업지도서</button>
+               				</div>
+               				<div class="align-right">
+               					<button class="btn">실적등록</button>
+               				</div>
+               			</div>
+                	</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

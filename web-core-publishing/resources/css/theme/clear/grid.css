@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* sfp Table*/
+
+.sfp-grid-body-panel {background:#cfcfcf}
+
+.sfp-grid tbody td{border-top:1px solid #cfcfcf;}
+/* .sfp-grid tbody tr:first-child td{border-top:0} */
+.border-style.sfp-grid tbody td,.border-style .sfp-grid tbody td{border-top: 1px solid #cfcfcf;border-left: 1px solid #cfcfcf;border-right: 1px solid #cfcfcf;}
